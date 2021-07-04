@@ -1,0 +1,27 @@
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: $font-family-heading;
+    font-weight: $font-weight-heading;
+    line-height: $line-height-heading;
+    margin-bottom: $spacer-gutter;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
+* + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
+    margin-top: $grid-gutter-width/2;
+}
+.h1,h1{font-size: 38px;}
+.h2,h2{font-size: 32px;}
+.h3,h3{font-size: 28px;}
+.h4,h4{font-size: 21px;}
+.h5,h5{font-size: 18px;}
+.h6,h6{font-size: 1rem;}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){}

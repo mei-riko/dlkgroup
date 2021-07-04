@@ -1,0 +1,115 @@
+$white                : #ffffff;
+$black                : #000000;
+$action               : #ce002b;
+
+
+$light-grey           : #FCFBFA;
+$grey                 : #777777;
+$dark-grey            : #3a3a3a;
+
+$body-color           : $black;
+$body-bg              : #F9F9F9;
+
+$border-color         : #d7d7d8;
+$border-radius        : 6px;
+
+$link-color           : $black !default;
+$link-hover-color     : $action !default;
+$link-decoration      : none !default;
+$link-hover-decoration: underline !default;
+
+$grid-breakpoints: (
+  xs: 420px,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
+) !default;
+
+$container-max-widths: (
+  xs: 100%,
+  sm: 0px,
+  md: 0px,
+  lg: 0px,
+  xl: 0px,
+) !default;
+
+
+$font-weight          : 400;
+$font-weight-bolder   : 600;
+$font-weight-bold     : 700;
+
+$font-weight-heading: $font-weight-bold !default;
+$dt-font-weight:      $font-weight-bold !default;
+
+$line-height          : 1.7;
+$line-height-base     : 1.4;
+$line-height-heading  : 1.2;
+
+$font-size-base       : 1rem;
+$font-weight-base     : $font-weight;
+
+$font-family-heading  : "Inter", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base     : "Inter", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation Mono",   "Courier New",    monospace !default;
+
+$font-size: (
+  // small
+  xs: 0px,
+  // btn
+  sm: 0px,
+  // main
+  md: 14px,
+  // lead
+  lg: 0px
+) !default;
+
+$letter-spacing       : 0.04em;
+
+$grid-columns         : 12 !default;
+$grid-gutter-width    : 30px !default;
+$spacer-gutter        : 15px !default;
+
+$spacer : 30px!default;
+$spacers: ()  !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: $spacer/2,       // 15px
+    2: $spacer,         // 30px
+    3: (3*$spacer)/2,   // 45px
+    4: $spacer * 2,     // 60px
+    5: $spacer * 3      // 90px
+  ),
+  $spacers
+);
+
+$headings-margin-bottom: $spacer / 2 !default;
+$headings-font-family  : null !default;
+$headings-font-weight  : 400 !default;
+$headings-line-height  : 1.2 !default;
+$headings-color        : null !default;
+
+$paragraph-margin-bottom: $spacer-gutter !default;
+
+$table-cell-padding   : 10px !default;
+$table-cell-padding-sm: 6px !default;
+$table-caption-color  : #242424 !default;
+
+$label-margin-bottom: 10px;
+
+$enable-grid-classes              : true !default;
+$enable-pointer-cursor-for-buttons: true !default;
+
+// Utilities
+
+$displays : none,   inline,   inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+$overflows: auto,   hidden !default;
+$positions: static, relative, absolute,     fixed, sticky !default;
+
+
+// Printing
+
+$print-page-size     : a3 !default;
+$print-body-min-width: map-get($grid-breakpoints, "lg") !default;
