@@ -1,0 +1,25 @@
+- var tel = {'item':"8 800 533 44 18",'link':"tel:78005334418"}
+- var email = {'item':"info@dlk-investgroup.ru",'link':"mailto:info@dlk-investgroup.ru"}
+
+block variables
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        title= pageTitle
+
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet")
+        
+        link(href='./css/framework.css', rel='stylesheet')
+        link(href='./css/main.css', rel='stylesheet')
+
+    body
+        script(src="./js/jquery.min.js")
+        include ./header/header.pug
+        main 
+            block content
+        include ./footer/footer.pug
+        script(src="./js/app.min.js")
