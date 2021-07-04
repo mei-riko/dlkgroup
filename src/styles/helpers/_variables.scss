@@ -2,13 +2,12 @@ $white                : #ffffff;
 $black                : #000000;
 $action               : #ce002b;
 
-
 $light-grey           : #FCFBFA;
 $grey                 : #777777;
 $dark-grey            : #3a3a3a;
 
 $body-color           : $black;
-$body-bg              : #F9F9F9;
+$body-bg              : #2F3B41;
 
 $border-color         : #d7d7d8;
 $border-radius        : 6px;
@@ -113,3 +112,6 @@ $positions: static, relative, absolute,     fixed, sticky !default;
 
 $print-page-size     : a3 !default;
 $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
+
+// Vars of User X - ЧЕРНОВИК
+$border:#1E282D;

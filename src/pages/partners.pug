@@ -1,0 +1,20 @@
+extends ../blocks/main.pug
+
+block variables
+    - var pageTitle = "Главная страницы"
+    - var form_inputs = [{"label":"Ваши Ф.И.О.","type":"text"},{"label":"Название агентства/частное лицо","type":"text"},{"label":"Контактный телефон","type":"tel","placeholder":"+7"},{"label":"E-mail","type":"email"},{"label":"ФИО клиента","type":"text"},{"label":"Контакты клиента","type":"text"},{ "label":"Запрос клиента","type":""}]
+
+mixin contactInfo
+    div.contact-information
+        h5.heading-5.subtitle Контактная информация для партнёров
+        .row
+            .col-12.col-sm-6.contact-information__tel
+                p ТЕЛЕФОН
+                p 
+                    a(href=tel.link).link=tel.item
+            .col-12.col-sm-6.contact-information__email
+                p E-MAIL
+                p 
+                    a(href=email.link).link=email.item
+
+block content

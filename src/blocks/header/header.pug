@@ -1,2 +1,54 @@
+//- Ссылки для header и footer
+- var links = [{"link":"#","name":"Продавать","active":true},{"link":"#","name":"Передать клиента"},{"link":"#","name":"Доверительное управление"},{"link":"#","name":"Услуги"},{"link":"#","name":"Контакты"}]
+- var links2 = [{"link":"#","name":"Аренда"},{"link":"#","name":"Продажа"},{"link":"#","name":"Новостройки"},{"link":"#","name":"Коммерческая недвижимость"},{"link":"#","name":"Инвестиционные проекты"}]
+
+//- Ссылки для страницы 404
+- var links3 = [{"link":"#","name":"Главная"},{"link":"#","name":"Контакты"},{"link":"#","name":"Аренда недвижимости"},{"link":"#","name":"Продажа недвижимости"}]
+
+- var btns = [{"type":"default","value":"Заказать звонок","class":"call-order"},{"type":"social","value":"telegram.svg","href":"#1"},{"type":"social","value":"whatsapp.svg","href":"#2"}]
+- var address = "Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3"
+- var work = "пн-пт 08.00 - 17.00 <br> сб 10.00 - 16.00 <br>  воскресенье — выходной"
+
+mixin navLink(link,name,active)
+    if active
+        a(href=link).nav__link.nav__link_active=name
+    else
+        a(href=link).nav__link=name
+
+mixin Button(type,value,href,className)
+    if(type==="social")
+        a(href=href, class=["btn","btn_social",className])
+            img(src=`../img/global/${value}`)
+    else
+        button(class=["btn","btn_action",className])=value
+
+
+
 header.header
-    p header
+    .header__top
+        .container
+            menu.menu
+                li.menu__burger
+                    button.btn.btn_default
+                        img.img-fluid(src="../img/global/menu.svg", alt="")
+                li.menu__logo
+                    a(href="#")
+                        img.img-fluid(src="../img/global/logo.png", alt="logo")
+                li.menu__links
+                    nav.nav 
+                        for a in links
+                            +navLink(a.link, a.name, a.active)
+
+                li.menu__btns
+                    a(href=tel.link).link.text-bold.menu__tel=tel.item
+                    for btn in btns
+                        +Button(btn.type, btn.value, btn.href, btn.class)
+    .header__bottom
+        .container   
+            menu.menu
+                li
+                    nav.nav 
+                        for a in links2
+                            +navLink(a.link, a.name, a.active)
+                li
+                    a(href=tel.link).link.text-bold=tel.item

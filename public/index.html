@@ -13,11 +13,36 @@
   <body>
     <script src="./js/jquery.min.js"></script>
     <header class="header">
-      <p>header</p>
+      <div class="header__top">
+        <div class="container">
+          <menu class="menu">
+            <li class="menu__burger">
+              <button class="btn btn_default"><img class="img-fluid" src="../img/global/menu.svg" alt=""/></button>
+            </li>
+            <li class="menu__logo"><a href="#"><img class="img-fluid" src="../img/global/logo.png" alt="logo"/></a></li>
+            <li class="menu__links">
+              <nav class="nav"> <a class="nav__link nav__link_active" href="#">Продавать</a><a class="nav__link" href="#">Передать клиента</a><a class="nav__link" href="#">Доверительное управление</a><a class="nav__link" href="#">Услуги</a><a class="nav__link" href="#">Контакты</a>
+              </nav>
+            </li>
+            <li class="menu__btns"><a class="link text-bold menu__tel" href="tel:78005334418">8 800 533 44 18</a>
+                  <button class="btn btn_action call-order">Заказать звонок</button><a class="btn btn_social" href="#1"><img src="../img/global/telegram.svg"/></a><a class="btn btn_social" href="#2"><img src="../img/global/whatsapp.svg"/></a>
+            </li>
+          </menu>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">  
+          <menu class="menu">
+            <li>
+              <nav class="nav"> <a class="nav__link" href="#">Аренда</a><a class="nav__link" href="#">Продажа</a><a class="nav__link" href="#">Новостройки</a><a class="nav__link" href="#">Коммерческая недвижимость</a><a class="nav__link" href="#">Инвестиционные проекты</a>
+              </nav>
+            </li>
+            <li><a class="link text-bold" href="tel:78005334418">8 800 533 44 18</a></li>
+          </menu>
+        </div>
+      </div>
     </header>
-    <main> 
-      <p>content</p>
-    </main>
+    <p>content</p>
     <footer class="footer">
       <p>footer</p>
     </footer>
