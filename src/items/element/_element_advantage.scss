@@ -1,0 +1,7 @@
+.element_advantage{
+    flex-direction: column;
+
+    background: $black-lighter;
+    border-radius: 2px;
+    padding: map-get($map: $spacers, $key: 2);
+}

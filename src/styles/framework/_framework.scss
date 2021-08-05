@@ -57,6 +57,45 @@ a{
         outline: none;
     }
 }
+.link-inverse{
+    color: $link-hover-color;
+    
+    &:hover{
+        color: $link-color;
+    }
+}
+.link-arrow{
+    display: flex;
+    align-items: center;
+
+    &__icon{
+        flex: 0 0 $spacer-gutter;
+        margin-right: $spacer-gutter;
+        fill: $gold;
+
+        transition: .4s;
+    }
+    &__body{
+        text-transform: uppercase;
+        font-weight: $font-weight-bolder;
+        color: $gold;
+
+        transition: .4s;
+    }
+
+    &:hover{
+        text-decoration: none;
+
+        .link-arrow__icon{
+            fill: $secondary;
+        }
+        .link-arrow__body{
+            color: $secondary;
+        }
+    }
+}
+
+
 table{
     font-size: 1rem;
 }

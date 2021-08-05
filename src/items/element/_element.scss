@@ -1,10 +1,13 @@
 .element{
     display: flex;
-    align-items: flex-start;
 
-    &__icon{
+    &__img{
         flex: 0 0 54px;
         max-width: 54px;
+    }
+    &__icon{
+        flex: 0 0 40px;
+        max-width: 40px;
     }
     &__content{
         flex-grow: 1;

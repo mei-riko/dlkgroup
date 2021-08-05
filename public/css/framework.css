@@ -1913,6 +1913,55 @@ a:focus {
   outline: none;
 }
 
+.link-inverse {
+  color: #E2B359;
+}
+
+.link-inverse:hover {
+  color: #FAFAFA;
+}
+
+.link-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.link-arrow__icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 10px;
+  flex: 0 0 10px;
+  margin-right: 10px;
+  fill: #E2B359;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.link-arrow__body {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #E2B359;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.link-arrow:hover {
+  text-decoration: none;
+}
+
+.link-arrow:hover .link-arrow__icon {
+  fill: #9EB6B6;
+}
+
+.link-arrow:hover .link-arrow__body {
+  color: #9EB6B6;
+}
+
 table {
   font-size: 1rem;
 }

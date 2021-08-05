@@ -1,8 +1,92 @@
 extends ../blocks/main.pug
 
 block variables
+    link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    script(script src="https://unpkg.com/swiper/swiper-bundle.min.js")
     - var pageTitle = "Главная страницы"
-    - var form_inputs = [{"label":"Ваши Ф.И.О.","type":"text"},{"label":"Название агентства/частное лицо","type":"text"},{"label":"Контактный телефон","type":"tel","placeholder":"+7"},{"label":"E-mail","type":"email"},{"label":"ФИО клиента","type":"text"},{"label":"Контакты клиента","type":"text"},{ "label":"Запрос клиента","type":""}]
+    - var advantages = [{"title":"100% соответствие","content":"Предлагаем объекты, которые соответствуют запросам"},{"title":"Плюсы и минусы","content":"Раскрываем полную информацию о наших объектах"},{"title":"Полное сопровождение","content":"Полное сопровождение на всех этапах сделки"},{"title":"30 лет опыт","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus."},{"title":"Европейское качество","content":"Предоставляем высококачественный сервис"},{"title":"Под инвестирование","content":"Предлагаем варианты в которые инвестируем сами"}]
+    - var popularProjects1 = [{"id":"1","title":"Студия в историческом центре","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"2","title":"Квартира с видом на море","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"3","title":"Апартаменты под ключ","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":false},{"id":"4","title":"Квартира с видом на парк","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"5","title":"Студия в новом ЖК","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":false},{"id":"6","title":"Апартаменты для инвестиции","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"7","title":"Студия с видом на набережную","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true}];
+
+mixin projectSlide(object)
+    .swiper-slide 
+        .project-preview
+            img.project-preview__img(src=object.id)
+            .project-preview__heading=object.title
+            .project-preview__intro=object.address
+            .project-preview__chars
+                .element.align-items-center
+                    .element__icon
+                        img.img-fluid(src="../img/icon/icon-room.svg")
+                    .element__content=object.room
+                .element.align-items-center
+                    .element__icon
+                        img.img-fluid(src="../img/icon/icon-plan.svg")
+                    .element__content=object.plan
+                .element.align-items-center
+                    .element__icon
+                        img.img-fluid(src="../img/icon/icon-floor.svg")
+                    .element__content=object.floor
+                if object.balcony
+                    .element.align-items-center
+                        .element__icon
+                            img.img-fluid(src="../img/icon/icon-balcony.svg")
+                        .element__content есть балкон
+                else 
+                    .element.element_disabled.align-items-center
+                        .element__icon
+                            img.img-fluid(src="../img/icon/icon-balcony.svg")
+                        .element__content нет балкона
 
 block content
-    p content
+    section.pt-5.pb-5
+        .container 
+            .row.justify-content-between
+                .col-7
+                    .row
+                        .col-5
+                            p.h1 О «DLK Group»
+                        .col-7
+                            p.mb-2.text-bolder Агенство DLK Group — это&nbsp;эксперты в&nbsp;сфере недвижимости и&nbsp;земельных участков. 
+                                | DLK помогает клиентам подбирать недвижимость под&nbsp;любые цели.
+                            p.text-secondary Доступно множество разнообразных объектов: от&nbsp;квартиру или&nbsp;дом для&nbsp;постоянного 
+                                | проживания до&nbsp;отличных инвестиционных проектов, которые позволят вам получить прибыль 
+                                | и&nbsp;приумножить капитал в&nbsp;кратчайшие сроки. Множество разнообразных объектов: 
+                                | от&nbsp;квартиру или&nbsp;дом для&nbsp;постоянного проживания до&nbsp;отличных инвестиционных проектов, 
+                                | которые позволят вам получить прибыль и&nbsp;приумножить капитал в&nbsp;кратчайшие сроки.
+                            a.link-arrow(href="#") 
+                                <svg class="link-arrow__icon" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.61405 7.96572e-06L5.52642 4.49998L0.61405 9L0 8.43743L4.29834 4.49998L0 0.5625L0.61405 7.96572e-06ZM4.08758 0L9 4.49998L4.08758 9L3.47358 8.43743L7.77192 4.49998L3.47358 0.5625L4.08758 0Z" />
+                                </svg>
+                                span.link-arrow__body Больше информации
+                .col-4
+                    img.img-fluid(src="../img/demo/index-img-1.jpg" alt="" title="")
+            .row.justify-content-end.mt-5
+                .col-9
+                    .element-service-grid.content__scroll
+                        for advantage in advantages
+                            .element.element_advantage
+                                p.h6=advantage.title
+                                p.text-secondary=advantage.content
+    section.pt-4.pb-4.bg-darker
+        .container 
+            .row 
+                .col-9 
+                    p.h3 Популярные объявления
+                .col-3.text-right
+                    a.link-inverse.text-underline(href="#") Как сюда попасть?
+            .tabs-container
+                .tabs 
+                    .tabs__heading Продажа:
+                    .tabs__item.tabs__item--active(data-content="#tab1") Жилая
+                    .tabs__item(data-content="#tab2") Загородная
+                    .tabs__item(data-content="#tab3") Коммерческая
+                .tabs-content.tabs-content_has-slider.tabs-content--show.tabs-content--active#tab1
+                    //- Swiper Slider
+                    .swiper-container.swiper-container_project
+                        .swiper-button.swiper-button__next
+                        .swiper-button.swiper-button__prev
+                        .swiper-wrapper
+                            for object in popularProjects1
+                                +projectSlide(object)
+                .tabs-content.tabs-content_has-slider#tab2
+                .tabs-content.tabs-content_has-slider#tab3

@@ -19,4 +19,5 @@ $(function() {
 });
 
 import '../blocks/slider/slider';
+import '../blocks/slider/swiper';
 import './mouseup';
