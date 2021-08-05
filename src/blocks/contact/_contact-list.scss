@@ -1,0 +1,9 @@
+.contact-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__heading{
+        font-weight: $font-weight-base;
+        color: $secondary;
+    }
+}

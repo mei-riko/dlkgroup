@@ -1,0 +1,31 @@
+.element_numbered{
+    flex-direction: column;
+
+    background: $black-lighter;
+    border-radius: 2px;
+    padding: map-get($map: $spacers, $key: 2);
+
+    position: relative;
+
+    &__num{
+        font-size: 100px;
+        font-weight: $font-weight-bold;
+        line-height: 1em;
+        text-align: right;
+
+        color: $black;
+
+        position: absolute;
+        top: 50%;
+        right: map-get($map: $spacers, $key: 2);
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+    &__content{
+        position: relative;
+        z-index: 1;
+
+        width: 280px;
+        max-width: 100%;
+    }
+}

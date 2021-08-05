@@ -1,0 +1,9 @@
+.btn_secondary{
+    background: $green;
+    color: $white;
+
+    &:hover, &:focus{
+        background: $green-hover;
+        color: $white;
+    }
+}

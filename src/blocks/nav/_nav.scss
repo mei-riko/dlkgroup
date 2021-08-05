@@ -1,0 +1,24 @@
+.nav{
+    flex-grow: 1;
+    margin-left: -($spacer-gutter);
+    margin-right: -($spacer-gutter);
+
+    &__link{
+        color: $body-color;
+        padding: $spacer-gutter;
+        line-height: $line-height-heading;
+
+        &:hover{
+            text-decoration: none;
+            color: $secondary;
+        }
+
+        &_additional{
+            color: $secondary;
+
+            &:hover{
+                color: $body-color;
+            }
+        }
+    }
+}

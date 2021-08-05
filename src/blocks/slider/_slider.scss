@@ -1,0 +1,136 @@
+// Custom Slider With Tabs
+.slider{
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    height: fit-content;
+
+    &__controls{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-shrink: 0;
+
+        padding-bottom: map-get($map: $spacers, $key: 3);
+        margin-right: map-get($map: $spacers, $key: 2);
+
+        // Navigation Block With Text
+        &-text{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        // Navigation Text Item
+        &-item{
+            color: $secondary;
+            border: none;
+            border-left: 4px solid;
+            border-color: inherit;
+
+            margin-bottom: $spacer-gutter;
+            // font-weight: normal;
+            padding: 0px 0px 0px map-get($map: $spacers, $key: 1);
+
+            cursor: pointer;
+            transition: .4s;
+
+            &:hover{
+                color: $white;
+            }
+            // js status
+            &--active{
+                color: $gold;
+                font-weight: $font-weight-bold;
+                pointer-events: none;
+            }
+        }
+        // Navigation Block With Icon
+        &-icon{
+            flex-grow: 0;
+            margin-top: map-get($map: $spacers, $key: 2);
+
+            display: grid;
+            grid-gap: map-get($map: $spacers, $key: 2);
+            grid-template-columns: repeat(2, 64px);;
+        }
+        // Navigation Icon Item
+        &-arrow{
+            cursor: pointer;
+
+            path{
+                fill: $secondary;
+                transition: .4s;
+            }
+            
+            &:hover{
+                path{
+                    fill: $gold;
+                }
+            }
+        }
+    }
+
+    &__content{
+        width: 410px;
+        max-width: 100%;
+    }
+
+    &__item{
+        display: none;
+        height: 100%;
+
+        &--active{
+            display: block;
+            animation: slide_show 0.2s linear;
+        }
+    }
+    // Block With Image
+    &__photo{
+        position: relative;
+        width: 100%;
+        // height: 100%;
+        
+        &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 120%;
+        }
+    }
+    // <img>
+    &__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+    // Block With Text
+    &__text{
+        padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 4);
+        background: $black-lighter;
+        width: 500px;
+        max-width: 100%;
+
+        position: absolute;
+        // top: 50%;
+        left: 0;
+        // right: 0;
+        bottom: map-get($map: $spacers, $key: 5);
+    }
+}
+
+@keyframes slide_show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}

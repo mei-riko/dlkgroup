@@ -1,0 +1,10 @@
+.btn_action{
+    border: 3px solid $gold;
+    background: $black;
+    color: $white;
+
+    &:hover, &:focus{
+        background: $black-darker;
+        color: $white;
+    }
+}

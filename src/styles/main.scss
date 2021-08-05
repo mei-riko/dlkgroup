@@ -1,4 +1,33 @@
-.main{}
-
 @import "../styles/helpers/variables";
+
+// Buttons
+@import "../items/btn/btn";
+@import "../items/btn/btn_additional";
+@import "../items/btn/btn_action";
+@import "../items/btn/btn_secondary";
+@import "../items/btn/btn_networks";
+// Inputs
+@import "../items/input/input";
+@import "../items/input/input_line";
+// Table
+@import "../items/table/table";
+// Different Style Item (repeating element)
+@import "../items/element/element";
+@import "../items/element/element_numbered";
+// Element Grid
+@import "../items/element/element-service-grid";
+// Navigation
+@import "../blocks/nav/nav";
+@import "../blocks/nav/nav_additional";
+// Forms
+@import "../blocks/form/form";
+// Contact Information Columns
+@import "../blocks/contact/contact-list";
+// Header
 @import "../blocks/header/header";
+// Main Content
+@import "../blocks/content/content";
+// Footer
+@import "../blocks/footer/footer";
+// Slider & Tabs
+@import "../blocks/slider/slider";

@@ -1,0 +1,17 @@
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+    &__head{
+        background: $black-darker;
+        font-weight: $font-weight-bold;
+    }
+    &__row{
+        border-bottom: 1px solid $border-color;
+    }
+    &__td{
+        padding: map-get($map: $spacers, $key: 1);
+        width: fit-content;
+    }
+}

@@ -1,24 +1,32 @@
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+extends ../blocks/main.pug
 
-        title Contact Page
+block variables
+    - var pageTitle = "Контакты"
+    - var phones = [{'name':'Для партнеров','item':'8 (812) 234 44 12','link':'tel:+7122344412'},{'name':'По вопросам продажи недвижимости','item':'8 (812) 234 44 12','link':'tel:+7122344412'},{'name':'По вопросам сотрудничества','item':'8 (812) 234 44 12','link':'tel:+7122344412'}]
+    - var emails = [{'name':'Для клиентов','item':'service@dlk-investgroup.ru','link':'tel:mailto:service@dlk-investgroup.ru'},{'name':'Для партнеров','item':'partners@dlk-investgroup.ru','link':'mailto:partners@dlk-investgroup.ru'},{'name':'По вопросам продажи недвижимости','item':'sale@dlk-investgroup.ru','link':'mailto:sale@dlk-investgroup.ru'}]
 
-        link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet")
-        
-        link(href='./css/framework.css', rel='stylesheet')
-        link(href='./css/main.css', rel='stylesheet')
+mixin listContact(name, item, link, className)
+    dt.contact-list__heading=name
+    dd 
+        a(href=link,class=className)=item
 
-    body
-        script(src="./js/jquery.min.js")
-        include ../blocks/header/header.pug
-        main 
-            section
-                p page content 
-            aside
-                p links
-        include ../blocks/footer/footer.pug
-        script(src="./js/app.min.js")
+block content
+    section.pt-4.pb-4.bg-image(style="background-image:url('../img/bg/contacts.png');")
+        .container.text-center
+            h1.mb-2 Контакты DLK Group
+            p.lead Единый телефон для связи 
+                a(href=tel.link).text-bold=tel.item
+            a.btn.btn_action(href="javascript;" data-fancybox data-src="callback") Заказать звонок
+    section.pt-4.pb-4
+        .container
+            .row
+                .col-6
+                    p.h5 Телефоны
+                    dl.contact-list.mt-2
+                        for i in phones
+                            +listContact(i.name, i.item, i.link)
+                .col-6
+                    p.h5 E-mail
+                    dl.contact-list.mt-2
+                        for i in emails
+                            +listContact(i.name, i.item, i.link, 'text-underline')

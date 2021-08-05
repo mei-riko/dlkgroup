@@ -1,0 +1,13 @@
+.btn_networks{
+    padding: 6px;
+
+    background: $green;
+    color: $white;
+    fill: $white;
+
+    &:hover, &:focus{
+        background: $green-hover;
+        color: $white;
+        fill: $white;
+    }
+}

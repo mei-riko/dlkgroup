@@ -2,23 +2,19 @@ extends ../blocks/main.pug
 
 block variables
     - var pageTitle = "Партнерская программа"
-    - var inputs = [{"label":"Ваши Ф.И.О.","type":"text"},{"label":"Название агентства/частное лицо","type":"text"},{"label":"Контактный телефон","type":"tel","placeholder":"+7"},{"label":"E-mail","type":"email"},{"label":"ФИО клиента","type":"text"},{"label":"Контакты клиента","type":"text"},{ "label":"Запрос клиента","type":""}]
+    - var inputs = [{"label":"Ваши Ф.И.О.","type":"text"},{"label":"Тип объекта","type":"text"},{"label":"Регион, в котором находится объект","type":"text"},{"label":"Общий метраж","type":"number"},{"label":"Состояние объекта","type":"text"},{ "label":"Пожелания по стоиомсти","type":""},{"label":"Контактный телефон","type":"tel","placeholder":"+7"}]
 
 block content
     section.pt-2.pb-2.content
         .container
             .row.justify-content-between.align-items-center
                 .col-5 
-                    h1 Партнерская программа для&nbsp;агентств и&nbsp;частных риелторов
-                    p.lead.text-secondary.text-bolder.mb-2 В&nbsp;DLK Group действует партнерская программа для&nbsp;обмена клиентами
-                    p Если у&nbsp;Вас есть запрос от&nbsp;клиента на&nbsp;наш объект или в&nbsp;нашем регионе, 
-                        | то&nbsp;вы можете воспользоваться услугами наших специалистов. Вы и&nbsp;Ваш клиент получите 
-                        | полную поддержку от&nbsp;нашего агентства и&nbsp;сопровождение на&nbsp;всех этапах.
-                    p Ваше вознаграждение составит 60% от&nbsp;комиссионных со&nbsp;сделки. Узнать точную сумму 
-                        | объекта и&nbsp;процессы взаимодействия с&nbsp;нашей организацией, Вы&nbsp;можете, оставив 
-                        | заявку или связавшись с&nbsp;нами по&nbsp;контактам, указанным ниже.
-                .col-6
-                    .row
+                    h1 Удобная продажа недвижимости с&nbsp;DLK&nbsp;Group
+                    p.lead.text-secondary.text-bolder.mb-2 DLK&nbsp;Group поможет вам продать вашу недвижимость.
+                    p DLK Group поможет вам продать вашу недвижимость. Мы активно сотрудничаем не только с частными лицами, которые хотят продать свой объект, но и с инвесторами, которые регулярно реализуют свои объекты.
+                    p Для того, чтобы продать через нас свой объект просим Вас заполнить анкету ниже или связаться по контактным номерам, расположенным после анкеты.  
+                .col-6 
+                    .row 
                         .col-6
                             .content__image.content__image_circle(style="background-image:url('../img/demo/img1.png');")
                             .content__image.content__image_ellipse(style="background-image:url('../img/demo/img2.png');")
@@ -28,7 +24,7 @@ block content
         .container
             .row.justify-content-between
                 .col-4
-                    p.h2 Анкета передачи клиента
+                    p.h2 Анкета продажи
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas. Nec feugiat elementum at augue sit. Placerat odio amet cursus morbi.
                     p.mt-4.mb-2.lead.text-secondary.text-bolder Контактная информация для партнёров
                     .row 

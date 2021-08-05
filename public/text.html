@@ -4,27 +4,221 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Text Page</title>
+    <title>Текстовая страница</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
     <link href="./css/framework.css" rel="stylesheet"/>
     <link href="./css/main.css" rel="stylesheet"/>
   </head>
   <body>
     <script src="./js/jquery.min.js"></script>
     <header class="header">
-      <p>header</p>
+      <div class="header__additional">
+        <div class="container">
+          <menu class="header__menu">
+            <svg class="header__burger" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.1921 15.3202H0.807891C0.361719 15.3202 0 15.6819 0 16.1281C0 16.5743 0.361719 16.936 0.807891 16.936H19.1921C19.6383 16.936 20 16.5743 20 16.1281C20 15.6819 19.6383 15.3202 19.1921 15.3202Z"></path>
+              <path d="M19.1921 9.19208H0.807891C0.361719 9.19208 0 9.55376 0 9.99997C0 10.4462 0.361719 10.8079 0.807891 10.8079H19.1921C19.6383 10.8079 20 10.4462 20 9.99997C20 9.5538 19.6383 9.19208 19.1921 9.19208Z"></path>
+              <path d="M19.1921 3.06403H0.807891C0.361719 3.06403 0 3.42574 0 3.87192C0 4.31809 0.361719 4.67981 0.807891 4.67981H19.1921C19.6383 4.67981 20 4.31809 20 3.87192C20 3.42574 19.6383 3.06403 19.1921 3.06403Z"></path>
+            </svg><a class="header__logo logo" href="index.html"><img class="img-fluid" src="../img/global/logo.svg" alt="logo"/></a>
+            <nav class="nav nav_additional"><a class="nav__link_additional nav__link nav__link_active" href="#">Продавать</a><a class="nav__link_additional nav__link" href="#">Передать клиента</a><a class="nav__link_additional nav__link" href="#">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="#">Контакты</a>
+            </nav>
+            <div class="header__callbacks"><a class="header__callbacks-item d-none" href="tel:78005334418">8 800 533 44 18</a><a class="header__callbacks-item btn btn_additional btn_secondary" href="javascript;" data-fancybox="data-fancybox" data-src="#callback">Заказать звонок</a><a class="header__callbacks-item btn btn_networks" href="#"><svg width="16" height="16" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.83274 8.11186L5.81389 13.0644L8.39307 10.4852L12.8152 14L15.9289 0L0 6.63493L3.83274 8.11186ZM11.3772 4.01674L6.50161 8.4638L5.89434 10.7525L4.77252 7.94743L11.3772 4.01674Z" fill="white"/>
+</svg></a><a class="header__callbacks-item btn btn_networks" href="#"><svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.50187 0H7.49813C3.36281 0 0 3.36375 0 7.5C0 9.14062 0.52875 10.6613 1.42781 11.8959L0.493125 14.6822L3.37594 13.7606C4.56187 14.5463 5.97656 15 7.50187 15C11.6372 15 15 11.6353 15 7.5C15 3.36469 11.6372 0 7.50187 0Z" fill="#FCFCFC"/>
+<path d="M11.8663 10.5909C11.6853 11.1018 10.9672 11.5256 10.3944 11.6493C10.0025 11.7327 9.49063 11.7993 7.76751 11.0849C5.56345 10.1718 4.14407 7.93211 4.03345 7.7868C3.92751 7.64149 3.14282 6.60086 3.14282 5.52461C3.14282 4.44836 3.68938 3.9243 3.9097 3.6993C4.09063 3.51461 4.3897 3.43024 4.67657 3.43024C4.76938 3.43024 4.85282 3.43492 4.92782 3.43867C5.14813 3.44805 5.25876 3.46117 5.40407 3.80899C5.58501 4.24492 6.02563 5.32117 6.07813 5.4318C6.13157 5.54243 6.18501 5.69243 6.11001 5.83774C6.0397 5.98774 5.97782 6.0543 5.8672 6.1818C5.75657 6.3093 5.65157 6.4068 5.54095 6.54368C5.4397 6.66274 5.32532 6.79024 5.45282 7.01055C5.58032 7.22618 6.02095 7.94524 6.6697 8.52274C7.50688 9.26805 8.18563 9.50618 8.42845 9.60743C8.60938 9.68243 8.82501 9.66461 8.9572 9.52399C9.12501 9.34305 9.3322 9.04305 9.54313 8.74774C9.69313 8.53586 9.88251 8.50961 10.0813 8.58461C10.2838 8.65493 11.3553 9.18461 11.5756 9.2943C11.7959 9.40493 11.9413 9.45743 11.9947 9.55024C12.0472 9.64305 12.0472 10.079 11.8663 10.5909Z" fill="#146565"/>
+</svg></a></div>
+          </menu>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="container">
+          <menu class="header__menu">
+            <nav class="nav"><a class="nav__link nav__link_active" href="#">Аренда</a><a class="nav__link" href="#">Продажа</a><a class="nav__link" href="#">Новостройки</a><a class="nav__link" href="#">Коммерческая недвижимость</a><a class="nav__link" href="#">Инвестиционные проекты</a>
+            </nav>
+            <div class="header__phone"><a class="header__link text-bold" href="tel:78005334418">8 800 533 44 18</a></div>
+          </menu>
+        </div>
+      </div>
     </header>
-    <main> 
-      <section>
-        <p>page content </p>
-      </section>
-      <aside>
-        <p>links</p>
-      </aside>
-    </main>
+    <section class="content pt-4 pb-4"> 
+      <div class="container">
+        <div class="content__block">
+          <h1>Заголовок H1</h1>
+          <p class="lead">Lead Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed senectus volutpat, nibh ut id. Aliquam suscipit viverra vulputate tincidunt nunc lacus. Faucibus et velit proin nisi feugiat. Pulvinar semper iaculis sit nisl et velit semper tortor.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id ultricies pulvinar nec. Velit bibendum nunc a, varius in volutpat. Sed ut condimentum suspendisse platea libero, id nibh egestas adipiscing. Vitae lobortis ut sit aliquet quis scelerisque habitasse. In mattis integer molestie blandit phasellus et sit lectus. Neque, vitae, gravida montes, aenean tortor, sit sagittis pharetra neque. Ac magna phasellus enim sed dignissim lorem. Pharetra, velit fermentum nunc vestibulum, fusce. Sed sed ac quam ornare. Odio imperdiet in adipiscing adipiscing eros tincidunt justo.</p>
+          <p>Tristique et eu nec volutpat. Cum dignissim montes, turpis et viverra. Sed eros augue pretium pellentesque nisl. In sociis sed nec convallis. Duis risus eget eget augue nisi etiam fermentum ut. Felis molestie turpis orci lectus ut eu nibh. Metus vestibulum ac penatibus diam mollis lectus nec vestibulum. Vestibulum morbi neque dui velit nec. Sed facilisi sed pharetra dignissim sit diam rhoncus.</p>
+          <h2>Заголовок H2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id ultricies pulvinar nec. Velit bibendum nunc a, varius in volutpat. Sed ut condimentum suspendisse platea libero, id nibh egestas adipiscing. Vitae lobortis ut sit aliquet quis scelerisque habitasse. In mattis integer molestie blandit phasellus et sit lectus. Neque, vitae, gravida montes, aenean tortor, sit sagittis pharetra neque. Ac magna phasellus enim sed dignissim lorem. Pharetra, velit fermentum nunc vestibulum, fusce. Sed sed ac quam ornare. Odio imperdiet in adipiscing adipiscing eros tincidunt justo.</p>
+        </div>
+        <div class="content__block">
+          <div class="row">
+            <div class="col-6">
+              <h3 class="pt-1">Заголовок H3 for col-6</h3>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                <li>Ipsum vulputate vehicula eu fermentum nunc. </li>
+                <li>Cursus rhoncus id lobortis arcu fames morbi vitae fringilla facilisis. </li>
+                <li>Egestas urna, gravida ultrices dictumst.</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <h3 class="pt-1">Заголовок H3 for col-6</h3>
+              <ol>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+                <li>Ipsum vulputate vehicula eu fermentum nunc. </li>
+                <li>Cursus rhoncus id lobortis arcu fames morbi vitae fringilla facilisis. </li>
+                <li>Egestas urna, gravida ultrices dictumst.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="content__block">
+          <h4 class="pt-1">Заголовок H4 </h4>
+        </div>
+        <div class="content__block">
+          <div class="row"> 
+            <div class="col-4"><img class="img-fluid" src="../img/demo/test-img.jpg"/>
+              <p class="text-secondary mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas</p>
+            </div>
+            <div class="col-4"><img class="img-fluid" src="../img/demo/test-img.jpg"/>
+              <p class="text-secondary mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas</p>
+            </div>
+            <div class="col-4"><img class="img-fluid" src="../img/demo/test-img.jpg"/>
+              <p class="text-secondary mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas</p>
+            </div>
+          </div>
+        </div>
+        <div class="content__block">
+          <h5 class="pt-1">Заголовок H5</h5>
+          <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas. Nec feugiat elementum at augue sit. Placerat odio amet cursus morbi. Odio a placerat sapien nunc lobortis quam ultrices. Enim, gravida facilisi tempus eget. Id sollicitudin id lacus tellus turpis malesuada ac. Mauris pulvinar amet commodo sed nisl. Vel vitae dictum eget facilisi ipsum ut at. Morbi eu, magna ultricies arcu enim, nam dis ultrices sit. Pretium praesent viverra odio pretium pellentesque. Venenatis pharetra, eget porttitor amet ut sapien. At quam leo sed lacinia urna.</blockquote>
+        </div>
+        <div class="content__block">
+          <div class="row">
+            <div class="col-4">
+              <div class="element">
+                <div class="element__icon"><img class="img-fluid" src="../img/demo/icon-demo.svg"/></div>
+                <div class="element__content">
+                  <h6 class="element__heading">Заголовок H6</h6>
+                  <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="element">
+                <div class="element__icon"><img class="img-fluid" src="../img/demo/icon-demo.svg"/></div>
+                <div class="element__content">
+                  <h6 class="element__heading">Заголовок H6</h6>
+                  <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="element">
+                <div class="element__icon"><img class="img-fluid" src="../img/demo/icon-demo.svg"/></div>
+                <div class="element__content">
+                  <h6 class="element__heading">Заголовок H6</h6>
+                  <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__request mt-4 mb-4">
+          <p class="h3">Узнайте рыночную стоимость вашей недвижимости</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas. Nec feugiat elementum at augue sit. Placerat odio amet cursus morbi.</p>
+          <form class="form mt-2" action="">
+            <div class="form__row form__row_send">
+              <input class="input" type="text" placeholder="Ваше имя"/>
+              <input class="input input_phone" type="text" placeholder="+7"/>
+              <button class="btn btn_action">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <div class="content__block"> 
+          <div class="table-responsive">
+            <table class="table"> 
+              <thead class="table__head"> 
+                <tr class="table__row"> 
+                  <td class="table__td">Table Head</td>
+                  <td class="table__td">Table Head</td>
+                  <td class="table__td">Table Head</td>
+                </tr>
+              </thead>
+              <tbody class="table__body">
+                <tr class="table__row"> 
+                  <td class="table__td">Table Line</td>
+                  <td class="table__td">Table Line</td>
+                  <td class="table__td">Table Line</td>
+                </tr>
+                <tr class="table__row"> 
+                  <td class="table__td">Table Line</td>
+                  <td class="table__td">Table Line</td>
+                  <td class="table__td">Table Line</td>
+                </tr>
+                <tr class="table__row"> 
+                  <td class="table__td">Table Line</td>
+                  <td class="table__td">Table Line</td>
+                  <td class="table__td">Table Line</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
-      <p>footer</p>
+      <div class="container">
+        <div class="footer__contact-info">
+          <div class="row">
+            <div class="col-8">
+              <div class="footer__menu"><a class="footer__logo logo" href="index.html"><img class="img-fluid" src="../img/global/logo.svg" alt="logo"/></a>
+                <nav class="nav nav_additional"><a class="nav__link_additional nav__link nav__link_active" href="#">Аренда</a><a class="nav__link_additional nav__link" href="#">Продажа</a><a class="nav__link_additional nav__link" href="#">Новостройки</a><a class="nav__link_additional nav__link" href="#">Коммерческая недвижимость</a><a class="nav__link_additional nav__link" href="#">Инвестиционные проекты</a>
+                </nav>
+              </div>
+              <div class="row mt-2 mb-1">
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">ТЕЛЕФОН</div><a class="text-bolder footer__contact-link" href="tel:78005334418">8 800 533 44 18</a>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">E-MAIL</div><a class="text-bolder footer__contact-link" href="mailto:info@dlk-investgroup.ru">info@dlk-investgroup.ru</a>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">АДРЕС </div><span class="text-bolder">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</span>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">ЧАСЫ РАБОТЫ</div>
+                  <ul class="text-bolder footer__contact-list">
+                    <li>пн-пт 08.00 - 17.00 </li>
+                    <li>сб 10.00 - 16.00</li>
+                    <li>воскресенье — выходной</li>
+                  </ul>
+                </div>
+              </div>
+              <nav class="nav"><a class="nav__link_additional nav__link nav__link_active" href="#">Продавать</a><a class="nav__link_additional nav__link" href="#">Передать клиента</a><a class="nav__link_additional nav__link" href="#">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="#">Контакты</a>
+              </nav>
+            </div>
+            <div class="col-4">
+              <div class="footer__form">
+                <p class="h3">Есть вопросы?</p>
+                <form class="form">
+                  <input class="input input_line" type="text" placeholder="Ваше имя" name=""/>
+                  <input class="input input_line" type="tel" placeholder="+7" name=""/>
+                  <textarea class="input input_line" placeholder="Say «hello»" name=""></textarea>
+                  <button class="btn btn_action footer__form-submit">Отправить запрос </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__technical-info">
+          <div class="row"> 
+            <div class="col-6"><span>© 2021 ДЛК ГРУПП</span></div>
+            <div class="col-6 text-right"><a class="footer__link" href="#">Сайт разработан websoho.ru</a></div>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="./js/app.min.js"></script>
   </body>

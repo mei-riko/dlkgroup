@@ -1,0 +1,49 @@
+.header{
+    position: relative;
+
+    // Main Part
+    &__additional{
+        padding: map-get($map: $spacers, $key: 1) 0;
+    }
+    &__main{
+        padding: $spacer-gutter 0;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+    }
+
+    // Line With Nav and etc
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__burger{
+        fill: $body-color;
+        display: none;
+    }
+    &__logo{
+        padding-bottom: 4px;
+    }
+    // Callback
+    &__callbacks{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-item{
+            margin-right: map-get($map: $spacers, $key: 1);
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+    // Items
+    &__link{
+        color: $body-color;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

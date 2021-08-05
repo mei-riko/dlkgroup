@@ -1,0 +1,17 @@
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 14px 28px;
+    border-radius: 2px;
+
+    font-size: map-get($map: $font-size, $key: md);
+    line-height: map-get($map: $font-size, $key: lg);
+    font-weight: $font-weight-bolder;
+
+    &:hover, &:focus{
+        text-decoration: none;
+    }
+}

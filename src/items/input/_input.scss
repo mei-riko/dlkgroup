@@ -1,0 +1,23 @@
+.input{
+    font-size: map-get($map: $font-size, $key: sm);
+    line-height: map-get($map: $font-size, $key: lg);
+    padding: 14px 28px;
+
+    border: 1px solid $black-darker;
+    background: $black-darker;
+    color: $white;
+
+    &::placeholder{
+        color: $secondary;
+        transition: .4s;
+    }
+
+    &:focus{
+        border: 1px solid $black-darker;
+        outline: none;
+
+        &::placeholder{
+            opacity: 0;
+        }
+    }
+}

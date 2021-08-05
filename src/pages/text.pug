@@ -1,24 +1,99 @@
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+extends ../blocks/main.pug
 
-        title Text Page
-
-        link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet")
-        
-        link(href='./css/framework.css', rel='stylesheet')
-        link(href='./css/main.css', rel='stylesheet')
-
-    body
-        script(src="./js/jquery.min.js")
-        include ../blocks/header/header.pug
-        main 
-            section
-                p page content 
-            aside
-                p links
-        include ../blocks/footer/footer.pug
-        script(src="./js/app.min.js")
+block variables
+    - var pageTitle = "Текстовая страница"
+    
+block content
+    section.content.pt-4.pb-4 
+        .container
+            .content__block
+                h1 Заголовок H1
+                p.lead Lead Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed senectus volutpat, nibh ut id. Aliquam suscipit viverra vulputate tincidunt nunc lacus. Faucibus et velit proin nisi feugiat. Pulvinar semper iaculis sit nisl et velit semper tortor.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id ultricies pulvinar nec. Velit bibendum nunc a, varius in volutpat. Sed ut condimentum suspendisse platea libero, id nibh egestas adipiscing. Vitae lobortis ut sit aliquet quis scelerisque habitasse. In mattis integer molestie blandit phasellus et sit lectus. Neque, vitae, gravida montes, aenean tortor, sit sagittis pharetra neque. Ac magna phasellus enim sed dignissim lorem. Pharetra, velit fermentum nunc vestibulum, fusce. Sed sed ac quam ornare. Odio imperdiet in adipiscing adipiscing eros tincidunt justo.
+                p Tristique et eu nec volutpat. Cum dignissim montes, turpis et viverra. Sed eros augue pretium pellentesque nisl. In sociis sed nec convallis. Duis risus eget eget augue nisi etiam fermentum ut. Felis molestie turpis orci lectus ut eu nibh. Metus vestibulum ac penatibus diam mollis lectus nec vestibulum. Vestibulum morbi neque dui velit nec. Sed facilisi sed pharetra dignissim sit diam rhoncus.
+                h2 Заголовок H2
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id ultricies pulvinar nec. Velit bibendum nunc a, varius in volutpat. Sed ut condimentum suspendisse platea libero, id nibh egestas adipiscing. Vitae lobortis ut sit aliquet quis scelerisque habitasse. In mattis integer molestie blandit phasellus et sit lectus. Neque, vitae, gravida montes, aenean tortor, sit sagittis pharetra neque. Ac magna phasellus enim sed dignissim lorem. Pharetra, velit fermentum nunc vestibulum, fusce. Sed sed ac quam ornare. Odio imperdiet in adipiscing adipiscing eros tincidunt justo.
+            .content__block
+                .row
+                    .col-6
+                        h3.pt-1 Заголовок H3 for col-6
+                        ul
+                            li Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            li Ipsum vulputate vehicula eu fermentum nunc. 
+                            li Cursus rhoncus id lobortis arcu fames morbi vitae fringilla facilisis. 
+                            li Egestas urna, gravida ultrices dictumst.
+                    .col-6
+                        h3.pt-1 Заголовок H3 for col-6
+                        ol
+                            li Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            li Ipsum vulputate vehicula eu fermentum nunc. 
+                            li Cursus rhoncus id lobortis arcu fames morbi vitae fringilla facilisis. 
+                            li Egestas urna, gravida ultrices dictumst.
+            .content__block
+                h4.pt-1 Заголовок H4 
+            .content__block
+                .row 
+                    .col-4
+                        img.img-fluid(src="../img/demo/test-img.jpg")
+                        p.text-secondary.mt-1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas
+                    .col-4
+                        img.img-fluid(src="../img/demo/test-img.jpg")
+                        p.text-secondary.mt-1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas
+                    .col-4
+                        img.img-fluid(src="../img/demo/test-img.jpg")
+                        p.text-secondary.mt-1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas
+            .content__block
+                h5.pt-1 Заголовок H5
+                blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas. Nec feugiat elementum at augue sit. Placerat odio amet cursus morbi. Odio a placerat sapien nunc lobortis quam ultrices. Enim, gravida facilisi tempus eget. Id sollicitudin id lacus tellus turpis malesuada ac. Mauris pulvinar amet commodo sed nisl. Vel vitae dictum eget facilisi ipsum ut at. Morbi eu, magna ultricies arcu enim, nam dis ultrices sit. Pretium praesent viverra odio pretium pellentesque. Venenatis pharetra, eget porttitor amet ut sapien. At quam leo sed lacinia urna.
+            .content__block
+                .row
+                    .col-4
+                        .element
+                            .element__icon
+                                img.img-fluid(src="../img/demo/icon-demo.svg")
+                            .element__content
+                                h6.element__heading Заголовок H6
+                                p.text-secondary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas
+                    .col-4
+                        .element
+                            .element__icon
+                                img.img-fluid(src="../img/demo/icon-demo.svg")
+                            .element__content
+                                h6.element__heading Заголовок H6
+                                p.text-secondary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas
+                    .col-4
+                        .element
+                            .element__icon
+                                img.img-fluid(src="../img/demo/icon-demo.svg")
+                            .element__content
+                                h6.element__heading Заголовок H6
+                                p.text-secondary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas
+            .content__request.mt-4.mb-4
+                p.h3 Узнайте рыночную стоимость вашей недвижимости
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas. Nec feugiat elementum at augue sit. Placerat odio amet cursus morbi.
+                form.form.mt-2(action="")
+                    .form__row.form__row_send
+                        input.input(type="text",placeholder="Ваше имя")
+                        input.input.input_phone(type="text",placeholder="+7")
+                        button.btn.btn_action Отправить
+            .content__block 
+                .table-responsive
+                    table.table 
+                        thead.table__head 
+                            tr.table__row 
+                                td.table__td Table Head
+                                td.table__td Table Head
+                                td.table__td Table Head
+                        tbody.table__body
+                            tr.table__row 
+                                td.table__td Table Line
+                                td.table__td Table Line
+                                td.table__td Table Line
+                            tr.table__row 
+                                td.table__td Table Line
+                                td.table__td Table Line
+                                td.table__td Table Line
+                            tr.table__row 
+                                td.table__td Table Line
+                                td.table__td Table Line
+                                td.table__td Table Line

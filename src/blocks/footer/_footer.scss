@@ -1,0 +1,53 @@
+.footer{
+    border-top: 1px solid $border-color;
+
+    &__contact{
+        &-info{
+            padding: map-get($map: $spacers, $key: 4) 0;
+        }
+        &-heading{
+            font-size: 10px;
+            line-height: $line-height-heading;
+
+            text-transform: uppercase;
+            color: $secondary;
+            margin-bottom: $spacer-gutter;
+        }
+        &-link{
+            color: $white;
+        }
+    }
+
+    // Line With Nav and etc
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo{
+        padding-bottom: 4px;
+    }
+    // Additional Information
+    &__technical-info{
+        border-top: 1px solid $border-color;
+        padding: map-get($map: $spacers, $key: 1) 0;
+
+        font-size: 10px;
+        line-height: $line-height-heading;
+        color: $secondary;
+    }
+
+    // Form
+    &__form{
+        background: $black-lighter;
+        padding: $spacer;
+
+        &-submit{
+            width: 100%;
+            margin-bottom: -55px;
+        }
+    }
+    &__link{
+        color: $secondary;
+    }
+}

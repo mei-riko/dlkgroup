@@ -1,2 +1,45 @@
 footer.footer
-    p footer
+    .container
+            .footer__contact-info
+                .row
+                    .col-8
+                        .footer__menu
+                            a.footer__logo.logo(href="index.html")
+                                img.img-fluid(src="../img/global/logo.svg", alt="logo")
+                            nav.nav.nav_additional
+                                for i in linksMain
+                                    +navLink(i.link, i.name, i.active,'nav__link_additional')
+                        .row.mt-2.mb-1
+                            .col-6.mb-2
+                                .footer__contact-heading ТЕЛЕФОН
+                                a(href=tel.link).text-bolder.footer__contact-link=tel.item
+                            .col-6.mb-2
+                                .footer__contact-heading E-MAIL
+                                a(href=email.link).text-bolder.footer__contact-link=email.item
+                            .col-6.mb-2
+                                .footer__contact-heading АДРЕС 
+                                span.text-bolder=address
+                            .col-6.mb-2
+                                .footer__contact-heading ЧАСЫ РАБОТЫ
+                                ul.text-bolder.footer__contact-list
+                                    li пн-пт 08.00 - 17.00 
+                                    li сб 10.00 - 16.00
+                                    li воскресенье — выходной
+                        nav.nav
+                            for i in linksAdditional
+                                +navLink(i.link, i.name, i.active,'nav__link_additional')
+                    .col-4
+                        .footer__form
+                            p.h3 Есть вопросы?
+                            form.form
+                                input.input.input_line(type="text",placeholder="Ваше имя", name="")
+                                input.input.input_line(type="tel",placeholder="+7", name="")
+                                textarea.input.input_line(placeholder="Say «hello»", name="")
+                                button.btn.btn_action.footer__form-submit Отправить запрос 
+                    
+            .footer__technical-info
+                .row 
+                    .col-6
+                        span © 2021 ДЛК ГРУПП
+                    .col-6.text-right
+                        a(href="#",class="footer__link") Сайт разработан websoho.ru

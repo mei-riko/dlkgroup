@@ -1,24 +1,24 @@
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+extends ../blocks/main.pug
 
-        title Error
-
-        link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet")
-        
-        link(href='./css/framework.css', rel='stylesheet')
-        link(href='./css/main.css', rel='stylesheet')
-
-    body
-        script(src="./js/jquery.min.js")
-        include ../blocks/header/header.pug
-        main 
-            section
-                p page content 
-            aside
-                p links
-        include ../blocks/footer/footer.pug
-        script(src="./js/app.min.js")
+block variables
+    - var pageTitle = "Ошибка 404"
+    
+block content
+    section.content.pt-4.pb-4.bg-darker
+        .container 
+            .row.align-items-center.justify-content-around
+                .col-5
+                    p.content__error-heading Страница, которую вы пытаетесь найти, не существует или была перемещена.
+                    p.mt-2.mb-2.text-bold Код ошибки 404
+                    p.text-secondary Вот некоторые ссылки, с которых можно начать:
+                    ul
+                        li
+                            a.text-secondary(href="index.html") Главная
+                        li
+                            a.text-secondary(href="contact.html") Контакты
+                        li
+                            a.text-secondary(href="#") Аренда недвижимости
+                        li
+                            a.text-secondary(href="#") Продажа недвижимости
+                .col-4 
+                    img.img-fluid(src="../img/error.svg" alt=pageTitle title=pageTitle)

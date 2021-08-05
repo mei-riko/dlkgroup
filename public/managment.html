@@ -4,27 +4,214 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Managment Page</title>
+    <title>Доверительное управление</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
     <link href="./css/framework.css" rel="stylesheet"/>
     <link href="./css/main.css" rel="stylesheet"/>
   </head>
   <body>
     <script src="./js/jquery.min.js"></script>
     <header class="header">
-      <p>header</p>
+      <div class="header__additional">
+        <div class="container">
+          <menu class="header__menu">
+            <svg class="header__burger" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.1921 15.3202H0.807891C0.361719 15.3202 0 15.6819 0 16.1281C0 16.5743 0.361719 16.936 0.807891 16.936H19.1921C19.6383 16.936 20 16.5743 20 16.1281C20 15.6819 19.6383 15.3202 19.1921 15.3202Z"></path>
+              <path d="M19.1921 9.19208H0.807891C0.361719 9.19208 0 9.55376 0 9.99997C0 10.4462 0.361719 10.8079 0.807891 10.8079H19.1921C19.6383 10.8079 20 10.4462 20 9.99997C20 9.5538 19.6383 9.19208 19.1921 9.19208Z"></path>
+              <path d="M19.1921 3.06403H0.807891C0.361719 3.06403 0 3.42574 0 3.87192C0 4.31809 0.361719 4.67981 0.807891 4.67981H19.1921C19.6383 4.67981 20 4.31809 20 3.87192C20 3.42574 19.6383 3.06403 19.1921 3.06403Z"></path>
+            </svg><a class="header__logo logo" href="index.html"><img class="img-fluid" src="../img/global/logo.svg" alt="logo"/></a>
+            <nav class="nav nav_additional"><a class="nav__link_additional nav__link nav__link_active" href="#">Продавать</a><a class="nav__link_additional nav__link" href="#">Передать клиента</a><a class="nav__link_additional nav__link" href="#">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="#">Контакты</a>
+            </nav>
+            <div class="header__callbacks"><a class="header__callbacks-item d-none" href="tel:78005334418">8 800 533 44 18</a><a class="header__callbacks-item btn btn_additional btn_secondary" href="javascript;" data-fancybox="data-fancybox" data-src="#callback">Заказать звонок</a><a class="header__callbacks-item btn btn_networks" href="#"><svg width="16" height="16" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.83274 8.11186L5.81389 13.0644L8.39307 10.4852L12.8152 14L15.9289 0L0 6.63493L3.83274 8.11186ZM11.3772 4.01674L6.50161 8.4638L5.89434 10.7525L4.77252 7.94743L11.3772 4.01674Z" fill="white"/>
+</svg></a><a class="header__callbacks-item btn btn_networks" href="#"><svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.50187 0H7.49813C3.36281 0 0 3.36375 0 7.5C0 9.14062 0.52875 10.6613 1.42781 11.8959L0.493125 14.6822L3.37594 13.7606C4.56187 14.5463 5.97656 15 7.50187 15C11.6372 15 15 11.6353 15 7.5C15 3.36469 11.6372 0 7.50187 0Z" fill="#FCFCFC"/>
+<path d="M11.8663 10.5909C11.6853 11.1018 10.9672 11.5256 10.3944 11.6493C10.0025 11.7327 9.49063 11.7993 7.76751 11.0849C5.56345 10.1718 4.14407 7.93211 4.03345 7.7868C3.92751 7.64149 3.14282 6.60086 3.14282 5.52461C3.14282 4.44836 3.68938 3.9243 3.9097 3.6993C4.09063 3.51461 4.3897 3.43024 4.67657 3.43024C4.76938 3.43024 4.85282 3.43492 4.92782 3.43867C5.14813 3.44805 5.25876 3.46117 5.40407 3.80899C5.58501 4.24492 6.02563 5.32117 6.07813 5.4318C6.13157 5.54243 6.18501 5.69243 6.11001 5.83774C6.0397 5.98774 5.97782 6.0543 5.8672 6.1818C5.75657 6.3093 5.65157 6.4068 5.54095 6.54368C5.4397 6.66274 5.32532 6.79024 5.45282 7.01055C5.58032 7.22618 6.02095 7.94524 6.6697 8.52274C7.50688 9.26805 8.18563 9.50618 8.42845 9.60743C8.60938 9.68243 8.82501 9.66461 8.9572 9.52399C9.12501 9.34305 9.3322 9.04305 9.54313 8.74774C9.69313 8.53586 9.88251 8.50961 10.0813 8.58461C10.2838 8.65493 11.3553 9.18461 11.5756 9.2943C11.7959 9.40493 11.9413 9.45743 11.9947 9.55024C12.0472 9.64305 12.0472 10.079 11.8663 10.5909Z" fill="#146565"/>
+</svg></a></div>
+          </menu>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="container">
+          <menu class="header__menu">
+            <nav class="nav"><a class="nav__link nav__link_active" href="#">Аренда</a><a class="nav__link" href="#">Продажа</a><a class="nav__link" href="#">Новостройки</a><a class="nav__link" href="#">Коммерческая недвижимость</a><a class="nav__link" href="#">Инвестиционные проекты</a>
+            </nav>
+            <div class="header__phone"><a class="header__link text-bold" href="tel:78005334418">8 800 533 44 18</a></div>
+          </menu>
+        </div>
+      </div>
     </header>
-    <main> 
-      <section>
-        <p>page content </p>
-      </section>
-      <aside>
-        <p>links</p>
-      </aside>
-    </main>
+    <section class="pt-4 pb-4 bg-image" style="background-image:url('../img/bg/managment.jpg');">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-5 text-center">
+            <p class="text-uppercase text-gold text-bold">Доверительное управление</p>
+            <h1 class="mt-1 mb-2">Максимальный доход</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum quam elit purus tincidunt massa. Nulla turpis sed metus rhoncus, volutpat, vulputate lectus. Morbi neque ultricies sit pellentesque metus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content pt-4 pb-4">
+      <div class="container">
+        <div class="content__block">
+          <div class="row justify-content-between"> 
+            <div class="col-4"> 
+              <h2 class="h3">Сотрудничество с агенством</h2>
+              <p class="lead text-bolder text-secondary mb-2">Неоспоримые преимущества работы с агенством недвижимости DLK Group</p>
+              <p>Сдавать квартиру вместе с DLK Group — лучшее решение, если вы цените свое время и хотите зарабатывать на своей недвижимости.</p>
+              <p>Сотрудничая с нами, вы получаете ряд неоспоримых преимуществ, которыми уже успели воспользоваться сотни наших клиентов. Оцените и вы наши возможности и раскройте потенциал своего жилья.</p>
+            </div>
+            <div class="col-7"> 
+              <div class="slider js-slide">
+                <div class="slider__controls">
+                  <div class="slider__controls-text"> <span class="js-slide-link slider__controls-item slider__controls-item--active">До 50% больше дохода</span><span class="js-slide-link slider__controls-item">Нет простоя квартиры</span><span class="js-slide-link slider__controls-item">Гарантированные выплаты</span><span class="js-slide-link slider__controls-item">Сохранность жилья</span><span class="js-slide-link slider__controls-item">Экономия вашего времени</span><span class="js-slide-link slider__controls-item">Мы не стоим на месте</span></div>
+                  <div class="slider__controls-icon">
+                    <div class="js-slide-prev slider__controls-arrow slider__controls-arrow_left"><svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+</svg>
+                    </div>
+                    <div class="js-slide-next slider__controls-arrow slider__controls-arrow_right"><svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+</svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__content">
+                  <div class="js-slide-item slider__item slider__item--active">
+                    <div class="slider__photo"><img class="slider__img" data-src="../img/slide/img.png" alt=""/></div>
+                    <div class="slider__text">Краткосрочная аренда выгоднее, чем долгосрочная, а наш многолетний опыт работы в сфере управления недвижимостью, знание рынка, маркетинг и ежедневная оптимизация цен позволяют максимизировать Ваш доход!</div>
+                  </div>
+                  <div class="js-slide-item slider__item">
+                    <div class="slider__photo"><img class="slider__img" data-src="https://images.wallpaperscraft.ru/image/oblaka_tyazhelye_grozovye_molniya_nepogoda_doroga_asfalt_fonari_55492_1920x1200.jpg" alt=""/></div>
+                    <div class="slider__text">Ваша квартира начнёт приносить вам деньги уже в день обращения! Да, нам требуется всего несколько часов на запуск нового объекта. Вы можете смело строить планы на будущее и не переживать об упущенной выгоде из-за внезапно съехавших арендаторов.</div>
+                  </div>
+                  <div class="js-slide-item slider__item">
+                    <div class="slider__photo"><img class="slider__img" data-src="https://artsten.ru/kartinki/anglijskij-stil-v-interere-foto-primery-osobennosti15.jpg" alt=""/></div>
+                    <div class="slider__text">Проживание гостей возможно лишь при полной предварительной оплаты брони, которую взимают и гарантируют ведущие туристические площадки. В случае поздней или частичной отмены вы также получаете компенсацию в виде полной стоимости проживания.</div>
+                  </div>
+                  <div class="js-slide-item slider__item">
+                    <div class="slider__photo"><img class="slider__img" data-src="https://vashestroitelstvo.ru/wp-content/uploads/2020/09/19.jpg" alt=""/></div>
+                    <div class="slider__text">Туристы и бизнес-путешественники арендуют апартаменты в основном как место для ночлега и реже пользуются бытовой техникой, что влечет меньший износ квартиры, чем при долгосрочной аренде, и позволяет надолго сохранить её привлекательный вид.</div>
+                  </div>
+                  <div class="js-slide-item slider__item">
+                    <div class="slider__photo"><img class="slider__img" data-src="https://obzorstroy.ru/wp-content/uploads/2020/05/interer-v-stile-kantri-1-scaled.jpg" alt=""/></div>
+                    <div class="slider__text">Мы берем на себя все Ваши хлопоты: от поиска арендаторов, круглосуточной поддержки, уборки и гостиничного сервиса до мелкого ремонта и постоянного поддержания квартиры в надлежащем состоянии.</div>
+                  </div>
+                  <div class="js-slide-item slider__item">
+                    <div class="slider__photo"><img class="slider__img" data-src="https://mebel.ru/upload/iblock/e12/e12bdc057900c9be9325b475d8dea3b6.jpeg" alt=""/></div>
+                    <div class="slider__text">Мы постоянно развиваемся и улучшаем наш сервис, поэтому вы всегда будете получать максимальный доход от своей недвижимости и весь спектр качественно предоставляемых услуг, доступный на рынке аренды жилья.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__request mt-4 mb-4">
+          <p class="h3">Хотите получать максимальный доход с квартиры?</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas. Nec feugiat elementum at augue sit. Placerat odio amet cursus morbi.</p>
+          <form class="form mt-2" action="">
+            <div class="form__row form__row_send">
+              <input class="input" type="text" placeholder="Ваше имя"/>
+              <input class="input input_phone" type="text" placeholder="+7"/>
+              <button class="btn btn_action">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <div class="content__block">
+          <p class="h1">Какие услуги мы предоставляем?</p>
+          <div class="mt-2 element-service-grid content__scroll">
+            <div class="element element_numbered">
+              <div class="element_numbered__num">01</div>
+              <div class="element_numbered__content">
+                <p class="h6 element__heading">Контроль оплаты арендатора</p>
+                <p class="text-secondary">Согласуем ставку аренды и&nbsp;способ перечисления денег, кандидатуру арендатора</p>
+              </div>
+            </div>
+            <div class="element element_numbered">
+              <div class="element_numbered__num">02</div>
+              <div class="element_numbered__content">
+                <p class="h6 element__heading">Заключение договора найма</p>
+                <p class="text-secondary">Заключаем договор и&nbsp;получаем нотариальную доверенность на&nbsp;управление и&nbsp;заключение договора.</p>
+              </div>
+            </div>
+            <div class="element element_numbered">
+              <div class="element_numbered__num">03</div>
+              <div class="element_numbered__content">
+                <p class="h6 element__heading">Организуем ремонт и&nbsp;уборку</p>
+                <p class="text-secondary">Организуем ремонтные работы для&nbsp;улучшения качества квартиры при&nbsp;необходимости и&nbsp;нанимаем клининг.</p>
+              </div>
+            </div>
+            <div class="element element_numbered">
+              <div class="element_numbered__num">04</div>
+              <div class="element_numbered__content">
+                <p class="h6 element__heading">Обеспечиваем высокий спрос</p>
+                <p class="text-secondary">Размещаем информацию о&nbsp;квартире и&nbsp;заключаем договор аренды, заселяем арендатора.</p>
+              </div>
+            </div>
+            <div class="element element_numbered">
+              <div class="element_numbered__num">05</div>
+              <div class="element_numbered__content">
+                <p class="h6 element__heading">Контроль оплаты</p>
+                <p class="text-secondary">Следим за&nbsp;оплатой коммунальных счетов по&nbsp;квартире и&nbsp;перечислением арендной платы собственнику.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
-      <p>footer</p>
+      <div class="container">
+        <div class="footer__contact-info">
+          <div class="row">
+            <div class="col-8">
+              <div class="footer__menu"><a class="footer__logo logo" href="index.html"><img class="img-fluid" src="../img/global/logo.svg" alt="logo"/></a>
+                <nav class="nav nav_additional"><a class="nav__link_additional nav__link nav__link_active" href="#">Аренда</a><a class="nav__link_additional nav__link" href="#">Продажа</a><a class="nav__link_additional nav__link" href="#">Новостройки</a><a class="nav__link_additional nav__link" href="#">Коммерческая недвижимость</a><a class="nav__link_additional nav__link" href="#">Инвестиционные проекты</a>
+                </nav>
+              </div>
+              <div class="row mt-2 mb-1">
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">ТЕЛЕФОН</div><a class="text-bolder footer__contact-link" href="tel:78005334418">8 800 533 44 18</a>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">E-MAIL</div><a class="text-bolder footer__contact-link" href="mailto:info@dlk-investgroup.ru">info@dlk-investgroup.ru</a>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">АДРЕС </div><span class="text-bolder">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</span>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">ЧАСЫ РАБОТЫ</div>
+                  <ul class="text-bolder footer__contact-list">
+                    <li>пн-пт 08.00 - 17.00 </li>
+                    <li>сб 10.00 - 16.00</li>
+                    <li>воскресенье — выходной</li>
+                  </ul>
+                </div>
+              </div>
+              <nav class="nav"><a class="nav__link_additional nav__link nav__link_active" href="#">Продавать</a><a class="nav__link_additional nav__link" href="#">Передать клиента</a><a class="nav__link_additional nav__link" href="#">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="#">Контакты</a>
+              </nav>
+            </div>
+            <div class="col-4">
+              <div class="footer__form">
+                <p class="h3">Есть вопросы?</p>
+                <form class="form">
+                  <input class="input input_line" type="text" placeholder="Ваше имя" name=""/>
+                  <input class="input input_line" type="tel" placeholder="+7" name=""/>
+                  <textarea class="input input_line" placeholder="Say «hello»" name=""></textarea>
+                  <button class="btn btn_action footer__form-submit">Отправить запрос </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__technical-info">
+          <div class="row"> 
+            <div class="col-6"><span>© 2021 ДЛК ГРУПП</span></div>
+            <div class="col-6 text-right"><a class="footer__link" href="#">Сайт разработан websoho.ru</a></div>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="./js/app.min.js"></script>
   </body>

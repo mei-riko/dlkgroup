@@ -1,0 +1,17 @@
+.element{
+    display: flex;
+    align-items: flex-start;
+
+    &__icon{
+        flex: 0 0 54px;
+        max-width: 54px;
+    }
+    &__content{
+        flex-grow: 1;
+        padding-left: map-get($map: $spacers, $key: 1);
+    }
+    &__heading{
+        margin-top: 0;
+        margin-bottom: $spacer-gutter/2;
+    }
+}

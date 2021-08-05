@@ -1,18 +1,21 @@
-$white                : #ffffff;
-$black                : #000000;
-$action               : #ce002b;
+$white                : #FAFAFA;
+$black                : #2F3B41;
+$black-lighter        : #434B50;
+$black-darker         : #1E282D;
+$light                : #E4E5E5;
+$secondary            : #9EB6B6;
+$gold                 : #E2B359;
+$green                : #054B4B;
+$green-hover          : #146565;
 
-$light-grey           : #FCFBFA;
-$grey                 : #777777;
-$dark-grey            : #3a3a3a;
+$action               : $gold;
+$body-color           : $white;
+$body-bg              : $black;
 
-$body-color           : $black;
-$body-bg              : #2F3B41;
-
-$border-color         : #d7d7d8;
+$border-color         : $black-darker;
 $border-radius        : 6px;
 
-$link-color           : $black !default;
+$link-color           : $white !default;
 $link-hover-color     : $action !default;
 $link-decoration      : none !default;
 $link-hover-decoration: underline !default;
@@ -25,6 +28,7 @@ $grid-breakpoints: (
   xl: 1440px
 ) !default;
 
+$container-width: 1360px;
 $container-max-widths: (
   xs: 100%,
   sm: 0px,
@@ -35,7 +39,7 @@ $container-max-widths: (
 
 
 $font-weight          : 400;
-$font-weight-bolder   : 600;
+$font-weight-bolder   : 500;
 $font-weight-bold     : 700;
 
 $font-weight-heading: $font-weight-bold !default;
@@ -55,19 +59,19 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation M
 $font-size: (
   // small
   xs: 0px,
-  // btn
-  sm: 0px,
+  // input
+  sm: 12px,
   // main
-  md: 14px,
+  md: 13px,
   // lead
-  lg: 0px
+  lg: 16px
 ) !default;
 
 $letter-spacing       : 0.04em;
 
 $grid-columns         : 12 !default;
 $grid-gutter-width    : 30px !default;
-$spacer-gutter        : 15px !default;
+$spacer-gutter        : 10px !default;
 
 $spacer : 30px!default;
 $spacers: ()  !default;
@@ -84,13 +88,14 @@ $spacers: map-merge(
   $spacers
 );
 
-$headings-margin-bottom: $spacer / 2 !default;
-$headings-font-family  : null !default;
-$headings-font-weight  : 400 !default;
-$headings-line-height  : 1.2 !default;
-$headings-color        : null !default;
+$headings-margin-top    : $spacer !default;
+$headings-margin-bottom : $spacer / 2 !default;
+$headings-font-family   : null !default;
+$headings-font-weight   : 400 !default;
+$headings-line-height   : 1.2 !default;
+$headings-color         : null !default;
 
-$paragraph-margin-bottom: $spacer-gutter !default;
+$paragraph-margin-bottom: $spacer / 2 !default;
 
 $table-cell-padding   : 10px !default;
 $table-cell-padding-sm: 6px !default;
@@ -112,6 +117,3 @@ $positions: static, relative, absolute,     fixed, sticky !default;
 
 $print-page-size     : a3 !default;
 $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
-
-// Vars of User X - ЧЕРНОВИК
-$border:#1E282D;

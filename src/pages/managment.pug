@@ -1,24 +1,97 @@
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+extends ../blocks/main.pug
 
-        title Managment Page
+block variables
+    - var pageTitle = "Доверительное управление"
+    - var sliderItems = [{text:"Краткосрочная аренда выгоднее, чем долгосрочная, а наш многолетний опыт работы в сфере управления недвижимостью, знание рынка, маркетинг и ежедневная оптимизация цен позволяют максимизировать Ваш доход!",img:"../img/slide/img.png", active: true},{text:"Ваша квартира начнёт приносить вам деньги уже в день обращения! Да, нам требуется всего несколько часов на запуск нового объекта. Вы можете смело строить планы на будущее и не переживать об упущенной выгоде из-за внезапно съехавших арендаторов.",img:"https://images.wallpaperscraft.ru/image/oblaka_tyazhelye_grozovye_molniya_nepogoda_doroga_asfalt_fonari_55492_1920x1200.jpg"},{text:"Проживание гостей возможно лишь при полной предварительной оплаты брони, которую взимают и гарантируют ведущие туристические площадки. В случае поздней или частичной отмены вы также получаете компенсацию в виде полной стоимости проживания.",img:"https://artsten.ru/kartinki/anglijskij-stil-v-interere-foto-primery-osobennosti15.jpg"},{text:"Туристы и бизнес-путешественники арендуют апартаменты в основном как место для ночлега и реже пользуются бытовой техникой, что влечет меньший износ квартиры, чем при долгосрочной аренде, и позволяет надолго сохранить её привлекательный вид.",img:"https://vashestroitelstvo.ru/wp-content/uploads/2020/09/19.jpg"},{text:"Мы берем на себя все Ваши хлопоты: от поиска арендаторов, круглосуточной поддержки, уборки и гостиничного сервиса до мелкого ремонта и постоянного поддержания квартиры в надлежащем состоянии.",img:"https://obzorstroy.ru/wp-content/uploads/2020/05/interer-v-stile-kantri-1-scaled.jpg"},{text:"Мы постоянно развиваемся и улучшаем наш сервис, поэтому вы всегда будете получать максимальный доход от своей недвижимости и весь спектр качественно предоставляемых услуг, доступный на рынке аренды жилья.",img:"https://mebel.ru/upload/iblock/e12/e12bdc057900c9be9325b475d8dea3b6.jpeg"}]
 
-        link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet")
-        
-        link(href='./css/framework.css', rel='stylesheet')
-        link(href='./css/main.css', rel='stylesheet')
-
-    body
-        script(src="./js/jquery.min.js")
-        include ../blocks/header/header.pug
-        main 
-            section
-                p page content 
-            aside
-                p links
-        include ../blocks/footer/footer.pug
-        script(src="./js/app.min.js")
+mixin sliderRow(object)
+    if object.active 
+        .js-slide-item.slider__item.slider__item--active
+            .slider__photo
+                img.slider__img(data-src=object.img, alt="", )
+            .slider__text=object.text
+    else
+        .js-slide-item.slider__item
+            .slider__photo
+                img.slider__img(data-src=object.img, alt="", )
+            .slider__text=object.text
+block content
+    section.pt-4.pb-4.bg-image(style="background-image:url('../img/bg/managment.jpg');")
+        .container
+            .row.justify-content-center
+                .col-5.text-center
+                    p.text-uppercase.text-gold.text-bold Доверительное управление
+                    h1.mt-1.mb-2 Максимальный доход
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum quam elit purus tincidunt massa. Nulla turpis sed metus rhoncus, volutpat, vulputate lectus. Morbi neque ultricies sit pellentesque metus.
+    section.content.pt-4.pb-4
+        .container
+            .content__block
+                .row.justify-content-between 
+                    .col-4 
+                        h2.h3 Сотрудничество с агенством
+                        p.lead.text-bolder.text-secondary.mb-2 Неоспоримые преимущества работы с агенством недвижимости DLK Group
+                        p Сдавать квартиру вместе с DLK Group — лучшее решение, если вы цените свое время и хотите зарабатывать на своей недвижимости.
+                        p Сотрудничая с нами, вы получаете ряд неоспоримых преимуществ, которыми уже успели воспользоваться сотни наших клиентов. Оцените и вы наши возможности и раскройте потенциал своего жилья.
+                    .col-7 
+                        .slider.js-slide
+                            //- .slider-management
+                            .slider__controls
+                                //- .slider-links
+                                .slider__controls-text 
+                                    //- span.js-slide-link.slider-links-item До 50% больше дохода
+                                    span.js-slide-link.slider__controls-item.slider__controls-item--active До 50% больше дохода
+                                    span.js-slide-link.slider__controls-item Нет простоя квартиры
+                                    span.js-slide-link.slider__controls-item Гарантированные выплаты
+                                    span.js-slide-link.slider__controls-item Сохранность жилья
+                                    span.js-slide-link.slider__controls-item Экономия вашего времени
+                                    span.js-slide-link.slider__controls-item Мы не стоим на месте
+                                //- .slider-arrow
+                                .slider__controls-icon
+                                    .js-slide-prev.slider__controls-arrow.slider__controls-arrow_left
+                                        <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+                                        </svg>
+                                    .js-slide-next.slider__controls-arrow.slider__controls-arrow_right
+                                        <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+                                        </svg>
+                            //- slider-content
+                            .slider__content
+                                for object in sliderItems
+                                    +sliderRow(object)
+            .content__request.mt-4.mb-4
+                p.h3 Хотите получать максимальный доход с квартиры?
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas. Nec feugiat elementum at augue sit. Placerat odio amet cursus morbi.
+                form.form.mt-2(action="")
+                    .form__row.form__row_send
+                        input.input(type="text",placeholder="Ваше имя")
+                        input.input.input_phone(type="text",placeholder="+7")
+                        button.btn.btn_action Отправить
+            .content__block
+                p.h1 Какие услуги мы предоставляем?
+                .mt-2.element-service-grid.content__scroll
+                    .element.element_numbered
+                        .element_numbered__num 01
+                        .element_numbered__content
+                            p.h6.element__heading Контроль оплаты арендатора
+                            p.text-secondary Согласуем ставку аренды и&nbsp;способ перечисления денег, кандидатуру арендатора
+                    .element.element_numbered
+                        .element_numbered__num 02
+                        .element_numbered__content
+                            p.h6.element__heading Заключение договора найма
+                            p.text-secondary Заключаем договор и&nbsp;получаем нотариальную доверенность на&nbsp;управление и&nbsp;заключение договора.
+                    .element.element_numbered
+                        .element_numbered__num 03
+                        .element_numbered__content
+                            p.h6.element__heading Организуем ремонт и&nbsp;уборку
+                            p.text-secondary Организуем ремонтные работы для&nbsp;улучшения качества квартиры при&nbsp;необходимости и&nbsp;нанимаем клининг.
+                    .element.element_numbered
+                        .element_numbered__num 04
+                        .element_numbered__content
+                            p.h6.element__heading Обеспечиваем высокий спрос
+                            p.text-secondary Размещаем информацию о&nbsp;квартире и&nbsp;заключаем договор аренды, заселяем арендатора.
+                    .element.element_numbered
+                        .element_numbered__num 05
+                        .element_numbered__content
+                            p.h6.element__heading Контроль оплаты
+                            p.text-secondary Следим за&nbsp;оплатой коммунальных счетов по&nbsp;квартире и&nbsp;перечислением арендной платы собственнику.
