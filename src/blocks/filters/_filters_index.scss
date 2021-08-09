@@ -1,0 +1,4 @@
+.filters_index{
+    grid-gap: 0;
+    grid-template-columns: repeat(3, minmax(200px,auto)) 1fr;
+}

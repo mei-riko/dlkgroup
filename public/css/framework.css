@@ -1945,6 +1945,7 @@ a:focus {
   text-transform: uppercase;
   font-weight: 500;
   color: #E2B359;
+  white-space: nowrap;
   -webkit-transition: .4s;
   -o-transition: .4s;
   transition: .4s;

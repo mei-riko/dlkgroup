@@ -1,0 +1,33 @@
+.news-preview{
+    display: grid;
+    grid-template-columns: 1fr 124px;
+    grid-gap: $spacer-gutter;
+    grid-template-areas: 
+        "heading image"
+        "intro image";
+    &__date{
+        color: $secondary;
+        grid-area: date;
+    }
+    &__heading{
+        font-weight: $font-weight-bold;
+        line-height: $line-height-heading;
+        grid-area: heading;
+
+        padding-right: $spacer-gutter;
+    }
+    &__intro{
+        line-height: $line-height-heading;
+        color: $secondary;
+        grid-area: intro;
+    
+        padding-right: $spacer-gutter;
+    }
+    &__img{
+        width: 100%;
+        height: 90px;
+
+        background: no-repeat center / cover;
+        grid-area: image;
+    }
+}

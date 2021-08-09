@@ -1,0 +1,33 @@
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__heading{
+        font-size: map-get($map: $font-size, $key: lg);
+        margin-right: $spacer;
+    }
+    &__item{
+        padding: 0 20px;
+        line-height: 28px;
+        border-radius: 2px;
+        background-color: $green;
+        white-space: nowrap;
+        margin-right: $spacer/2;
+
+        opacity: .5;
+        cursor: pointer;
+        transition: .4s;
+
+        &:hover, &:focus{
+            opacity: 1;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &--active{
+            opacity: 1;
+        }
+    }
+}

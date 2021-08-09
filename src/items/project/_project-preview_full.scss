@@ -1,0 +1,20 @@
+.project-preview_full{
+    &__heading{
+        font-size: 32px;
+        margin-bottom: $spacer;
+    }
+    &__content{
+        padding-left: $spacer;
+    }
+    &__intro{
+        color: $secondary;
+        margin-bottom: map-get($map: $spacers, $key: 2);
+    }
+    &__chars{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 1);
+        color: $secondary;
+
+        grid-template-columns: repeat(3, minmax(auto, 120px));
+    }
+}

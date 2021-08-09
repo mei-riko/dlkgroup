@@ -1,0 +1,52 @@
+.filters{
+    display: grid;
+
+    &__item{
+        position: relative;
+        padding: map-get($map: $spacers, $key: 1) map-get($map: $spacers, $key: 2);
+        background-color: $white;
+        border: 1px solid $light;
+        border-radius: 2px;
+
+        &:after{
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url('../img/icon/chevron.svg') no-repeat center / contain;
+
+            position: absolute;
+            right: $spacer-gutter;
+            top: calc(50% - 12px);
+        }
+    }
+    &__heading{
+        padding-right: $spacer-gutter;
+        color: $secondary;
+        font-size: map-get($map: $font-size, $key: md);
+        line-height: map-get($map: $font-size, $key: lg);
+
+        &--has-value{
+            color: $black;
+        }
+    }
+    &__options{
+        display: none;
+        color: $black;
+
+        position: absolute;
+        top: 60px;
+        left: 0;
+        min-width: 100%;
+
+        z-index: 11;
+
+        &--active{
+            display: block;
+            background: $white;
+            border-radius: 2px;
+            padding: $spacer/2;
+
+        }
+    }
+}

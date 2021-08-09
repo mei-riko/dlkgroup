@@ -6,11 +6,14 @@ block variables
     - var pageTitle = "Главная страницы"
     - var advantages = [{"title":"100% соответствие","content":"Предлагаем объекты, которые соответствуют запросам"},{"title":"Плюсы и минусы","content":"Раскрываем полную информацию о наших объектах"},{"title":"Полное сопровождение","content":"Полное сопровождение на всех этапах сделки"},{"title":"30 лет опыт","content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus."},{"title":"Европейское качество","content":"Предоставляем высококачественный сервис"},{"title":"Под инвестирование","content":"Предлагаем варианты в которые инвестируем сами"}]
     - var popularProjects1 = [{"id":"1","title":"Студия в историческом центре","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"2","title":"Квартира с видом на море","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"3","title":"Апартаменты под ключ","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":false},{"id":"4","title":"Квартира с видом на парк","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"5","title":"Студия в новом ЖК","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":false},{"id":"6","title":"Апартаменты для инвестиции","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"7","title":"Студия с видом на набережную","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true}];
+    - var popularProjects2 = [{"id":"1","title":"Студия в историческом центре","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"2","title":"Квартира с видом на море","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true}];
+    - var popularProjects3 = [{"id":"1","title":"Студия в историческом центре","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"2","title":"Квартира с видом на море","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"3","title":"Апартаменты под ключ","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":false}];
+    - var eliteProjects1   = [{"id":"1","title":"Апартаменты ЖК «Голландия»","address":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum etiam molestie iaculis elementum est. Suspendisse porta eleifend vel adipiscing ut euismod. Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","bath":"2 санузла","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"2","title":"Апартаменты ЖК «Вечная весна»","address":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum etiam molestie iaculis elementum est. Suspendisse porta eleifend vel adipiscing ut euismod. Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"2 комн.","bath":"1 санузел","plan":"130m2","floor":"2 этаж","balcony":true}];
 
 mixin projectSlide(object)
     .swiper-slide 
-        .project-preview
-            img.project-preview__img(src=object.id)
+        a.project-preview.project-preview_link(href="apart.html")
+            img.project-preview__img(src="../img/demo/test-img-2.jpg")
             .project-preview__heading=object.title
             .project-preview__intro=object.address
             .project-preview__chars
@@ -36,8 +39,111 @@ mixin projectSlide(object)
                         .element__icon
                             img.img-fluid(src="../img/icon/icon-balcony.svg")
                         .element__content нет балкона
+mixin projectFullSlide(object)
+    .swiper-slide 
+        .project-preview.project-preview_full
+            .row
+                .col-7
+                    a(href="apart.html")
+                        img.project-preview__img(src="../img/demo/project-full.jpg")
+                .col-5
+                    .project-preview_full__content
+                        .project-preview__heading.project-preview_full__heading=object.title
+                        .project-preview_full__intro=object.address
+                        .project-preview_full__chars.mb-4
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-room.svg")
+                                .element__content=object.room
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-plan.svg")
+                                .element__content=object.plan
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-bathroom.svg")
+                                .element__content=object.bath
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-floor.svg")
+                                .element__content=object.floor
+                            if object.balcony
+                                .element.align-items-center
+                                    .element__icon
+                                        img.img-fluid(src="../img/icon/icon-balcony.svg")
+                                    .element__content есть балкон
+                            else 
+                                .element.element_disabled.align-items-center
+                                    .element__icon
+                                        img.img-fluid(src="../img/icon/icon-balcony.svg")
+                                    .element__content нет балкона
+                        a.btn.btn_action(href="apart.html") Узнать больше
+mixin checkbox(id, title, checked)
+    .checkbox(class!=attributes.class)
+        input.checkbox__input(type="checkbox" id=id checked=checked class!=attributes.field)
+        label.checkbox__label(for=id)!= title
+mixin checkboxFilter(id, title, checked)
+    .checkbox.checkbox_filter(class!=attributes.class)
+        input.checkbox__input.checkbox_filter__input(type="checkbox" id=id checked=checked class!=attributes.field)
+        label.checkbox_filter__label(for=id)!= title
 
 block content
+    section.content.content_filters-tab
+        .content_filters-tab__content
+            .container 
+                .row.justify-content-center
+                    .col-10
+                        p.h1.content_filters-tab__heading Подберите для себя идеальную недвижимость
+                        .tabs-container
+                            .tabs
+                                .tabs__item.tabs__item--active(data-content="#tabBuy") Покупка
+                                .tabs__item(data-content="#tabRent") Аренда
+                            .tabs-content.tabs-content--active#tabBuy
+                                .filters.filters_index 
+                                    .filters__item.filters__item_type 
+                                        .filters__heading.filters__heading--has-value Квартира в новостройке
+                                        .filters__options
+                                            +checkbox('type1','Квартира в новостройке')
+                                            +checkbox('type2','Квартира во вторичке')
+                                            +checkbox('type3','Дом')(class="checkbox--disabled")
+                                            +checkbox('type4','Таунхаус')
+                                    .filters__item.filters__item_room
+                                        .filters__heading.filters__heading--has-value Студия, 1 комн.
+                                        .filters__options 
+                                            +checkbox('room1','Студия')
+                                            +checkbox('room2','1 комната')
+                                            +checkbox('room3','2 комнаты')
+                                            +checkbox('room4','3 комнаты')
+                                            +checkbox('room5','4 комнаты')
+                                            +checkbox('room6','5 комнат')
+                                            +checkbox('room7','6 комнат')
+                                            +checkbox('room8','Свободная планировка')
+                                    .filters__item.filters__item_price
+                                        .filters__heading Цена
+                                        .filters__options 
+                                            span от 
+                                            span до 
+                                    .filters__item.filters__item_location
+                                        .filters__heading Город и регион
+                                        .filters__options 
+                                            +checkboxFilter('city1','Адлер')
+                                            +checkboxFilter('city2','Бытха',true)
+                                            +checkboxFilter('city3','Вардане')(class="checkbox--disabled")
+                                            +checkboxFilter('city4','Сочи')
+                                            +checkboxFilter('city5','Лазаревское')
+                                            +checkboxFilter('city6','Новый Сочи')
+                                            +checkboxFilter('city7','Туапсе')
+                                .text-right.mt-1
+                                    a.btn.btn_action(href="#" data-filter="index") Найти
+                            .tabs-content#tabRent
+                                span Test
+        .content_filters-tab__slider
+            //- Swiper Slider
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide.content_filters-tab__slide(style="background-image:url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80');")
+                    .swiper-slide.content_filters-tab__slide(style="background-image:url('https://images.unsplash.com/photo-1507149833265-60c372daea22?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80');")
+                    .swiper-slide.content_filters-tab__slide(style="background-image:url('https://images.unsplash.com/photo-1499955085172-a104c9463ece?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');")
     section.pt-5.pb-5
         .container 
             .row.justify-content-between
@@ -69,24 +175,84 @@ block content
                                 p.text-secondary=advantage.content
     section.pt-4.pb-4.bg-darker
         .container 
-            .row 
+            .row.mb-2
                 .col-9 
                     p.h3 Популярные объявления
                 .col-3.text-right
                     a.link-inverse.text-underline(href="#") Как сюда попасть?
             .tabs-container
-                .tabs 
+                .tabs
                     .tabs__heading Продажа:
                     .tabs__item.tabs__item--active(data-content="#tab1") Жилая
                     .tabs__item(data-content="#tab2") Загородная
                     .tabs__item(data-content="#tab3") Коммерческая
-                .tabs-content.tabs-content_has-slider.tabs-content--show.tabs-content--active#tab1
+                .tabs-content.tabs-content--active#tab1
                     //- Swiper Slider
-                    .swiper-container.swiper-container_project
-                        .swiper-button.swiper-button__next
-                        .swiper-button.swiper-button__prev
+                    .swiper-container.swiper-container_projects
+                        .swiper-button.swiper-button_prev
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+                            </svg>
+                        .swiper-button.swiper-button_next
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+                            </svg>
                         .swiper-wrapper
                             for object in popularProjects1
                                 +projectSlide(object)
-                .tabs-content.tabs-content_has-slider#tab2
-                .tabs-content.tabs-content_has-slider#tab3
+                .tabs-content#tab2
+                    //- Swiper Slider
+                    .swiper-container.swiper-container_projects
+                        .swiper-button.swiper-button_prev
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+                            </svg>
+                        .swiper-button.swiper-button_next
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+                            </svg>
+                        .swiper-wrapper
+                            for object in popularProjects2
+                                +projectSlide(object)
+                .tabs-content#tab3
+                    //- Swiper Slider
+                    .swiper-container.swiper-container_projects
+                        .swiper-button.swiper-button_prev
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+                            </svg>
+                        .swiper-button.swiper-button_next
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+                            </svg>
+                        .swiper-wrapper
+                            for object in popularProjects3
+                                +projectSlide(object)
+    section.pt-4.pb-4
+        .container 
+            .row.mb-2
+                .col-9 
+                    p.h3 Элитные объекты
+                .col-3.text-right
+                    a.link-inverse.text-underline(href="#") Как сюда попасть?
+            .tabs-container
+                .tabs
+                    .tabs__heading Продажа:
+                    .tabs__item.tabs__item--active(data-content="#tab11") Жилая
+                    .tabs__item(data-content="#tab22") Загородная
+                .tabs-content.tabs-content--active#tab11
+                    //- Swiper Slider
+                    .swiper-container.swiper-container_elites
+                        .swiper-button.swiper-button_prev
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+                            </svg>
+                        .swiper-button.swiper-button_next
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+                            </svg>
+                        .swiper-wrapper
+                            for object in eliteProjects1
+                                +projectFullSlide(object)
+    include ../blocks/news/news.pug
+    include ../blocks/tags/tags.pug

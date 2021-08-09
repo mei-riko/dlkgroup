@@ -44,6 +44,133 @@
         </div>
       </div>
     </header>
+    <section class="content content_filters-tab">
+      <div class="content_filters-tab__content">
+        <div class="container"> 
+          <div class="row justify-content-center">
+            <div class="col-10">
+              <p class="h1 content_filters-tab__heading">Подберите для себя идеальную недвижимость</p>
+              <div class="tabs-container">
+                <div class="tabs">
+                  <div class="tabs__item tabs__item--active" data-content="#tabBuy">Покупка</div>
+                  <div class="tabs__item" data-content="#tabRent">Аренда</div>
+                </div>
+                <div class="tabs-content tabs-content--active" id="tabBuy">
+                  <div class="filters filters_index"> 
+                    <div class="filters__item filters__item_type"> 
+                      <div class="filters__heading filters__heading--has-value">Квартира в новостройке</div>
+                      <div class="filters__options">
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="type1"/>
+                          <label class="checkbox__label" for="type1">Квартира в новостройке</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="type2"/>
+                          <label class="checkbox__label" for="type2">Квартира во вторичке</label>
+                        </div>
+                        <div class="checkbox checkbox--disabled">
+                          <input class="checkbox__input" type="checkbox" id="type3"/>
+                          <label class="checkbox__label" for="type3">Дом</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="type4"/>
+                          <label class="checkbox__label" for="type4">Таунхаус</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filters__item filters__item_room">
+                      <div class="filters__heading filters__heading--has-value">Студия, 1 комн.</div>
+                      <div class="filters__options"> 
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="room1"/>
+                          <label class="checkbox__label" for="room1">Студия</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="room2"/>
+                          <label class="checkbox__label" for="room2">1 комната</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="room3"/>
+                          <label class="checkbox__label" for="room3">2 комнаты</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="room4"/>
+                          <label class="checkbox__label" for="room4">3 комнаты</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="room5"/>
+                          <label class="checkbox__label" for="room5">4 комнаты</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="room6"/>
+                          <label class="checkbox__label" for="room6">5 комнат</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="room7"/>
+                          <label class="checkbox__label" for="room7">6 комнат</label>
+                        </div>
+                        <div class="checkbox">
+                          <input class="checkbox__input" type="checkbox" id="room8"/>
+                          <label class="checkbox__label" for="room8">Свободная планировка</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filters__item filters__item_price">
+                      <div class="filters__heading">Цена</div>
+                      <div class="filters__options"> <span>от </span><span>до </span></div>
+                    </div>
+                    <div class="filters__item filters__item_location">
+                      <div class="filters__heading">Город и регион</div>
+                      <div class="filters__options"> 
+                        <div class="checkbox checkbox_filter">
+                          <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city1"/>
+                          <label class="checkbox_filter__label" for="city1">Адлер</label>
+                        </div>
+                        <div class="checkbox checkbox_filter">
+                          <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city2" checked="checked"/>
+                          <label class="checkbox_filter__label" for="city2">Бытха</label>
+                        </div>
+                        <div class="checkbox checkbox_filter checkbox--disabled">
+                          <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city3"/>
+                          <label class="checkbox_filter__label" for="city3">Вардане</label>
+                        </div>
+                        <div class="checkbox checkbox_filter">
+                          <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city4"/>
+                          <label class="checkbox_filter__label" for="city4">Сочи</label>
+                        </div>
+                        <div class="checkbox checkbox_filter">
+                          <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city5"/>
+                          <label class="checkbox_filter__label" for="city5">Лазаревское</label>
+                        </div>
+                        <div class="checkbox checkbox_filter">
+                          <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city6"/>
+                          <label class="checkbox_filter__label" for="city6">Новый Сочи</label>
+                        </div>
+                        <div class="checkbox checkbox_filter">
+                          <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city7"/>
+                          <label class="checkbox_filter__label" for="city7">Туапсе</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-right mt-1"><a class="btn btn_action" href="#" data-filter="index">Найти</a></div>
+                </div>
+                <div class="tabs-content" id="tabRent"><span>Test</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content_filters-tab__slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide content_filters-tab__slide" style="background-image:url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1053&amp;q=80');"></div>
+            <div class="swiper-slide content_filters-tab__slide" style="background-image:url('https://images.unsplash.com/photo-1507149833265-60c372daea22?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1055&amp;q=80');"></div>
+            <div class="swiper-slide content_filters-tab__slide" style="background-image:url('https://images.unsplash.com/photo-1499955085172-a104c9463ece?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80');"></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="pt-5 pb-5">
       <div class="container"> 
         <div class="row justify-content-between">
@@ -103,26 +230,31 @@
     </section>
     <section class="pt-4 pb-4 bg-darker">
       <div class="container"> 
-        <div class="row"> 
+        <div class="row mb-2">
           <div class="col-9"> 
             <p class="h3">Популярные объявления</p>
           </div>
           <div class="col-3 text-right"><a class="link-inverse text-underline" href="#">Как сюда попасть?</a></div>
         </div>
         <div class="tabs-container">
-          <div class="tabs"> 
+          <div class="tabs">
             <div class="tabs__heading">Продажа:</div>
             <div class="tabs__item tabs__item--active" data-content="#tab1">Жилая</div>
             <div class="tabs__item" data-content="#tab2">Загородная</div>
             <div class="tabs__item" data-content="#tab3">Коммерческая</div>
           </div>
-          <div class="tabs-content tabs-content_has-slider tabs-content--show tabs-content--active" id="tab1">
-            <div class="swiper-container swiper-container_project">
-              <div class="swiper-button swiper-button__next"></div>
-              <div class="swiper-button swiper-button__prev"></div>
+          <div class="tabs-content tabs-content--active" id="tab1">
+            <div class="swiper-container swiper-container_projects">
+              <div class="swiper-button swiper-button_prev"><svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+</svg>
+              </div>
+              <div class="swiper-button swiper-button_next"><svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+</svg>
+              </div>
               <div class="swiper-wrapper">
-                <div class="swiper-slide"> 
-                  <div class="project-preview"><img class="project-preview__img" src="1"/>
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
                     <div class="project-preview__heading">Студия в историческом центре</div>
                     <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
                     <div class="project-preview__chars">
@@ -142,11 +274,8 @@
                         <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
                         <div class="element__content">есть балкон</div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="project-preview"><img class="project-preview__img" src="2"/>
+                    </div></a></div>
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
                     <div class="project-preview__heading">Квартира с видом на море</div>
                     <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
                     <div class="project-preview__chars">
@@ -166,11 +295,8 @@
                         <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
                         <div class="element__content">есть балкон</div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="project-preview"><img class="project-preview__img" src="3"/>
+                    </div></a></div>
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
                     <div class="project-preview__heading">Апартаменты под ключ</div>
                     <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
                     <div class="project-preview__chars">
@@ -190,11 +316,8 @@
                         <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
                         <div class="element__content">нет балкона</div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="project-preview"><img class="project-preview__img" src="4"/>
+                    </div></a></div>
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
                     <div class="project-preview__heading">Квартира с видом на парк</div>
                     <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
                     <div class="project-preview__chars">
@@ -214,11 +337,8 @@
                         <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
                         <div class="element__content">есть балкон</div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="project-preview"><img class="project-preview__img" src="5"/>
+                    </div></a></div>
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
                     <div class="project-preview__heading">Студия в новом ЖК</div>
                     <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
                     <div class="project-preview__chars">
@@ -238,11 +358,8 @@
                         <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
                         <div class="element__content">нет балкона</div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="project-preview"><img class="project-preview__img" src="6"/>
+                    </div></a></div>
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
                     <div class="project-preview__heading">Апартаменты для инвестиции</div>
                     <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
                     <div class="project-preview__chars">
@@ -262,11 +379,8 @@
                         <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
                         <div class="element__content">есть балкон</div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide"> 
-                  <div class="project-preview"><img class="project-preview__img" src="7"/>
+                    </div></a></div>
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
                     <div class="project-preview__heading">Студия с видом на набережную</div>
                     <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
                     <div class="project-preview__chars">
@@ -286,15 +400,312 @@
                         <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
                         <div class="element__content">есть балкон</div>
                       </div>
+                    </div></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs-content" id="tab2">
+            <div class="swiper-container swiper-container_projects">
+              <div class="swiper-button swiper-button_prev"><svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+</svg>
+              </div>
+              <div class="swiper-button swiper-button_next"><svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+</svg>
+              </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
+                    <div class="project-preview__heading">Студия в историческом центре</div>
+                    <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
+                    <div class="project-preview__chars">
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                        <div class="element__content">1 комн.</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-plan.svg"/></div>
+                        <div class="element__content">40m2</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-floor.svg"/></div>
+                        <div class="element__content">4 этаж</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
+                        <div class="element__content">есть балкон</div>
+                      </div>
+                    </div></a></div>
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
+                    <div class="project-preview__heading">Квартира с видом на море</div>
+                    <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
+                    <div class="project-preview__chars">
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                        <div class="element__content">1 комн.</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-plan.svg"/></div>
+                        <div class="element__content">40m2</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-floor.svg"/></div>
+                        <div class="element__content">4 этаж</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
+                        <div class="element__content">есть балкон</div>
+                      </div>
+                    </div></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs-content" id="tab3">
+            <div class="swiper-container swiper-container_projects">
+              <div class="swiper-button swiper-button_prev"><svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+</svg>
+              </div>
+              <div class="swiper-button swiper-button_next"><svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+</svg>
+              </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
+                    <div class="project-preview__heading">Студия в историческом центре</div>
+                    <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
+                    <div class="project-preview__chars">
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                        <div class="element__content">1 комн.</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-plan.svg"/></div>
+                        <div class="element__content">40m2</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-floor.svg"/></div>
+                        <div class="element__content">4 этаж</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
+                        <div class="element__content">есть балкон</div>
+                      </div>
+                    </div></a></div>
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
+                    <div class="project-preview__heading">Квартира с видом на море</div>
+                    <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
+                    <div class="project-preview__chars">
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                        <div class="element__content">1 комн.</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-plan.svg"/></div>
+                        <div class="element__content">40m2</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-floor.svg"/></div>
+                        <div class="element__content">4 этаж</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
+                        <div class="element__content">есть балкон</div>
+                      </div>
+                    </div></a></div>
+                <div class="swiper-slide"> <a class="project-preview project-preview_link" href="apart.html"><img class="project-preview__img" src="../img/demo/test-img-2.jpg"/>
+                    <div class="project-preview__heading">Апартаменты под ключ</div>
+                    <div class="project-preview__intro">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
+                    <div class="project-preview__chars">
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                        <div class="element__content">1 комн.</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-plan.svg"/></div>
+                        <div class="element__content">40m2</div>
+                      </div>
+                      <div class="element align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-floor.svg"/></div>
+                        <div class="element__content">4 этаж</div>
+                      </div>
+                      <div class="element element_disabled align-items-center">
+                        <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
+                        <div class="element__content">нет балкона</div>
+                      </div>
+                    </div></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-4 pb-4">
+      <div class="container"> 
+        <div class="row mb-2">
+          <div class="col-9"> 
+            <p class="h3">Элитные объекты</p>
+          </div>
+          <div class="col-3 text-right"><a class="link-inverse text-underline" href="#">Как сюда попасть?</a></div>
+        </div>
+        <div class="tabs-container">
+          <div class="tabs">
+            <div class="tabs__heading">Продажа:</div>
+            <div class="tabs__item tabs__item--active" data-content="#tab11">Жилая</div>
+            <div class="tabs__item" data-content="#tab22">Загородная</div>
+          </div>
+          <div class="tabs-content tabs-content--active" id="tab11">
+            <div class="swiper-container swiper-container_elites">
+              <div class="swiper-button swiper-button_prev"><svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+</svg>
+              </div>
+              <div class="swiper-button swiper-button_next"><svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+</svg>
+              </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"> 
+                  <div class="project-preview project-preview_full">
+                    <div class="row">
+                      <div class="col-7"><a href="apart.html"><img class="project-preview__img" src="../img/demo/project-full.jpg"/></a></div>
+                      <div class="col-5">
+                        <div class="project-preview_full__content">
+                          <div class="project-preview__heading project-preview_full__heading">Апартаменты ЖК «Голландия»</div>
+                          <div class="project-preview_full__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum etiam molestie iaculis elementum est. Suspendisse porta eleifend vel adipiscing ut euismod. Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
+                          <div class="project-preview_full__chars mb-4">
+                            <div class="element align-items-center">
+                              <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                              <div class="element__content">1 комн.</div>
+                            </div>
+                            <div class="element align-items-center">
+                              <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-plan.svg"/></div>
+                              <div class="element__content">40m2</div>
+                            </div>
+                            <div class="element align-items-center">
+                              <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-bathroom.svg"/></div>
+                              <div class="element__content">2 санузла</div>
+                            </div>
+                            <div class="element align-items-center">
+                              <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-floor.svg"/></div>
+                              <div class="element__content">4 этаж</div>
+                            </div>
+                            <div class="element align-items-center">
+                              <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
+                              <div class="element__content">есть балкон</div>
+                            </div>
+                          </div><a class="btn btn_action" href="apart.html">Узнать больше</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide"> 
+                  <div class="project-preview project-preview_full">
+                    <div class="row">
+                      <div class="col-7"><a href="apart.html"><img class="project-preview__img" src="../img/demo/project-full.jpg"/></a></div>
+                      <div class="col-5">
+                        <div class="project-preview_full__content">
+                          <div class="project-preview__heading project-preview_full__heading">Апартаменты ЖК «Вечная весна»</div>
+                          <div class="project-preview_full__intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum etiam molestie iaculis elementum est. Suspendisse porta eleifend vel adipiscing ut euismod. Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
+                          <div class="project-preview_full__chars mb-4">
+                            <div class="element align-items-center">
+                              <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                              <div class="element__content">2 комн.</div>
+                            </div>
+                            <div class="element align-items-center">
+                              <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-plan.svg"/></div>
+                              <div class="element__content">130m2</div>
+                            </div>
+                            <div class="element align-items-center">
+                              <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-bathroom.svg"/></div>
+                              <div class="element__content">1 санузел</div>
+                            </div>
+                            <div class="element align-items-center">
+                              <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-floor.svg"/></div>
+                              <div class="element__content">2 этаж</div>
+                            </div>
+                            <div class="element align-items-center">
+                              <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
+                              <div class="element__content">есть балкон</div>
+                            </div>
+                          </div><a class="btn btn_action" href="apart.html">Узнать больше</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="tabs-content tabs-content_has-slider" id="tab2"></div>
-          <div class="tabs-content tabs-content_has-slider" id="tab3"></div>
         </div>
+      </div>
+    </section>
+    <section class="pb-4">
+      <div class="container">
+        <p class="h3 mb-2">Новости и статьи</p>
+        <div class="row">
+          <div class="col-4"><a class="news-preview news-preview_highlight" href="text.html" style="background-image: url('../img/demo/project-full.jpg');">
+              <div class="news-preview_highlight__heading">Кто, как и&nbsp;кому проиграл от&nbsp;льготной ипотеки?</div></a></div>
+          <div class="col-4">
+            <div class="news-preview mb-2"><a class="news-preview__heading" href="text.html">Кто переезжал в&nbsp;Москву до&nbsp;коронакризиса и&nbsp;после?</a>
+              <div class="news-preview__intro">Жители Чукотки и&nbsp;Алтая покупать жилье в&nbsp;столице и&nbsp;переезжать не&nbsp;планируют, а&nbsp;вот&nbsp;ниж…</div>
+              <div class="news-preview__img" style="background-image: url('../img/demo/project-1.jpg');"></div>
+            </div>
+            <div class="news-preview mb-2"><a class="news-preview__heading" href="text.html">В&nbsp;России могут ввести эталонные тарифы на&nbsp;теплоснабжение</a>
+              <div class="news-preview__intro">Жители Чукотки и&nbsp;Алтая покупать жилье в&nbsp;столице и&nbsp;переезжать не&nbsp;планируют, а&nbsp;вот&nbsp;ниж…</div>
+              <div class="news-preview__img" style="background-image: url('../img/demo/project-2.jpg');"></div>
+            </div>
+            <div class="news-preview mb-2"><a class="news-preview__heading" href="text.html">В&nbsp;Петербурге построят небоскреб. Второй по&nbsp;высоте в&nbsp;мире</a>
+              <div class="news-preview__intro">Жители Чукотки и&nbsp;Алтая покупать жилье в&nbsp;столице и&nbsp;переезжать не&nbsp;планируют, а&nbsp;вот&nbsp;ниж…</div>
+              <div class="news-preview__img" style="background-image: url('../img/demo/project-3.jpg');"></div>
+            </div><a class="link-arrow" href="#">
+               <svg class="link-arrow__icon" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.61405 7.96572e-06L5.52642 4.49998L0.61405 9L0 8.43743L4.29834 4.49998L0 0.5625L0.61405 7.96572e-06ZM4.08758 0L9 4.49998L4.08758 9L3.47358 8.43743L7.77192 4.49998L3.47358 0.5625L4.08758 0Z" />
+</svg><span class="link-arrow__body">Все публикации</span></a>
+          </div>
+          <div class="col-4">
+            <div class="news-preview news-preview_list mb-2">
+              <div class="news-preview__date">26 мая</div><a class="news-preview__heading" href="text.html">Кто переезжал в&nbsp;Москву до&nbsp;коронакризиса и&nbsp;после?</a>
+            </div>
+            <div class="news-preview news-preview_list mb-2">
+              <div class="news-preview__date">12 апреля</div><a class="news-preview__heading" href="text.html">В&nbsp;России могут ввести эталонные тарифы на&nbsp;теплоснабжение</a>
+            </div>
+            <div class="news-preview news-preview_list mb-2">
+              <div class="news-preview__date">11 апреля</div><a class="news-preview__heading" href="text.html">В&nbsp;Петербурге построят небоскреб. Второй по&nbsp;высоте в&nbsp;мире</a>
+            </div>
+            <div class="news-preview news-preview_list mb-2">
+              <div class="news-preview__date">2 апреля</div><a class="news-preview__heading" href="text.html">Кто переезжал в&nbsp;Москву до&nbsp;коронакризиса и&nbsp;после?</a>
+            </div>
+            <div class="news-preview news-preview_list mb-2">
+              <div class="news-preview__date">16 марта</div><a class="news-preview__heading" href="text.html">В&nbsp;России могут ввести эталонные тарифы на&nbsp;теплоснабжение</a>
+            </div>
+            <div class="news-preview news-preview_list mb-2">
+              <div class="news-preview__date">18 марта</div><a class="news-preview__heading" href="text.html">В&nbsp;Петербурге построят небоскреб. Второй по&nbsp;высоте в&nbsp;мире</a>
+            </div><a class="link-arrow" href="#">
+               <svg class="link-arrow__icon" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.61405 7.96572e-06L5.52642 4.49998L0.61405 9L0 8.43743L4.29834 4.49998L0 0.5625L0.61405 7.96572e-06ZM4.08758 0L9 4.49998L4.08758 9L3.47358 8.43743L7.77192 4.49998L3.47358 0.5625L4.08758 0Z" />
+</svg><span class="link-arrow__body">Все новости</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-2 pb-2 bg-darker">
+      <div class="container">
+        <div class="tags-heading mb-1">
+          <p class="text-uppercase h5 text-secondary mb-0">Квартиры по районам</p><a class="link-arrow tags-heading__link" href="#">
+             <svg class="link-arrow__icon" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.61405 7.96572e-06L5.52642 4.49998L0.61405 9L0 8.43743L4.29834 4.49998L0 0.5625L0.61405 7.96572e-06ZM4.08758 0L9 4.49998L4.08758 9L3.47358 8.43743L7.77192 4.49998L3.47358 0.5625L4.08758 0Z" />
+</svg><span class="link-arrow__body">Все районы</span></a>
+        </div>
+        <div class="tags mb-3"><a class="tags__item" href="#">Адлер</a><a class="tags__item" href="#">Бытха</a><a class="tags__item" href="#">Вардане</a><a class="tags__item" href="#">Сочи</a><a class="tags__item" href="#">Лазаревское</a><a class="tags__item" href="#">Новый Сочи</a><a class="tags__item" href="#">Туапсе</a><a class="tags__item" href="#">Кропка</a><a class="tags__item" href="#">Азовское</a><a class="tags__item" href="#">Великовское</a><a class="tags__item" href="#">Лазаревское</a><a class="tags__item" href="#">Новый Сочи</a><a class="tags__item" href="#">Туапсе</a><a class="tags__item" href="#">Кропка</a><a class="tags__item" href="#">Азовское</a><a class="tags__item" href="#">Великовское</a></div>
+        <div class="tags-heading mb-1">
+          <p class="text-uppercase h5 text-secondary mb-0">Квартиры в регионах россии</p><a class="link-arrow tags-heading__link" href="#">
+             <svg class="link-arrow__icon" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.61405 7.96572e-06L5.52642 4.49998L0.61405 9L0 8.43743L4.29834 4.49998L0 0.5625L0.61405 7.96572e-06ZM4.08758 0L9 4.49998L4.08758 9L3.47358 8.43743L7.77192 4.49998L3.47358 0.5625L4.08758 0Z" />
+</svg><span class="link-arrow__body">Все регионы</span></a>
+        </div>
+        <div class="tags"><a class="tags__item" href="#">Адлер</a><a class="tags__item" href="#">Бытха</a><a class="tags__item" href="#">Вардане</a><a class="tags__item" href="#">Сочи</a><a class="tags__item" href="#">Лазаревское</a><a class="tags__item" href="#">Новый Сочи</a><a class="tags__item" href="#">Туапсе</a><a class="tags__item" href="#">Кропка</a><a class="tags__item" href="#">Азовское</a><a class="tags__item" href="#">Великовское</a></div>
       </div>
     </section>
     <footer class="footer">

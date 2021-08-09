@@ -20,4 +20,6 @@ $(function() {
 
 import '../blocks/slider/slider';
 import '../blocks/slider/swiper';
+import '../blocks/tabs/tabs';
+import '../blocks/filters/filters';
 import './mouseup';

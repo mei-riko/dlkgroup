@@ -5,6 +5,8 @@
     color: $white;
     fill: $white;
 
+    min-width: 1px;
+
     &:hover, &:focus{
         background: $green-hover;
         color: $white;

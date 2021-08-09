@@ -1,0 +1,15 @@
+.tabs-content{
+    display: none;
+
+    &_has-slider {
+        opacity: 0;
+    }
+      
+    &--active {
+        display: block;
+    }
+    
+    &--show {
+        opacity: 1;
+    }
+}

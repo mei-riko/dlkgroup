@@ -1,0 +1,6 @@
+.news-preview_list{
+    grid-template-columns: 80px 1fr;
+    grid-gap: $spacer-gutter;
+    grid-template-areas: 
+        "date heading";
+}

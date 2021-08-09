@@ -79,6 +79,7 @@ a{
         text-transform: uppercase;
         font-weight: $font-weight-bolder;
         color: $gold;
+        white-space: nowrap;
 
         transition: .4s;
     }

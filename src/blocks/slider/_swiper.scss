@@ -1,9 +1,49 @@
 .swiper-container{
-
+    &_projects{
+        padding-top: $spacer;
+        overflow: visible;
+        overflow-x: clip;
+    }
+    &_elites{
+        padding-top: $spacer;
+        overflow: visible;
+        overflow-x: clip;
+    }
 }
 .swiper-wrapper{
     height: fit-content;
 }
 .swiper-slide{
-    height: fit-content;
+    max-height: fit-content;
+}
+
+.swiper-button{
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+
+    display: inline-flex;
+    cursor: pointer;
+
+    svg{
+        fill: $secondary;
+        transition: .3s;
+    }
+
+    &:hover{
+        svg{
+            fill: $gold;
+        }
+    }
+
+    &_next{
+        right: 0;
+    }
+    &_prev{
+        right: 74px;
+    }
+}
+.swiper-button-disabled{
+    opacity: .4;
+    cursor: not-allowed;
 }

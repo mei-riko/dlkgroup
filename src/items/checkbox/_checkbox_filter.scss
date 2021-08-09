@@ -1,0 +1,50 @@
+.checkbox_filter{
+    display: inline-flex;
+    margin: 4px 2px;
+
+    &__input{
+        // active
+        &:checked + .checkbox_filter__label{
+            border-color: $green;
+            background: $green;
+            color: $white;
+        }
+        // disable
+        &:disabled + .checkbox_filter__label {
+            filter: opacity(.75);
+            cursor: not-allowed;
+            color: $secondary;
+            border-color: $secondary;
+        }
+    }
+    &__label{
+        text-align: center;
+        border-radius: 2px;
+        border: 1px solid $border-color;
+
+        padding: 0 8px;
+        margin-bottom: 0;
+
+        line-height: 24px;
+        white-space: nowrap;
+
+        cursor: inherit;
+        transition: .4s;
+
+        &:before{
+            display: none;
+        }
+
+        &:hover{
+            border-color: $secondary;
+        }
+    }
+
+    &:hover{
+        color: $secondary;
+    }
+}
+
+.checkbox_filter + .checkbox_filter{
+    margin-top: 4px;
+}

@@ -1,0 +1,71 @@
+.checkbox{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    min-height: 20px;
+
+    cursor: pointer;
+    
+    &__input{
+        display: none;
+
+        // active
+        &:checked + .checkbox__label:before {
+            border-color: $gold;
+            background: $gold url("../img/icon/checkbox-gold.svg") no-repeat center / cover;
+        }
+        // disable
+        &:disabled + .checkbox__label {
+            filter: opacity(.75);
+            cursor: not-allowed;
+            color: $secondary;
+        }
+    }
+    &__label{
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding-left: 35px;
+        
+        line-height: $line-height-base;
+
+        cursor: inherit;
+        transition: .3s;
+
+        &:before{
+            content:'';
+            display: block;
+
+            border-radius: 2px;
+            border: 1px solid $black;
+            background: $white;
+
+            width: 20px;
+            height: 20px;
+
+            position: absolute;
+            left: 0;
+            top: calc( 50% - 10px);
+        }
+    }
+
+    &:hover{
+        color: $action;
+    }
+
+    &--disabled{
+        filter: opacity(.75);
+        cursor: not-allowed;
+        border-color: $secondary;
+        color: $secondary;
+
+        &:hover{
+            color: $secondary;
+        }
+    }
+}
+
+.checkbox + .checkbox{
+    margin-top: $spacer-gutter;
+}

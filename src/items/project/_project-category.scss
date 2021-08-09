@@ -1,0 +1,46 @@
+.project-category{
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image content";
+
+    min-height: 200px;
+
+    &__content{
+        background: $black-lighter;
+        padding: map-get($map: $spacers, $key: 2);
+        grid-area: content;
+    }
+    &__image{
+        background: no-repeat center / cover;
+        grid-area: image;
+    }
+    &__heading{
+        line-height: $line-height-base;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacer-gutter;
+    }
+    &__object{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+
+        &-item{
+            // color: $light;
+            // text-decoration: underline;
+            margin-right: $spacer-gutter;
+        }
+        &-count{
+            color: $secondary;
+            font-size: 10px;
+        }
+
+        &:hover, &:focus{
+            text-decoration: none;
+        }
+    }
+    // Variables
+    &_reverse{
+        grid-template-areas: "content image";
+    }
+}

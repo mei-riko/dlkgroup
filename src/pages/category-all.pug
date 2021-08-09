@@ -1,24 +1,284 @@
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+extends ../blocks/main.pug
 
-        title Parent Category
+block variables
+    link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    script(script src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    - var pageTitle = "Недвижимость (общая)"
+    - var popularProjects1 = [{"id":"1","title":"Студия в историческом центре","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"2","title":"Квартира с видом на море","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"3","title":"Апартаменты под ключ","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":false},{"id":"4","title":"Квартира с видом на парк","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"5","title":"Студия в новом ЖК","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":false},{"id":"6","title":"Апартаменты для инвестиции","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"7","title":"Студия с видом на набережную","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true}];
+    - var popularProjects2 = [{"id":"1","title":"Студия в историческом центре","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"2","title":"Квартира с видом на море","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true}];
+    - var popularProjects3 = [{"id":"1","title":"Студия в историческом центре","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"2","title":"Квартира с видом на море","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"3","title":"Апартаменты под ключ","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":false}];
 
-        link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet")
-        
-        link(href='./css/framework.css', rel='stylesheet')
-        link(href='./css/main.css', rel='stylesheet')
+mixin projectSlide(object)
+    .swiper-slide 
+        a.project-preview.project-preview_link(href="apart.html")
+            img.project-preview__img(src="../img/demo/test-img-2.jpg")
+            .project-preview__heading=object.title
+            .project-preview__intro=object.address
+            .project-preview__chars
+                .element.align-items-center
+                    .element__icon
+                        img.img-fluid(src="../img/icon/icon-room.svg")
+                    .element__content=object.room
+                .element.align-items-center
+                    .element__icon
+                        img.img-fluid(src="../img/icon/icon-plan.svg")
+                    .element__content=object.plan
+                .element.align-items-center
+                    .element__icon
+                        img.img-fluid(src="../img/icon/icon-floor.svg")
+                    .element__content=object.floor
+                if object.balcony
+                    .element.align-items-center
+                        .element__icon
+                            img.img-fluid(src="../img/icon/icon-balcony.svg")
+                        .element__content есть балкон
+                else 
+                    .element.element_disabled.align-items-center
+                        .element__icon
+                            img.img-fluid(src="../img/icon/icon-balcony.svg")
+                        .element__content нет балкона
+mixin checkbox(id, title, checked)
+    .checkbox(class!=attributes.class)
+        input.checkbox__input(type="checkbox" id=id checked=checked class!=attributes.field)
+        label.checkbox__label(for=id)!= title
+mixin checkboxFilter(id, title, checked)
+    .checkbox.checkbox_filter(class!=attributes.class)
+        input.checkbox__input.checkbox_filter__input(type="checkbox" id=id checked=checked class!=attributes.field)
+        label.checkbox_filter__label(for=id)!= title
+mixin radio(id, title, name, checked)
+    .radio(class!=attributes.class)
+        input.radio__input(type="radio" id=id name=name checked=checked class!=attributes.field)
+        label.radio__label(for=id class!=attributes.label)!= title
 
-    body
-        script(src="./js/jquery.min.js")
-        include ../blocks/header/header.pug
-        main 
-            section
-                p page content 
-            aside
-                p links
-        include ../blocks/footer/footer.pug
-        script(src="./js/app.min.js")
+block content
+    section.pt-2.pb-2.filter-container
+        .container 
+            .filters.filters_inside
+                .filters__item.filters__item_main
+                    .filters__heading.filters__heading--has-value Продажа
+                    .filters__options
+                        +radio('main1','Продажа', 'main', true)
+                        +radio('main2','Аренда', 'main')(class="radio--disabled")
+                .filters__item.filters__item_type 
+                    .filters__heading.filters__heading--has-value Квартира в новостройке
+                    .filters__options
+                        +checkbox('type1','Квартира в новостройке')
+                        +checkbox('type2','Квартира во вторичке')
+                        +checkbox('type3','Дом')(class="checkbox--disabled")
+                        +checkbox('type4','Таунхаус')
+                .filters__item.filters__item_room
+                    .filters__heading.filters__heading--has-value Студия, 1 комн.
+                    .filters__options 
+                        +checkbox('room1','Студия')
+                        +checkbox('room2','1 комната')
+                        +checkbox('room3','2 комнаты')
+                        +checkbox('room4','3 комнаты')
+                        +checkbox('room5','4 комнаты')
+                        +checkbox('room6','5 комнат')
+                        +checkbox('room7','6 комнат')
+                        +checkbox('room8','Свободная планировка')
+                .filters__item.filters__item_price
+                    .filters__heading Цена
+                    .filters__options 
+                        span от 
+                        span до 
+                .filters__item.filters__item_location
+                    .filters__heading Город и регион
+                    .filters__options 
+                        +checkboxFilter('city1','Адлер')
+                        +checkboxFilter('city2','Бытха',true)
+                        +checkboxFilter('city3','Вардане')(class="checkbox--disabled")
+                        +checkboxFilter('city4','Сочи')
+                        +checkboxFilter('city5','Лазаревское')
+                        +checkboxFilter('city6','Новый Сочи')
+                        +checkboxFilter('city7','Туапсе')
+                .filters_inside__more
+                    a.btn.btn_modal.filters_inside__btn(href="#" data-filter="more") Ещё фильтры
+                .filters_inside__filter
+                    a.btn.btn_action.filters_inside__btn(href="#" data-filter="index") Найти
+    section.pt-2.pb-2 
+        .container 
+            h1.h3.mb-2 Недвижимость в Сочи
+            .grid.grid_category
+                .project-category
+                    .project-category__content
+                        p.project-category__heading Купить квартиру
+                        a.project-category__object(href="#")
+                            .project-category__object-item 1-комнатные
+                            .project-category__object-count 20 190
+                        a.project-category__object(href="#")
+                            .project-category__object-item 2-комнатные
+                            .project-category__object-count 12 235
+                        a.project-category__object(href="#")
+                            .project-category__object-item 3-комнатные
+                            .project-category__object-count 5 550
+                        a.project-category__object(href="#")
+                            .project-category__object-item Свободная планировка
+                            .project-category__object-count 1 220
+                    .project-category__image(style="background-image:url('../img/demo/test-img-2.jpg');")
+                .project-category
+                    .project-category__content
+                        p.project-category__heading Снять квартиру
+                        .project-category__object
+                            .project-category__object-item 1-комнатные
+                            .project-category__object-count 20 190
+                        .project-category__object
+                            .project-category__object-item 2-комнатные
+                            .project-category__object-count 12 235
+                        .project-category__object
+                            .project-category__object-item 3-комнатные
+                            .project-category__object-count 5 550
+                        .project-category__object
+                            .project-category__object-item Свободная планировка
+                            .project-category__object-count 1 220
+                    .project-category__image(style="background-image:url('../img/demo/test-img-2.jpg');")
+                .project-category.project-category_reverse
+                    .project-category__content
+                        p.project-category__heading Новостройки
+                        .project-category__object
+                            .project-category__object-item Каталог ЖК
+                            .project-category__object-count 20 190
+                        .project-category__object
+                            .project-category__object-item Сданные новостройки
+                            .project-category__object-count 12 235
+                        .project-category__object
+                            .project-category__object-item Строящиеся новостройки
+                            .project-category__object-count 5 550
+                    .project-category__image(style="background-image:url('../img/demo/test-img-2.jpg');")
+                .project-category.project-category_reverse
+                    .project-category__content
+                        p.project-category__heading Коммерческая недвижимость
+                        .project-category__object
+                            .project-category__object-item Купить склад
+                            .project-category__object-count 190
+                        .project-category__object
+                            .project-category__object-item Купить гараж
+                            .project-category__object-count 235
+                        .project-category__object
+                            .project-category__object-item Купить офис
+                            .project-category__object-count 50
+                        .project-category__object
+                            .project-category__object-item Аренда офиса
+                            .project-category__object-count 1 220
+                        .project-category__object
+                            .project-category__object-item Аренда помещения
+                            .project-category__object-count 320
+                    .project-category__image(style="background-image:url('../img/demo/test-img-2.jpg');")
+                .project-category
+                    .project-category__content
+                        p.project-category__heading Инвестиционные проекты
+                        .project-category__object
+                            .project-category__object-item Купить склад
+                            .project-category__object-count 20 190
+                        .project-category__object
+                            .project-category__object-item Купить гараж
+                            .project-category__object-count 12 235
+                        .project-category__object
+                            .project-category__object-item Купить офис
+                            .project-category__object-count 5 550
+                    .project-category__image(style="background-image:url('../img/demo/test-img-2.jpg');")
+    section.pt-2.pb-4
+        .container 
+            .row.mb-2
+                .col-9 
+                    p.h3 Популярные объявления
+                .col-3.text-right
+                    a.link-inverse.text-underline(href="#") Как сюда попасть?
+            .tabs-container.mb-4
+                .tabs
+                    .tabs__heading Продажа:
+                    .tabs__item.tabs__item--active(data-content="#tab1") Жилая
+                    .tabs__item(data-content="#tab2") Загородная
+                    .tabs__item(data-content="#tab3") Коммерческая
+                .tabs-content.tabs-content--active#tab1
+                    //- Swiper Slider
+                    .swiper-container.swiper-container_projects
+                        .swiper-button.swiper-button_prev
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+                            </svg>
+                        .swiper-button.swiper-button_next
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+                            </svg>
+                        .swiper-wrapper
+                            for object in popularProjects1
+                                +projectSlide(object)
+                .tabs-content#tab2
+                    //- Swiper Slider
+                    .swiper-container.swiper-container_projects
+                        .swiper-button.swiper-button_prev
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+                            </svg>
+                        .swiper-button.swiper-button_next
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+                            </svg>
+                        .swiper-wrapper
+                            for object in popularProjects2
+                                +projectSlide(object)
+                .tabs-content#tab3
+                    //- Swiper Slider
+                    .swiper-container.swiper-container_projects
+                        .swiper-button.swiper-button_prev
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+                            </svg>
+                        .swiper-button.swiper-button_next
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+                            </svg>
+                        .swiper-wrapper
+                            for object in popularProjects3
+                                +projectSlide(object)
+            .tabs-container
+                .tabs
+                    .tabs__heading Аренда:
+                    .tabs__item.tabs__item--active(data-content="#tab11") Жилая
+                    .tabs__item(data-content="#tab22") Загородная
+                    .tabs__item(data-content="#tab33") Коммерческая
+                .tabs-content.tabs-content--active#tab11
+                    //- Swiper Slider
+                    .swiper-container.swiper-container_projects
+                        .swiper-button.swiper-button_prev
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+                            </svg>
+                        .swiper-button.swiper-button_next
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+                            </svg>
+                        .swiper-wrapper
+                            for object in popularProjects1
+                                +projectSlide(object)
+                .tabs-content#tab22
+                    //- Swiper Slider
+                    .swiper-container.swiper-container_projects
+                        .swiper-button.swiper-button_prev
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+                            </svg>
+                        .swiper-button.swiper-button_next
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+                            </svg>
+                        .swiper-wrapper
+                            for object in popularProjects2
+                                +projectSlide(object)
+                .tabs-content#tab33
+                    //- Swiper Slider
+                    .swiper-container.swiper-container_projects
+                        .swiper-button.swiper-button_prev
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 6.46154L1.9093 6.46154L7.14587 11.3077L6.48327 12L0 6L6.48337 0L7.14587 0.692307L1.9093 5.53846L64 5.53846V6.46154Z"/>
+                            </svg>
+                        .swiper-button.swiper-button_next
+                            <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 5.53846H62.0907L56.8541 0.692252L57.5167 0L64 6L57.5166 12L56.8541 11.3077L62.0907 6.46154H0V5.53846Z"/>
+                            </svg>
+                        .swiper-wrapper
+                            for object in popularProjects3
+                                +projectSlide(object)
+    include ../blocks/news/news.pug
+    include ../blocks/tags/tags.pug
