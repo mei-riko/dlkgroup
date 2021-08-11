@@ -1,31 +1,304 @@
 
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<script script="script" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <html lang="ru">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Apartment Complex</title>
+    <title>Жилой комплекс</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-    <link href="./css/framework.css" rel="stylesheet"/>
-    <link href="./css/main.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="../css/framework.css" rel="stylesheet"/>
+    <link href="../css/main.css" rel="stylesheet"/>
   </head>
   <body>
-    <script src="./js/jquery.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
     <header class="header">
-      <p>header</p>
+      <div class="header__additional">
+        <div class="container">
+          <menu class="header__menu">
+            <svg class="header__burger" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.1921 15.3202H0.807891C0.361719 15.3202 0 15.6819 0 16.1281C0 16.5743 0.361719 16.936 0.807891 16.936H19.1921C19.6383 16.936 20 16.5743 20 16.1281C20 15.6819 19.6383 15.3202 19.1921 15.3202Z"></path>
+              <path d="M19.1921 9.19208H0.807891C0.361719 9.19208 0 9.55376 0 9.99997C0 10.4462 0.361719 10.8079 0.807891 10.8079H19.1921C19.6383 10.8079 20 10.4462 20 9.99997C20 9.5538 19.6383 9.19208 19.1921 9.19208Z"></path>
+              <path d="M19.1921 3.06403H0.807891C0.361719 3.06403 0 3.42574 0 3.87192C0 4.31809 0.361719 4.67981 0.807891 4.67981H19.1921C19.6383 4.67981 20 4.31809 20 3.87192C20 3.42574 19.6383 3.06403 19.1921 3.06403Z"></path>
+            </svg><a class="header__logo logo" href="index.html"><img class="img-fluid" src="../img/global/logo.svg" alt="logo"/></a>
+            <nav class="nav nav_additional"><a class="nav__link_additional nav__link nav__link_active" href="sales.html">Продавать</a><a class="nav__link_additional nav__link" href="partners.html">Передать клиента</a><a class="nav__link_additional nav__link" href="managment.html">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="contact.html">Контакты</a>
+            </nav>
+            <div class="header__callbacks"><a class="header__callbacks-item d-none" href="tel:78005334418">8 800 533 44 18</a><a class="header__callbacks-item btn btn_additional btn_secondary" href="javascript;" data-fancybox="data-fancybox" data-src="#callback">Заказать звонок</a><a class="header__callbacks-item btn btn_networks" href="#"><svg width="16" height="16" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.83274 8.11186L5.81389 13.0644L8.39307 10.4852L12.8152 14L15.9289 0L0 6.63493L3.83274 8.11186ZM11.3772 4.01674L6.50161 8.4638L5.89434 10.7525L4.77252 7.94743L11.3772 4.01674Z" fill="white"/>
+</svg></a><a class="header__callbacks-item btn btn_networks" href="#"><svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.50187 0H7.49813C3.36281 0 0 3.36375 0 7.5C0 9.14062 0.52875 10.6613 1.42781 11.8959L0.493125 14.6822L3.37594 13.7606C4.56187 14.5463 5.97656 15 7.50187 15C11.6372 15 15 11.6353 15 7.5C15 3.36469 11.6372 0 7.50187 0Z" fill="#FCFCFC"/>
+<path d="M11.8663 10.5909C11.6853 11.1018 10.9672 11.5256 10.3944 11.6493C10.0025 11.7327 9.49063 11.7993 7.76751 11.0849C5.56345 10.1718 4.14407 7.93211 4.03345 7.7868C3.92751 7.64149 3.14282 6.60086 3.14282 5.52461C3.14282 4.44836 3.68938 3.9243 3.9097 3.6993C4.09063 3.51461 4.3897 3.43024 4.67657 3.43024C4.76938 3.43024 4.85282 3.43492 4.92782 3.43867C5.14813 3.44805 5.25876 3.46117 5.40407 3.80899C5.58501 4.24492 6.02563 5.32117 6.07813 5.4318C6.13157 5.54243 6.18501 5.69243 6.11001 5.83774C6.0397 5.98774 5.97782 6.0543 5.8672 6.1818C5.75657 6.3093 5.65157 6.4068 5.54095 6.54368C5.4397 6.66274 5.32532 6.79024 5.45282 7.01055C5.58032 7.22618 6.02095 7.94524 6.6697 8.52274C7.50688 9.26805 8.18563 9.50618 8.42845 9.60743C8.60938 9.68243 8.82501 9.66461 8.9572 9.52399C9.12501 9.34305 9.3322 9.04305 9.54313 8.74774C9.69313 8.53586 9.88251 8.50961 10.0813 8.58461C10.2838 8.65493 11.3553 9.18461 11.5756 9.2943C11.7959 9.40493 11.9413 9.45743 11.9947 9.55024C12.0472 9.64305 12.0472 10.079 11.8663 10.5909Z" fill="#146565"/>
+</svg></a></div>
+          </menu>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="container">
+          <menu class="header__menu">
+            <nav class="nav"><a class="nav__link nav__link_active" href="category-all.html">Аренда</a><a class="nav__link" href="category-all.html">Продажа</a><a class="nav__link" href="category-all.html">Новостройки</a><a class="nav__link" href="category-all.html">Коммерческая недвижимость</a><a class="nav__link" href="category-filters.html">Инвестиционные проекты</a>
+            </nav>
+            <div class="header__phone"><a class="header__link text-bold" href="tel:78005334418">8 800 533 44 18</a></div>
+          </menu>
+        </div>
+      </div>
     </header>
-    <main> 
-      <section>
-        <p>page content </p>
-      </section>
-      <aside>
-        <p>links</p>
-      </aside>
-    </main>
+    <section class="pt-4 pb-4 bg-image" style="background-image:url('../img/bg/managment.jpg');">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-5 text-center">
+            <p class="text-uppercase text-gold text-bold">Комплекс бизнес класса</p>
+            <h1 class="mt-1 mb-2">Жилой комплекс «Vita Nova»</h1>
+            <p> Ближайшая станция метро&nbsp;Динамо (ул.&nbsp;Кораблестроителей, дом&nbsp;35)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content pt-2 pb-2">
+      <div class="container">
+        <nav class="breadcrumbs"> <a class="breadcrumbs__link" href="category-all.html">Недвижимость в Сочи </a><span class="breadcrumbs__sep">/ </span><a class="breadcrumbs__link" href="category-filters.html">Продажа</a><span class="breadcrumbs__sep">/ </span><a class="breadcrumbs__link" href="category-filters.html">1-комн. квартиры</a><span class="breadcrumbs__sep">/ </span><span class="breadcrumbs__here">ЖК «Vita Nova»</span></nav>
+        <div class="row project-details project-details_inside">
+          <div class="col-9">
+            <div class="row">
+              <div class="col-6">
+                <div class="project-details__slider swiper-container swiper-container_project">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="img-fluid" src="https://images.unsplash.com/photo-1550136513-548af4445338?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1054&amp;q=80"/></div>
+                    <div class="swiper-slide"><img class="img-fluid" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"/></div>
+                    <div class="swiper-slide"><img class="img-fluid" src="https://images.unsplash.com/photo-1538944570562-2c9cb7857097?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"/></div>
+                    <div class="swiper-slide"><img class="img-fluid" src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1087&amp;q=80"/></div>
+                  </div>
+                </div>
+                <div class="project-details__thumbs swiper-container swiper-container_thumbs">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="img-fluid" src="https://images.unsplash.com/photo-1550136513-548af4445338?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1054&amp;q=80"/></div>
+                    <div class="swiper-slide"><img class="img-fluid" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"/></div>
+                    <div class="swiper-slide"><img class="img-fluid" src="https://images.unsplash.com/photo-1538944570562-2c9cb7857097?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"/></div>
+                    <div class="swiper-slide"><img class="img-fluid" src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1087&amp;q=80"/></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <p class="h2 project-details__heading project-details__heading_inside">ЖК&nbsp;«Апарт-отель ARTSTUDIO Moskovsky»</p>
+                <div class="project-details__location"><span>ст.м. Динамо</span><span class="project-details__sep">⋅</span><span class="project-details__time">12 мин. пешком</span></div>
+                <div class="project-details__address">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная&nbsp;ул., 3</div>
+                <div class="project-details__chars project-details__chars_inside">
+                  <div class="element align-items-center">
+                    <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                    <div class="element__content"> 
+                      <div class="text-bold text-white">16,5 м²</div>жилая площадь
+                    </div>
+                  </div>
+                  <div class="element align-items-center">
+                    <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-plan.svg"/></div>
+                    <div class="element__content">
+                      <div class="text-bold text-white">22,5 м²</div>общая площадь
+                    </div>
+                  </div>
+                  <div class="element align-items-center">
+                    <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-floor.svg"/></div>
+                    <div class="element__content"> 
+                      <div class="text-bold text-white">4 этаж </div>из 21
+                    </div>
+                  </div>
+                  <div class="element align-items-center">
+                    <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-kitchen.svg"/></div>
+                    <div class="element__content">
+                      <div class="text-bold text-white">11,0 м²</div>кухня
+                    </div>
+                  </div>
+                  <div class="element align-items-center">
+                    <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
+                    <div class="element__content">есть балкон</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="h4 mt-4">102 апартаментов от застройщика</p>
+            <p class="text-secondary mb-2">в ЖК «Апарт-отель ARTSTUDIO Moskovsky (Артстудио Московский)»</p>
+            <div class="toggle">
+              <div class="toggle__title">
+                <div class="project-details_inside__apart"> <span>Студии</span><span class="text-secondary">от 18 м²</span><span>5,7–8,6 млн ₽</span><span class="text-gold text-right">11 предложений</span></div>
+              </div>
+              <div class="toggle__content"> 
+                <div class="project-details_inside__apart project-details_inside__apart_toggle"> <a class="text-underline" href="apart.html">Студия</a><span class="text-secondary">21.4 м²</span><span>6,6 млн ₽</span><span class="text-secondary text-right">3 кв. 2021</span><img class="img-fluid" src="../img/demo/plan.jpg"/></div>
+                <div class="project-details_inside__apart project-details_inside__apart_toggle"> <a class="text-underline" href="apart.html">Студия</a><span class="text-secondary">21.4 м²</span><span>6,6 млн ₽</span><span class="text-secondary text-right">3 кв. 2021</span><img class="img-fluid" src="../img/demo/plan.jpg"/></div>
+                <div class="project-details_inside__apart project-details_inside__apart_toggle"> <a class="text-underline" href="apart.html">Студия</a><span class="text-secondary">21.4 м²</span><span>6,6 млн ₽</span><span class="text-secondary text-right">3 кв. 2021</span><img class="img-fluid" src="../img/demo/plan.jpg"/></div>
+              </div>
+            </div>
+            <div class="toggle">
+              <div class="toggle__title">
+                <div class="project-details_inside__apart"> <span>1-комнатные</span><span class="text-secondary">от 28 м²</span><span>11,2–32,8 млн ₽</span><span class="text-gold text-right">67 предложений</span></div>
+              </div>
+              <div class="toggle__content"> 
+                <p>2</p>
+              </div>
+            </div>
+            <div class="project-details_inside__content mt-4">
+              <p class="h6 mb-2">Описание объекта</p>
+              <p>Сфера высшего интересный реализация проверки нашей задача реализации направлений организации структура оценить также отношении особенности административных образом поставленных играет подготовки высшего представляет нашей в а в соответствующий формировании направлений способствует повседневная рамки в анализа разработке и разработке повседневная особенности требуют равным и важную идейные количественный участниками порядка.</p>
+              <p>В отношении также порядка, что повседневная разработке форм модель также дальнейших структура рост равным также же постоянный активности повседневная постоянный эксперимент участниками практика в дальнейших организационной высшего существенных высшего анализа идейные обучения занимаемых плановых в соответствующий постоянный и порядка, соображения рамки задач.</p>
+            </div>
+            <div class="project-details_inside__map" id="map"></div>
+            <div class="project-details_inside__form mt-4 mb-4">
+              <div class="row"> 
+                <div class="col-3"><img class="img-fluid" src="../img/icon/handshake.svg"/></div>
+                <div class="col-8"> 
+                  <p class="h4">Бесплатная подборка самых востребованных объявлений месяца</p>
+                  <p class="mb-2">Укажите электронную почту и мы отправим на неё наши лучшие предложения</p>
+                  <form class="form mt-2" action=""></form>
+                  <div class="form__row form__row_subs">
+                    <input class="input" type="email" placeholder="Email" autocomplete="none"/>
+                    <button class="btn btn_action">Получить подборку</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="h6 mb-2">Объекты на территории жилого комплекса</p>
+            <div class="project-details__chars project-details__chars_around">
+              <div class="element align-items-center">
+                <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                <div class="element__content"> детская площадка</div>
+              </div>
+              <div class="element align-items-center">
+                <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-plan.svg"/></div>
+                <div class="element__content">тренажеры</div>
+              </div>
+              <div class="element align-items-center">
+                <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-floor.svg"/></div>
+                <div class="element__content">салон красоты</div>
+              </div>
+              <div class="element align-items-center">
+                <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-kitchen.svg"/></div>
+                <div class="element__content">2 магазина</div>
+              </div>
+              <div class="element align-items-center">
+                <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-balcony.svg"/></div>
+                <div class="element__content">пекарня</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="project-details_inside__sidebar">
+              <div class="h3 project-details__price">от 18 820 119 ₽</div>
+              <div class="project-details__price-per-meter">от 170 002 до 225 000 ₽/м²</div>
+              <p class="mt-2">Долевое участие (214-ФЗ), возможна ипотека</p><a class="btn btn_action" href="#" data-fancybox="order" data-src="#order" style="width: 100%;">Оставить заявку</a>
+              <div class="project-details_inside__dev"><img class="project-details_inside__dev-img img-fluid" src="../img/demo/pic-apart.jpg"/>
+                <div class="project-details_inside__dev-intro"> 
+                  <div class="project-details_inside__dev-name text-bold">Эталон</div>
+                  <div class="text-secondary">Застройщик </div>
+                  <div class="text-secondary">Год основания: 1987</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content pt-2 pb-4">
+      <div class="container">
+        <div class="content__request content__request_cta">
+          <p class="h1">Доверьте подбор недвижимости экспертам!</p>
+          <p class="mb-2">Оставьте заявку и получите максимально подходящую по вашим критериям подборку объектов</p>
+          <div class="list list_check">
+            <div class="list_check__item"> 
+              <div class="text-bold">100% соответствие </div>вашим критериям
+            </div>
+            <div class="list_check__item"> 
+              <div class="text-bold">экономия вашего времени </div>на поисках объекта
+            </div>
+            <div class="list_check__item"> 
+              <div class="text-bold">плюсы и минусы </div>каждого объекта
+            </div>
+            <div class="list_check__item"> 
+              <div class="text-bold">европейское качество </div>предоставляемых услуг 
+            </div>
+          </div>
+          <form class="form mt-2" action="">
+            <div class="form__row form__row_send">
+              <input class="input" type="text" placeholder="Ваше имя"/>
+              <input class="input input_phone" type="tel" placeholder="+7"/>
+              <button class="btn btn_action">Подбор объектов</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
-      <p>footer</p>
+      <div class="container">
+        <div class="footer__contact-info">
+          <div class="row">
+            <div class="col-8">
+              <div class="footer__menu"><a class="footer__logo logo" href="index.html"><img class="img-fluid" src="../img/global/logo.svg" alt="logo"/></a>
+                <nav class="nav nav_additional"><a class="nav__link_additional nav__link nav__link_active" href="category-all.html">Аренда</a><a class="nav__link_additional nav__link" href="category-all.html">Продажа</a><a class="nav__link_additional nav__link" href="category-all.html">Новостройки</a><a class="nav__link_additional nav__link" href="category-all.html">Коммерческая недвижимость</a><a class="nav__link_additional nav__link" href="category-filters.html">Инвестиционные проекты</a>
+                </nav>
+              </div>
+              <div class="row mt-2 mb-1">
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">ТЕЛЕФОН</div><a class="text-bolder footer__contact-link" href="tel:78005334418">8 800 533 44 18</a>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">E-MAIL</div><a class="text-bolder footer__contact-link" href="mailto:info@dlk-investgroup.ru">info@dlk-investgroup.ru</a>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">АДРЕС </div><span class="text-bolder">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</span>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">ЧАСЫ РАБОТЫ</div>
+                  <ul class="text-bolder footer__contact-list">
+                    <li>пн-пт 08.00 - 17.00 </li>
+                    <li>сб 10.00 - 16.00</li>
+                    <li>воскресенье — выходной</li>
+                  </ul>
+                </div>
+              </div>
+              <nav class="nav"><a class="nav__link_additional nav__link nav__link_active" href="sales.html">Продавать</a><a class="nav__link_additional nav__link" href="partners.html">Передать клиента</a><a class="nav__link_additional nav__link" href="managment.html">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="contact.html">Контакты</a>
+              </nav>
+            </div>
+            <div class="col-4">
+              <div class="footer__form">
+                <p class="h3">Есть вопросы?</p>
+                <form class="form">
+                  <input class="input input_line" type="text" placeholder="Ваше имя" name=""/>
+                  <input class="input input_line" type="tel" placeholder="+7" name=""/>
+                  <textarea class="input input_line" placeholder="Say «hello»" name=""></textarea>
+                  <button class="btn btn_action footer__form-submit">Отправить запрос </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__technical-info">
+          <div class="row"> 
+            <div class="col-6"><span>© 2021 ДЛК ГРУПП</span></div>
+            <div class="col-6 text-right"><a class="footer__link" href="#">Сайт разработан websoho.ru</a></div>
+          </div>
+        </div>
+      </div>
     </footer>
-    <script src="./js/app.min.js"></script>
+    <div class="modal modal_callback" id="callback"> 
+      <p class="h4">Хотите узнать больше?</p>
+      <p class="mb-2 text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas</p>
+      <form class="form">
+        <input class="form__line input input_line" type="tel" placeholder="+7" name=""/>
+        <button class="form__line btn btn_action">Заказать звонок </button>
+      </form>
+    </div>
+    <div class="modal modal_callback" id="order"> 
+      <p class="h4">Хотите узнать больше?</p>
+      <p class="mb-2 text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas</p>
+      <form class="form">
+        <input class="form__line input input_line" type="text" placeholder="Ваше имя" name=""/>
+        <input class="form__line input input_line" type="tel" placeholder="+7" name=""/>
+        <button class="form__line btn btn_action">Оставить заявку </button>
+      </form>
+    </div>
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="../js/jquery.inputmask.min.js"></script>
+    <script src="../js/app.min.js"></script>
   </body>
 </html>

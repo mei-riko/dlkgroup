@@ -1,0 +1,14 @@
+.breadcrumbs{
+    color: $secondary;
+    font-size: map-get($map: $font-size, $key: xs);
+
+    &__link{
+        color: $secondary;
+    }
+    &__here{
+        filter: opacity(.5);
+    }
+    &__sep{
+        margin: 0 4px;
+    }
+}

@@ -42,6 +42,10 @@ ol, ul{
         margin-bottom: 0;
     }
 }
+dl, dt, dd{
+    font-weight: $font-weight-base;
+    margin: 0;
+}
 a{
     display: inline-block;
     outline: none;

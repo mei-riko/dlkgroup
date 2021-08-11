@@ -8,7 +8,12 @@
     }
     &__request{
         background: $black-lighter;
-        padding:map-get($map: $spacers, $key: 3)
+        padding:map-get($map: $spacers, $key: 3);
+
+        &_cta{
+            background: $green url('../img/icon/folder-man.svg') no-repeat calc(100% - 30px) center / contain;
+            background-position-x: calc(100% - 30px);
+        }
     }
     &__error-heading{
         font-size: 18px;

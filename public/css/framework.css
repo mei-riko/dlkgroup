@@ -1895,6 +1895,11 @@ ol:last-child, ul:last-child {
   margin-bottom: 0;
 }
 
+dl, dt, dd {
+  font-weight: 400;
+  margin: 0;
+}
+
 a {
   display: inline-block;
   outline: none;

@@ -1,6 +1,6 @@
 //- Ссылки для header и footer
-- var linksAdditional   = [{"link":"#","name":"Продавать","active":true},{"link":"#","name":"Передать клиента"},{"link":"#","name":"Доверительное управление"},{"link":"#","name":"Услуги"},{"link":"#","name":"Контакты"}]
-- var linksMain         = [{"link":"#","name":"Аренда","active":true},{"link":"#","name":"Продажа"},{"link":"#","name":"Новостройки"},{"link":"#","name":"Коммерческая недвижимость"},{"link":"#","name":"Инвестиционные проекты"}]
+- var linksAdditional   = [{"link":"sales.html","name":"Продавать","active":true},{"link":"partners.html","name":"Передать клиента"},{"link":"managment.html","name":"Доверительное управление"},{"link":"#","name":"Услуги"},{"link":"contact.html","name":"Контакты"}]
+- var linksMain         = [{"link":"category-all.html","name":"Аренда","active":true},{"link":"category-all.html","name":"Продажа"},{"link":"category-all.html","name":"Новостройки"},{"link":"category-all.html","name":"Коммерческая недвижимость"},{"link":"category-filters.html","name":"Инвестиционные проекты"}]
 
 - var address = "Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3"
 //- - var work = "пн-пт 08.00 - 17.00 <br> сб 10.00 - 16.00 <br>  воскресенье — выходной"
@@ -40,6 +40,27 @@ header.header
         .container
             menu.header__menu
                 nav.nav
+                    //- Выпаюащее меню
+                    .nav__item.nav__item_has-child
+                        a.nav__link(href="category-all.html" data-nav="#nav1") Category
+                        .nav__children#nav1
+                            .container
+                                .nav__children-grid
+                                    .nav__children-col
+                                        a.nav__children-title.nav__children-title_link(href="catalog.html") Subcategory Link
+                                        a.nav__children-item(href="category-filters.html") Subcategory Inside
+                                        a.nav__children-item(href="category-filters.html") Subcategory Inside
+                                        a.nav__children-item(href="category-filters.html") Subcategory Inside
+                                        a.nav__children-item(href="category-filters.html") Subcategory Inside
+                                        a.nav__children-item(href="category-filters.html") Subcategory Inside
+                                        a.nav__children-item(href="category-filters.html") Subcategory Inside
+                                    .nav__children-col
+                                        .nav__children-title Subcategory
+                                        a.nav__children-item(href="category-filters.html") Subcategory Inside
+                                        a.nav__children-item(href="category-filters.html") Subcategory Inside
+                                        a.nav__children-item(href="category-filters.html") Subcategory Inside
+                                        a.nav__children-item(href="category-filters.html") Subcategory Inside
+                                        a.nav__children-item(href="category-filters.html") Subcategory Inside
                     for i in linksMain
                         +navLink(i.link, i.name, i.active)
                 .header__phone

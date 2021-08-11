@@ -1,0 +1,18 @@
+.list_check{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-left: -$spacer/2;
+    margin-right: -$spacer/2;
+
+    &__item{
+        padding-left: 50px;
+        padding-right: $spacer/2;
+        background: url('../img/icon/checkbox-gold.svg') no-repeat 15px center / 20px;
+
+        max-width: 25%;
+
+        line-height: $line-height-base;
+    }
+}

@@ -10,82 +10,8 @@ block variables
     - var popularProjects3 = [{"id":"1","title":"Студия в историческом центре","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"2","title":"Квартира с видом на море","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"3","title":"Апартаменты под ключ","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":false}];
     - var eliteProjects1   = [{"id":"1","title":"Апартаменты ЖК «Голландия»","address":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum etiam molestie iaculis elementum est. Suspendisse porta eleifend vel adipiscing ut euismod. Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","bath":"2 санузла","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"2","title":"Апартаменты ЖК «Вечная весна»","address":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum etiam molestie iaculis elementum est. Suspendisse porta eleifend vel adipiscing ut euismod. Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"2 комн.","bath":"1 санузел","plan":"130m2","floor":"2 этаж","balcony":true}];
 
-mixin projectSlide(object)
-    .swiper-slide 
-        a.project-preview.project-preview_link(href="apart.html")
-            img.project-preview__img(src="../img/demo/test-img-2.jpg")
-            .project-preview__heading=object.title
-            .project-preview__intro=object.address
-            .project-preview__chars
-                .element.align-items-center
-                    .element__icon
-                        img.img-fluid(src="../img/icon/icon-room.svg")
-                    .element__content=object.room
-                .element.align-items-center
-                    .element__icon
-                        img.img-fluid(src="../img/icon/icon-plan.svg")
-                    .element__content=object.plan
-                .element.align-items-center
-                    .element__icon
-                        img.img-fluid(src="../img/icon/icon-floor.svg")
-                    .element__content=object.floor
-                if object.balcony
-                    .element.align-items-center
-                        .element__icon
-                            img.img-fluid(src="../img/icon/icon-balcony.svg")
-                        .element__content есть балкон
-                else 
-                    .element.element_disabled.align-items-center
-                        .element__icon
-                            img.img-fluid(src="../img/icon/icon-balcony.svg")
-                        .element__content нет балкона
-mixin projectFullSlide(object)
-    .swiper-slide 
-        .project-preview.project-preview_full
-            .row
-                .col-7
-                    a(href="apart.html")
-                        img.project-preview__img(src="../img/demo/project-full.jpg")
-                .col-5
-                    .project-preview_full__content
-                        .project-preview__heading.project-preview_full__heading=object.title
-                        .project-preview_full__intro=object.address
-                        .project-preview_full__chars.mb-4
-                            .element.align-items-center
-                                .element__icon
-                                    img.img-fluid(src="../img/icon/icon-room.svg")
-                                .element__content=object.room
-                            .element.align-items-center
-                                .element__icon
-                                    img.img-fluid(src="../img/icon/icon-plan.svg")
-                                .element__content=object.plan
-                            .element.align-items-center
-                                .element__icon
-                                    img.img-fluid(src="../img/icon/icon-bathroom.svg")
-                                .element__content=object.bath
-                            .element.align-items-center
-                                .element__icon
-                                    img.img-fluid(src="../img/icon/icon-floor.svg")
-                                .element__content=object.floor
-                            if object.balcony
-                                .element.align-items-center
-                                    .element__icon
-                                        img.img-fluid(src="../img/icon/icon-balcony.svg")
-                                    .element__content есть балкон
-                            else 
-                                .element.element_disabled.align-items-center
-                                    .element__icon
-                                        img.img-fluid(src="../img/icon/icon-balcony.svg")
-                                    .element__content нет балкона
-                        a.btn.btn_action(href="apart.html") Узнать больше
-mixin checkbox(id, title, checked)
-    .checkbox(class!=attributes.class)
-        input.checkbox__input(type="checkbox" id=id checked=checked class!=attributes.field)
-        label.checkbox__label(for=id)!= title
-mixin checkboxFilter(id, title, checked)
-    .checkbox.checkbox_filter(class!=attributes.class)
-        input.checkbox__input.checkbox_filter__input(type="checkbox" id=id checked=checked class!=attributes.field)
-        label.checkbox_filter__label(for=id)!= title
+include ../items/project/project.pug
+include ../items/checkbox/checkbox.pug
 
 block content
     section.content.content_filters-tab
@@ -168,7 +94,7 @@ block content
                     img.img-fluid(src="../img/demo/index-img-1.jpg" alt="" title="")
             .row.justify-content-end.mt-5
                 .col-9
-                    .element-service-grid.content__scroll
+                    .grid.grid_service-elem.content__scroll
                         for advantage in advantages
                             .element.element_advantage
                                 p.h6=advantage.title

@@ -1,24 +1,229 @@
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+extends ../blocks/main.pug
 
-        title Category With Filters
+block variables
+    - var pageTitle = "Недвижимость (внутренняя)"
+include ../items/checkbox/checkbox.pug
+include ../items/radio/radio.pug
 
-        link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet")
-        
-        link(href='./css/framework.css', rel='stylesheet')
-        link(href='./css/main.css', rel='stylesheet')
-
-    body
-        script(src="./js/jquery.min.js")
-        include ../blocks/header/header.pug
-        main 
-            section
-                p page content 
-            aside
-                p links
-        include ../blocks/footer/footer.pug
-        script(src="./js/app.min.js")
+block content
+    //- First Screen
+    section.pt-4.pb-4.bg-image(style="background-image:url('../img/bg/managment.jpg');")
+        .container
+            .row.justify-content-center
+                .col-5.text-center
+                    p.text-uppercase.text-gold.text-bold Недвижимость в&nbsp;Сочи
+                    h1.mt-1.mb-2 Продажа однокомнатных квартир и&nbsp;апартаментов
+    //- Filters
+    section.pt-2.pb-2.filter-container
+        .container 
+            .filters.filters_inside
+                .filters__item.filters__item_main
+                    .filters__heading.filters__heading--has-value Продажа
+                    .filters__options
+                        +radio('main1','Продажа', 'main', true)
+                        +radio('main2','Аренда', 'main')(class="radio--disabled")
+                .filters__item.filters__item_type 
+                    .filters__heading.filters__heading--has-value Квартира в новостройке
+                    .filters__options
+                        +checkbox('type1','Квартира в новостройке')
+                        +checkbox('type2','Квартира во вторичке')
+                        +checkbox('type3','Дом')(class="checkbox--disabled")
+                        +checkbox('type4','Таунхаус')
+                .filters__item.filters__item_room
+                    .filters__heading.filters__heading--has-value Студия, 1 комн.
+                    .filters__options 
+                        +checkbox('room1','Студия')
+                        +checkbox('room2','1 комната')
+                        +checkbox('room3','2 комнаты')
+                        +checkbox('room4','3 комнаты')
+                        +checkbox('room5','4 комнаты')
+                        +checkbox('room6','5 комнат')
+                        +checkbox('room7','6 комнат')
+                        +checkbox('room8','Свободная планировка')
+                .filters__item.filters__item_price
+                    .filters__heading Цена
+                    .filters__options 
+                        span от 
+                        span до 
+                .filters__item.filters__item_location
+                    .filters__heading Город и регион
+                    .filters__options 
+                        +checkboxFilter('city1','Адлер')
+                        +checkboxFilter('city2','Бытха',true)
+                        +checkboxFilter('city3','Вардане')(class="checkbox--disabled")
+                        +checkboxFilter('city4','Сочи')
+                        +checkboxFilter('city5','Лазаревское')
+                        +checkboxFilter('city6','Новый Сочи')
+                        +checkboxFilter('city7','Туапсе')
+                .filters_inside__more
+                    a.btn.btn_modal.filters_inside__btn(href="#" data-filter="more") Ещё фильтры
+                .filters_inside__filter
+                    a.btn.btn_action.filters_inside__btn(href="#" data-filter="index") Найти
+    //- Main
+    section.pt-2.pb-2
+        .container
+            nav.breadcrumbs 
+                a.breadcrumbs__link(href="category-all.html") Недвижимость в Сочи 
+                span.breadcrumbs__sep / 
+                a.breadcrumbs__link(href="category-filters.html") Продажа
+                span.breadcrumbs__sep / 
+                span.breadcrumbs__here Купить квартиру в Сочи
+            p.h2 Продажа однокомнатных квартир в Сочи
+            p.text-secondary Найдено 846 объявлений
+            p.lead.text-bold.mt-2 Рекомендуем посмотреть
+            .row.mb-3
+                .col-3
+                    dl.list.list_recommend
+                        dt.list__item 
+                            a.list_recommend__heading(href="#") с евроремонтом
+                        span.list_recommend__sep
+                        dd.list__item.list_recommend__count 127
+                .col-3
+                    dl.list.list_recommend
+                        dt.list__item 
+                            a.list_recommend__heading(href="#") дизайнерский ремонт
+                        span.list_recommend__sep
+                        dd.list__item.list_recommend__count 102
+                .col-3
+                    dl.list.list_recommend
+                        dt.list__item 
+                            a.list_recommend__heading(href="#") чистовая отделка
+                        span.list_recommend__sep
+                        dd.list__item.list_recommend__count 430
+                .col-3
+                    dl.list.list_recommend
+                        dt.list__item 
+                            a.list_recommend__heading(href="#") косметический ремонт
+                        span.list_recommend__sep
+                        dd.list__item.list_recommend__count 824
+                .col-3
+                    dl.list.list_recommend
+                        dt.list__item 
+                            a.list_recommend__heading(href="#") кирпичный дом
+                        span.list_recommend__sep
+                        dd.list__item.list_recommend__count 1200
+                .col-3
+                    dl.list.list_recommend
+                        dt.list__item 
+                            a.list_recommend__heading(href="#") монолитный дом
+                        span.list_recommend__sep
+                        dd.list__item.list_recommend__count 420
+                .col-3
+                    dl.list.list_recommend
+                        dt.list__item 
+                            a.list_recommend__heading(href="#") есть лифт
+                        span.list_recommend__sep
+                        dd.list__item.list_recommend__count 936
+            .project-details
+                .row 
+                    .col-4
+                        .project-details__gallery
+                            .project-details__gallery-img.project-details__gallery-img_first
+                                img.img-fluid(src="../img/demo/test-img-2.jpg")
+                            .project-details__gallery-img
+                                img.img-fluid(src="../img/demo/test-img-2.jpg")
+                            .project-details__gallery-img
+                                img.img-fluid(src="../img/demo/test-img-2.jpg")
+                            a.project-details__gallery-img.project-details__gallery-img_last(href="apart.html")
+                                img.img-fluid(src="../img/demo/test-img-2.jpg")
+                    .col-5
+                        a.h3.project-details__heading(href="apart.html") Студия в историческом центре
+                        .project-details__location
+                            span ст.м. Динамо
+                            span.project-details__sep ⋅
+                            span.project-details__time 12 мин. пешком
+                        .project-details__address Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3
+                        .project-details__intro Продажа 2 комнатной (евро) квартиры, комната 16.5+ кухня гостинная 20.9 в ЖК «Vita Nova». Дом построен в 2012 году надежным застройщиком, подразделением концерна YIT, с 1988 года  компания построила более 190 различных объектов, в том числе 30 ЖК с начала 2000х годов.
+                        .project-details__chars
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-room.svg")
+                                .element__content 1 комн.
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-room.svg")
+                                .element__content 1 комн.
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-room.svg")
+                                .element__content 1 комн.
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-room.svg")
+                                .element__content 1 комн.
+                    .col-3
+                        .h3.project-details__price 8  858 949 ₽
+                        .project-details__price-per-meter 170 002 ₽/м²
+                        a.project-details__dev(href="apart-complex.html")
+                            img.img-fluid(src="../img/demo/pic-apart.jpg")
+                            .project-details__dev-name ЖК «Vita Nova»
+            .project-details.project-details_last
+                .row 
+                    .col-4
+                        .project-details__gallery
+                            .project-details__gallery-img.project-details__gallery-img_first
+                                img.img-fluid(src="../img/demo/test-img-2.jpg")
+                            .project-details__gallery-img
+                                img.img-fluid(src="../img/demo/test-img-2.jpg")
+                            .project-details__gallery-img
+                                img.img-fluid(src="../img/demo/test-img-2.jpg")
+                    .col-5
+                        a.h3.project-details__heading(href="apart.html") Старт продаж 1кк «ЖК Охта»
+                        .project-details__location
+                            span ст.м. Динамо
+                            span.project-details__sep ⋅
+                            span.project-details__time 12 мин. пешком
+                        .project-details__address Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3
+                        .project-details__intro Продажа 2 комнатной (евро) квартиры, комната 16.5+ кухня гостинная 20.9 в ЖК «Vita Nova». Дом построен в 2012 году надежным застройщиком, подразделением концерна YIT, с 1988 года  компания построила более 190 различных объектов, в том числе 30 ЖК с начала 2000х годов.
+                        .project-details__chars
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-room.svg")
+                                .element__content 1 комн.
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-room.svg")
+                                .element__content 1 комн.
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-room.svg")
+                                .element__content 1 комн.
+                            .element.align-items-center
+                                .element__icon
+                                    img.img-fluid(src="../img/icon/icon-room.svg")
+                                .element__content 1 комн.
+                    .col-3
+                        .h3.project-details__price 5 959 999 ₽
+                        .project-details__price-per-meter 170 002 ₽/м²
+                        a.project-details__dev(href="apart-complex.html")
+                            img.img-fluid(src="../img/demo/pic-apart.jpg")
+                            .project-details__dev-name ЖК «Vita Nova»
+            .pagination
+                a.pagination__link(href="#") 1
+                a.pagination__link(href="#") 2
+                a.pagination__link(href="#") 3
+                span.pagination__link.pagination__link_here 4
+    //- Form
+    section.content.pt-2.pb-2
+        .container
+            .content__request.content__request_cta
+                p.h1 Доверьте подбор недвижимости экспертам!
+                p.mb-2 Оставьте заявку и получите максимально подходящую по вашим критериям подборку объектов
+                .list.list_check
+                    .list_check__item 
+                        .text-bold 100% соответствие 
+                        | вашим критериям
+                    .list_check__item 
+                        .text-bold экономия вашего времени 
+                        | на поисках объекта
+                    .list_check__item 
+                        .text-bold плюсы и минусы 
+                        | каждого объекта
+                    .list_check__item 
+                        .text-bold европейское качество 
+                        | предоставляемых услуг 
+                form.form.mt-2(action="")
+                    .form__row.form__row_send
+                        input.input(type="text",placeholder="Ваше имя")
+                        input.input.input_phone(type="text",placeholder="+7")
+                        button.btn.btn_action Подбор объектов

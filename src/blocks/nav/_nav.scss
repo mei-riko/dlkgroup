@@ -20,5 +20,59 @@
                 color: $body-color;
             }
         }
+
+        // JS State
+        &--active{
+            color: $gold;
+        }
+    }
+
+    &__item{
+        color: $body-color;
+        line-height: $line-height-heading;
+
+        display: inline-flex;
+    }
+    &__children{
+        display: none;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+        transform: translateY(100%);
+
+        background: $black-darker;
+        width: 100%;
+        padding-top: $spacer;
+        padding-bottom: $spacer;
+
+        // JS Status
+        &--active{
+            display: flex;
+        }
+    }
+    &__children-grid{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 2);
+        grid-template-columns: repeat(auto-fill, minmax(180px, auto));
+    }
+    &__children-title{
+        font-weight: $font-weight-bold;
+        color: $secondary;
+        margin-bottom: map-get($map: $spacers, $key: 1);
+
+        &_link{
+            color: $white;
+        }
+    }
+    &__children-item{
+        display: block;
+        color: $secondary;
+        margin-bottom: map-get($map: $spacers, $key: 1);
+
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 }

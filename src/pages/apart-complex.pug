@@ -1,24 +1,219 @@
-html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+extends ../blocks/main.pug
 
-        title Apartment Complex
+block variables
+    - var pageTitle = "Жилой комплекс"
+    - var chars = [{'title':'Год постройки', 'item':'2017'},{'title':'Тип дома', 'item':'Кирпичный'},{'title':'Этаж', 'item':'4 из 25'},{'title':'Ремонт', 'item':'Евроремонт'},{'title':'Балкон/терасса/лоджия', 'item':'Балкон'},{'title':'Вид из окон', 'item':'Во двор, на улицу'},{'title':'Парковка', 'item':'Есть'},{'title':'Лифты', 'item':'2 грузовых, 3 пассажирских'}]
+    - var popularProjects1 = [{"id":"1","title":"Студия в историческом центре","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"2","title":"Квартира с видом на море","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"3","title":"Апартаменты под ключ","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":false},{"id":"4","title":"Квартира с видом на парк","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"5","title":"Студия в новом ЖК","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":false},{"id":"6","title":"Апартаменты для инвестиции","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true},{"id":"7","title":"Студия с видом на набережную","address":"Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3","room":"1 комн.","plan":"40m2","floor":"4 этаж","balcony":true}];
+    script(src='https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js')
+    link(href='https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css' rel='stylesheet')
+    link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    script(script src="https://unpkg.com/swiper/swiper-bundle.min.js")
 
-        link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet")
-        
-        link(href='./css/framework.css', rel='stylesheet')
-        link(href='./css/main.css', rel='stylesheet')
+include ../items/project/project.pug
 
-    body
-        script(src="./js/jquery.min.js")
-        include ../blocks/header/header.pug
-        main 
-            section
-                p page content 
-            aside
-                p links
-        include ../blocks/footer/footer.pug
-        script(src="./js/app.min.js")
+mixin listChars(title, item)
+    dt.text-secondary=title
+    dd=item
+
+block content
+    //- First Screen
+    section.pt-4.pb-4.bg-image(style="background-image:url('../img/bg/managment.jpg');")
+        .container
+            .row.justify-content-center
+                .col-5.text-center
+                    p.text-uppercase.text-gold.text-bold Комплекс бизнес класса
+                    h1.mt-1.mb-2 Жилой комплекс «Vita Nova»
+                    p  Ближайшая станция метро&nbsp;Динамо (ул.&nbsp;Кораблестроителей, дом&nbsp;35)
+    //- Main
+    section.content.pt-2.pb-2
+        .container
+            nav.breadcrumbs 
+                a.breadcrumbs__link(href="category-all.html") Недвижимость в Сочи 
+                span.breadcrumbs__sep / 
+                a.breadcrumbs__link(href="category-filters.html") Продажа
+                span.breadcrumbs__sep / 
+                a.breadcrumbs__link(href="category-filters.html") 1-комн. квартиры
+                span.breadcrumbs__sep / 
+                span.breadcrumbs__here ЖК «Vita Nova»
+            .row.project-details.project-details_inside
+                .col-9
+                    .row
+                        //- Slider
+                        .col-6
+                            .project-details__slider.swiper-container.swiper-container_project
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img.img-fluid(src="https://images.unsplash.com/photo-1550136513-548af4445338?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1054&q=80")
+                                    .swiper-slide
+                                        img.img-fluid(src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80")
+                                    .swiper-slide
+                                        img.img-fluid(src="https://images.unsplash.com/photo-1538944570562-2c9cb7857097?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80")
+                                    .swiper-slide
+                                        img.img-fluid(src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80")
+                            .project-details__thumbs.swiper-container.swiper-container_thumbs
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img.img-fluid(src="https://images.unsplash.com/photo-1550136513-548af4445338?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1054&q=80")
+                                    .swiper-slide
+                                        img.img-fluid(src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80")
+                                    .swiper-slide
+                                        img.img-fluid(src="https://images.unsplash.com/photo-1538944570562-2c9cb7857097?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80")
+                                    .swiper-slide
+                                        img.img-fluid(src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80")
+                        //- Main Info
+                        .col-6
+                            p.h2.project-details__heading.project-details__heading_inside ЖК&nbsp;«Апарт-отель ARTSTUDIO Moskovsky»
+                            .project-details__location
+                                span ст.м. Динамо
+                                span.project-details__sep ⋅
+                                span.project-details__time 12 мин. пешком
+                            .project-details__address Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная&nbsp;ул., 3
+                            .project-details__chars.project-details__chars_inside
+                                .element.align-items-center
+                                    .element__icon
+                                        img.img-fluid(src="../img/icon/icon-room.svg")
+                                    .element__content 
+                                        .text-bold.text-white 16,5 м²
+                                        | жилая площадь
+                                .element.align-items-center
+                                    .element__icon
+                                        img.img-fluid(src="../img/icon/icon-plan.svg")
+                                    .element__content
+                                        .text-bold.text-white 22,5 м²
+                                        | общая площадь
+                                .element.align-items-center
+                                    .element__icon
+                                        img.img-fluid(src="../img/icon/icon-floor.svg")
+                                    .element__content 
+                                        .text-bold.text-white 4 этаж 
+                                        | из 21
+                                .element.align-items-center
+                                    .element__icon
+                                        img.img-fluid(src="../img/icon/icon-kitchen.svg")
+                                    .element__content
+                                        .text-bold.text-white 11,0 м²
+                                        | кухня
+                                .element.align-items-center
+                                    .element__icon
+                                        img.img-fluid(src="../img/icon/icon-balcony.svg")
+                                    .element__content есть балкон
+                    //- Apartments
+                    p.h4.mt-4 102 апартаментов от застройщика
+                    p.text-secondary.mb-2 в ЖК «Апарт-отель ARTSTUDIO Moskovsky (Артстудио Московский)»
+                    .toggle
+                        .toggle__title
+                            .project-details_inside__apart 
+                                span Студии
+                                span.text-secondary от 18 м²
+                                span 5,7–8,6 млн ₽
+                                span.text-gold.text-right 11 предложений
+                        .toggle__content 
+                            .project-details_inside__apart.project-details_inside__apart_toggle 
+                                a.text-underline(href="apart.html") Студия
+                                span.text-secondary 21.4 м²
+                                span 6,6 млн ₽
+                                span.text-secondary.text-right 3 кв. 2021
+                                img.img-fluid(src="../img/demo/plan.jpg")
+                            .project-details_inside__apart.project-details_inside__apart_toggle 
+                                a.text-underline(href="apart.html") Студия
+                                span.text-secondary 21.4 м²
+                                span 6,6 млн ₽
+                                span.text-secondary.text-right 3 кв. 2021
+                                img.img-fluid(src="../img/demo/plan.jpg")
+                            .project-details_inside__apart.project-details_inside__apart_toggle 
+                                a.text-underline(href="apart.html") Студия
+                                span.text-secondary 21.4 м²
+                                span 6,6 млн ₽
+                                span.text-secondary.text-right 3 кв. 2021
+                                img.img-fluid(src="../img/demo/plan.jpg")
+                    .toggle
+                        .toggle__title
+                            .project-details_inside__apart 
+                                span 1-комнатные
+                                span.text-secondary от 28 м²
+                                span 11,2–32,8 млн ₽
+                                span.text-gold.text-right 67 предложений
+                        .toggle__content 
+                            p 2
+                    //- Main Content
+                    .project-details_inside__content.mt-4
+                        p.h6.mb-2 Описание объекта
+                        p Сфера высшего интересный реализация проверки нашей задача реализации направлений организации структура оценить также отношении особенности административных образом поставленных играет подготовки высшего представляет нашей в а в соответствующий формировании направлений способствует повседневная рамки в анализа разработке и разработке повседневная особенности требуют равным и важную идейные количественный участниками порядка.
+                        p В отношении также порядка, что повседневная разработке форм модель также дальнейших структура рост равным также же постоянный активности повседневная постоянный эксперимент участниками практика в дальнейших организационной высшего существенных высшего анализа идейные обучения занимаемых плановых в соответствующий постоянный и порядка, соображения рамки задач.
+                    .project-details_inside__map#map
+                    //- CTA Subscribe Form
+                    .project-details_inside__form.mt-4.mb-4
+                        .row 
+                            .col-3
+                                img.img-fluid(src="../img/icon/handshake.svg")
+                            .col-8 
+                                p.h4 Бесплатная подборка самых востребованных объявлений месяца
+                                p.mb-2 Укажите электронную почту и мы отправим на неё наши лучшие предложения
+                                form.form.mt-2(action="")
+                                .form__row.form__row_subs
+                                    input.input(type="email",placeholder="Email",autocomplete="none")
+                                    button.btn.btn_action Получить подборку
+                    //- Territories
+                    p.h6.mb-2 Объекты на территории жилого комплекса
+                    .project-details__chars.project-details__chars_around
+                        .element.align-items-center
+                            .element__icon
+                                img.img-fluid(src="../img/icon/icon-room.svg")
+                            .element__content  детская площадка
+                        .element.align-items-center
+                            .element__icon
+                                img.img-fluid(src="../img/icon/icon-plan.svg")
+                            .element__content тренажеры
+                        .element.align-items-center
+                            .element__icon
+                                img.img-fluid(src="../img/icon/icon-floor.svg")
+                            .element__content салон красоты
+                        .element.align-items-center
+                            .element__icon
+                                img.img-fluid(src="../img/icon/icon-kitchen.svg")
+                            .element__content 2 магазина
+                        .element.align-items-center
+                            .element__icon
+                                img.img-fluid(src="../img/icon/icon-balcony.svg")
+                            .element__content пекарня
+                //- Sidebar
+                .col-3
+                    .project-details_inside__sidebar
+                        //- Price
+                        .h3.project-details__price от 18 820 119 ₽
+                        .project-details__price-per-meter от 170 002 до 225 000 ₽/м²
+                        //- Sidebar Intro
+                        p.mt-2 Долевое участие (214-ФЗ), возможна ипотека
+                        a.btn.btn_action(href="#" data-fancybox="order" data-src="#order" style="width: 100%;") Оставить заявку
+                        //- Complex|Developer
+                        .project-details_inside__dev
+                            img.project-details_inside__dev-img.img-fluid(src="../img/demo/pic-apart.jpg")
+                            .project-details_inside__dev-intro 
+                                .project-details_inside__dev-name.text-bold Эталон
+                                .text-secondary Застройщик 
+                                .text-secondary Год основания: 1987
+    //- Form
+    section.content.pt-2.pb-4
+        .container
+            .content__request.content__request_cta
+                p.h1 Доверьте подбор недвижимости экспертам!
+                p.mb-2 Оставьте заявку и получите максимально подходящую по вашим критериям подборку объектов
+                .list.list_check
+                    .list_check__item 
+                        .text-bold 100% соответствие 
+                        | вашим критериям
+                    .list_check__item 
+                        .text-bold экономия вашего времени 
+                        | на поисках объекта
+                    .list_check__item 
+                        .text-bold плюсы и минусы 
+                        | каждого объекта
+                    .list_check__item 
+                        .text-bold европейское качество 
+                        | предоставляемых услуг 
+                form.form.mt-2(action="")
+                    .form__row.form__row_send
+                        input.input(type="text",placeholder="Ваше имя")
+                        input.input.input_phone(type="tel",placeholder="+7")
+                        button.btn.btn_action Подбор объектов
+    

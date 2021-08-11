@@ -6,6 +6,7 @@
         padding: map-get($map: $spacers, $key: 1) 0;
     }
     &__main{
+        position: relative;
         padding: $spacer-gutter 0;
         border-top: 1px solid $border-color;
         border-bottom: 1px solid $border-color;

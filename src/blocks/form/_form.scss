@@ -9,5 +9,13 @@
         &_send{
             grid-template-columns: repeat(2, minmax(140px, 1fr)) 180px;
         }
+        &_subs{
+            grid-template-columns: 1fr 220px;
+            max-width: 600px;
+        }
+    }
+
+    &__line{
+        width: 100%;
     }
 }

@@ -4,27 +4,381 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Category With Filters</title>
+    <title>Недвижимость (внутренняя)</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
     <link href="./css/framework.css" rel="stylesheet"/>
     <link href="./css/main.css" rel="stylesheet"/>
   </head>
   <body>
     <script src="./js/jquery.min.js"></script>
     <header class="header">
-      <p>header</p>
+      <div class="header__additional">
+        <div class="container">
+          <menu class="header__menu">
+            <svg class="header__burger" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.1921 15.3202H0.807891C0.361719 15.3202 0 15.6819 0 16.1281C0 16.5743 0.361719 16.936 0.807891 16.936H19.1921C19.6383 16.936 20 16.5743 20 16.1281C20 15.6819 19.6383 15.3202 19.1921 15.3202Z"></path>
+              <path d="M19.1921 9.19208H0.807891C0.361719 9.19208 0 9.55376 0 9.99997C0 10.4462 0.361719 10.8079 0.807891 10.8079H19.1921C19.6383 10.8079 20 10.4462 20 9.99997C20 9.5538 19.6383 9.19208 19.1921 9.19208Z"></path>
+              <path d="M19.1921 3.06403H0.807891C0.361719 3.06403 0 3.42574 0 3.87192C0 4.31809 0.361719 4.67981 0.807891 4.67981H19.1921C19.6383 4.67981 20 4.31809 20 3.87192C20 3.42574 19.6383 3.06403 19.1921 3.06403Z"></path>
+            </svg><a class="header__logo logo" href="index.html"><img class="img-fluid" src="../img/global/logo.svg" alt="logo"/></a>
+            <nav class="nav nav_additional"><a class="nav__link_additional nav__link nav__link_active" href="sales.html">Продавать</a><a class="nav__link_additional nav__link" href="partners.html">Передать клиента</a><a class="nav__link_additional nav__link" href="managment.html">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="contact.html">Контакты</a>
+            </nav>
+            <div class="header__callbacks"><a class="header__callbacks-item d-none" href="tel:78005334418">8 800 533 44 18</a><a class="header__callbacks-item btn btn_additional btn_secondary" href="javascript;" data-fancybox="data-fancybox" data-src="#callback">Заказать звонок</a><a class="header__callbacks-item btn btn_networks" href="#"><svg width="16" height="16" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.83274 8.11186L5.81389 13.0644L8.39307 10.4852L12.8152 14L15.9289 0L0 6.63493L3.83274 8.11186ZM11.3772 4.01674L6.50161 8.4638L5.89434 10.7525L4.77252 7.94743L11.3772 4.01674Z" fill="white"/>
+</svg></a><a class="header__callbacks-item btn btn_networks" href="#"><svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.50187 0H7.49813C3.36281 0 0 3.36375 0 7.5C0 9.14062 0.52875 10.6613 1.42781 11.8959L0.493125 14.6822L3.37594 13.7606C4.56187 14.5463 5.97656 15 7.50187 15C11.6372 15 15 11.6353 15 7.5C15 3.36469 11.6372 0 7.50187 0Z" fill="#FCFCFC"/>
+<path d="M11.8663 10.5909C11.6853 11.1018 10.9672 11.5256 10.3944 11.6493C10.0025 11.7327 9.49063 11.7993 7.76751 11.0849C5.56345 10.1718 4.14407 7.93211 4.03345 7.7868C3.92751 7.64149 3.14282 6.60086 3.14282 5.52461C3.14282 4.44836 3.68938 3.9243 3.9097 3.6993C4.09063 3.51461 4.3897 3.43024 4.67657 3.43024C4.76938 3.43024 4.85282 3.43492 4.92782 3.43867C5.14813 3.44805 5.25876 3.46117 5.40407 3.80899C5.58501 4.24492 6.02563 5.32117 6.07813 5.4318C6.13157 5.54243 6.18501 5.69243 6.11001 5.83774C6.0397 5.98774 5.97782 6.0543 5.8672 6.1818C5.75657 6.3093 5.65157 6.4068 5.54095 6.54368C5.4397 6.66274 5.32532 6.79024 5.45282 7.01055C5.58032 7.22618 6.02095 7.94524 6.6697 8.52274C7.50688 9.26805 8.18563 9.50618 8.42845 9.60743C8.60938 9.68243 8.82501 9.66461 8.9572 9.52399C9.12501 9.34305 9.3322 9.04305 9.54313 8.74774C9.69313 8.53586 9.88251 8.50961 10.0813 8.58461C10.2838 8.65493 11.3553 9.18461 11.5756 9.2943C11.7959 9.40493 11.9413 9.45743 11.9947 9.55024C12.0472 9.64305 12.0472 10.079 11.8663 10.5909Z" fill="#146565"/>
+</svg></a></div>
+          </menu>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="container">
+          <menu class="header__menu">
+            <nav class="nav"><a class="nav__link nav__link_active" href="category-all.html">Аренда</a><a class="nav__link" href="category-all.html">Продажа</a><a class="nav__link" href="category-all.html">Новостройки</a><a class="nav__link" href="category-all.html">Коммерческая недвижимость</a><a class="nav__link" href="category-filters.html">Инвестиционные проекты</a>
+            </nav>
+            <div class="header__phone"><a class="header__link text-bold" href="tel:78005334418">8 800 533 44 18</a></div>
+          </menu>
+        </div>
+      </div>
     </header>
-    <main> 
-      <section>
-        <p>page content </p>
-      </section>
-      <aside>
-        <p>links</p>
-      </aside>
-    </main>
+    <section class="pt-4 pb-4 bg-image" style="background-image:url('../img/bg/managment.jpg');">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-5 text-center">
+            <p class="text-uppercase text-gold text-bold">Недвижимость в&nbsp;Сочи</p>
+            <h1 class="mt-1 mb-2">Продажа однокомнатных квартир и&nbsp;апартаментов</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-2 pb-2 filter-container">
+      <div class="container"> 
+        <div class="filters filters_inside">
+          <div class="filters__item filters__item_main">
+            <div class="filters__heading filters__heading--has-value">Продажа</div>
+            <div class="filters__options">
+              <div class="radio">
+                <input class="radio__input" type="radio" id="main1" name="main" checked="checked"/>
+                <label class="radio__label" for="main1">Продажа</label>
+              </div>
+              <div class="radio radio--disabled">
+                <input class="radio__input" type="radio" id="main2" name="main"/>
+                <label class="radio__label" for="main2">Аренда</label>
+              </div>
+            </div>
+          </div>
+          <div class="filters__item filters__item_type"> 
+            <div class="filters__heading filters__heading--has-value">Квартира в новостройке</div>
+            <div class="filters__options">
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="type1"/>
+                <label class="checkbox__label" for="type1">Квартира в новостройке</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="type2"/>
+                <label class="checkbox__label" for="type2">Квартира во вторичке</label>
+              </div>
+              <div class="checkbox checkbox--disabled">
+                <input class="checkbox__input" type="checkbox" id="type3"/>
+                <label class="checkbox__label" for="type3">Дом</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="type4"/>
+                <label class="checkbox__label" for="type4">Таунхаус</label>
+              </div>
+            </div>
+          </div>
+          <div class="filters__item filters__item_room">
+            <div class="filters__heading filters__heading--has-value">Студия, 1 комн.</div>
+            <div class="filters__options"> 
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="room1"/>
+                <label class="checkbox__label" for="room1">Студия</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="room2"/>
+                <label class="checkbox__label" for="room2">1 комната</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="room3"/>
+                <label class="checkbox__label" for="room3">2 комнаты</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="room4"/>
+                <label class="checkbox__label" for="room4">3 комнаты</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="room5"/>
+                <label class="checkbox__label" for="room5">4 комнаты</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="room6"/>
+                <label class="checkbox__label" for="room6">5 комнат</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="room7"/>
+                <label class="checkbox__label" for="room7">6 комнат</label>
+              </div>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="room8"/>
+                <label class="checkbox__label" for="room8">Свободная планировка</label>
+              </div>
+            </div>
+          </div>
+          <div class="filters__item filters__item_price">
+            <div class="filters__heading">Цена</div>
+            <div class="filters__options"> <span>от </span><span>до </span></div>
+          </div>
+          <div class="filters__item filters__item_location">
+            <div class="filters__heading">Город и регион</div>
+            <div class="filters__options"> 
+              <div class="checkbox checkbox_filter">
+                <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city1"/>
+                <label class="checkbox_filter__label" for="city1">Адлер</label>
+              </div>
+              <div class="checkbox checkbox_filter">
+                <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city2" checked="checked"/>
+                <label class="checkbox_filter__label" for="city2">Бытха</label>
+              </div>
+              <div class="checkbox checkbox_filter checkbox--disabled">
+                <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city3"/>
+                <label class="checkbox_filter__label" for="city3">Вардане</label>
+              </div>
+              <div class="checkbox checkbox_filter">
+                <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city4"/>
+                <label class="checkbox_filter__label" for="city4">Сочи</label>
+              </div>
+              <div class="checkbox checkbox_filter">
+                <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city5"/>
+                <label class="checkbox_filter__label" for="city5">Лазаревское</label>
+              </div>
+              <div class="checkbox checkbox_filter">
+                <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city6"/>
+                <label class="checkbox_filter__label" for="city6">Новый Сочи</label>
+              </div>
+              <div class="checkbox checkbox_filter">
+                <input class="checkbox__input checkbox_filter__input" type="checkbox" id="city7"/>
+                <label class="checkbox_filter__label" for="city7">Туапсе</label>
+              </div>
+            </div>
+          </div>
+          <div class="filters_inside__more"><a class="btn btn_modal filters_inside__btn" href="#" data-filter="more">Ещё фильтры</a></div>
+          <div class="filters_inside__filter"><a class="btn btn_action filters_inside__btn" href="#" data-filter="index">Найти</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-2 pb-2">
+      <div class="container">
+        <nav class="breadcrumbs"> <a class="breadcrumbs__link" href="category-all.html">Недвижимость в Сочи </a><span class="breadcrumbs__sep">/ </span><a class="breadcrumbs__link" href="category-filters.html">Продажа</a><span class="breadcrumbs__sep">/ </span><span class="breadcrumbs__here">Купить квартиру в Сочи</span></nav>
+        <p class="h2">Продажа однокомнатных квартир в Сочи</p>
+        <p class="text-secondary">Найдено 846 объявлений</p>
+        <p class="lead text-bold mt-2">Рекомендуем посмотреть</p>
+        <div class="row mb-3">
+          <div class="col-3">
+            <dl class="list list_recommend">
+              <dt class="list__item"> <a class="list_recommend__heading" href="#">с евроремонтом</a></dt><span class="list_recommend__sep"></span>
+              <dd class="list__item list_recommend__count">127</dd>
+            </dl>
+          </div>
+          <div class="col-3">
+            <dl class="list list_recommend">
+              <dt class="list__item"> <a class="list_recommend__heading" href="#">дизайнерский ремонт</a></dt><span class="list_recommend__sep"></span>
+              <dd class="list__item list_recommend__count">102</dd>
+            </dl>
+          </div>
+          <div class="col-3">
+            <dl class="list list_recommend">
+              <dt class="list__item"> <a class="list_recommend__heading" href="#">чистовая отделка</a></dt><span class="list_recommend__sep"></span>
+              <dd class="list__item list_recommend__count">430</dd>
+            </dl>
+          </div>
+          <div class="col-3">
+            <dl class="list list_recommend">
+              <dt class="list__item"> <a class="list_recommend__heading" href="#">косметический ремонт</a></dt><span class="list_recommend__sep"></span>
+              <dd class="list__item list_recommend__count">824</dd>
+            </dl>
+          </div>
+          <div class="col-3">
+            <dl class="list list_recommend">
+              <dt class="list__item"> <a class="list_recommend__heading" href="#">кирпичный дом</a></dt><span class="list_recommend__sep"></span>
+              <dd class="list__item list_recommend__count">1200</dd>
+            </dl>
+          </div>
+          <div class="col-3">
+            <dl class="list list_recommend">
+              <dt class="list__item"> <a class="list_recommend__heading" href="#">монолитный дом</a></dt><span class="list_recommend__sep"></span>
+              <dd class="list__item list_recommend__count">420</dd>
+            </dl>
+          </div>
+          <div class="col-3">
+            <dl class="list list_recommend">
+              <dt class="list__item"> <a class="list_recommend__heading" href="#">есть лифт</a></dt><span class="list_recommend__sep"></span>
+              <dd class="list__item list_recommend__count">936</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="project-details">
+          <div class="row"> 
+            <div class="col-4">
+              <div class="project-details__gallery">
+                <div class="project-details__gallery-img project-details__gallery-img_first"><img class="img-fluid" src="../img/demo/test-img-2.jpg"/></div>
+                <div class="project-details__gallery-img"><img class="img-fluid" src="../img/demo/test-img-2.jpg"/></div>
+                <div class="project-details__gallery-img"><img class="img-fluid" src="../img/demo/test-img-2.jpg"/></div><a class="project-details__gallery-img project-details__gallery-img_last" href="apart.html"><img class="img-fluid" src="../img/demo/test-img-2.jpg"/></a>
+              </div>
+            </div>
+            <div class="col-5"><a class="h3 project-details__heading" href="apart.html">Студия в историческом центре</a>
+              <div class="project-details__location"><span>ст.м. Динамо</span><span class="project-details__sep">⋅</span><span class="project-details__time">12 мин. пешком</span></div>
+              <div class="project-details__address">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
+              <div class="project-details__intro">Продажа 2 комнатной (евро) квартиры, комната 16.5+ кухня гостинная 20.9 в ЖК «Vita Nova». Дом построен в 2012 году надежным застройщиком, подразделением концерна YIT, с 1988 года  компания построила более 190 различных объектов, в том числе 30 ЖК с начала 2000х годов.</div>
+              <div class="project-details__chars">
+                <div class="element align-items-center">
+                  <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                  <div class="element__content">1 комн.</div>
+                </div>
+                <div class="element align-items-center">
+                  <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                  <div class="element__content">1 комн.</div>
+                </div>
+                <div class="element align-items-center">
+                  <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                  <div class="element__content">1 комн.</div>
+                </div>
+                <div class="element align-items-center">
+                  <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                  <div class="element__content">1 комн.</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="h3 project-details__price">8  858 949 ₽</div>
+              <div class="project-details__price-per-meter">170 002 ₽/м²</div><a class="project-details__dev" href="apart-complex.html"><img class="img-fluid" src="../img/demo/pic-apart.jpg"/>
+                <div class="project-details__dev-name">ЖК «Vita Nova»</div></a>
+            </div>
+          </div>
+        </div>
+        <div class="project-details project-details_last">
+          <div class="row"> 
+            <div class="col-4">
+              <div class="project-details__gallery">
+                <div class="project-details__gallery-img project-details__gallery-img_first"><img class="img-fluid" src="../img/demo/test-img-2.jpg"/></div>
+                <div class="project-details__gallery-img"><img class="img-fluid" src="../img/demo/test-img-2.jpg"/></div>
+                <div class="project-details__gallery-img"><img class="img-fluid" src="../img/demo/test-img-2.jpg"/></div>
+              </div>
+            </div>
+            <div class="col-5"><a class="h3 project-details__heading" href="apart.html">Старт продаж 1кк «ЖК Охта»</a>
+              <div class="project-details__location"><span>ст.м. Динамо</span><span class="project-details__sep">⋅</span><span class="project-details__time">12 мин. пешком</span></div>
+              <div class="project-details__address">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</div>
+              <div class="project-details__intro">Продажа 2 комнатной (евро) квартиры, комната 16.5+ кухня гостинная 20.9 в ЖК «Vita Nova». Дом построен в 2012 году надежным застройщиком, подразделением концерна YIT, с 1988 года  компания построила более 190 различных объектов, в том числе 30 ЖК с начала 2000х годов.</div>
+              <div class="project-details__chars">
+                <div class="element align-items-center">
+                  <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                  <div class="element__content">1 комн.</div>
+                </div>
+                <div class="element align-items-center">
+                  <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                  <div class="element__content">1 комн.</div>
+                </div>
+                <div class="element align-items-center">
+                  <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                  <div class="element__content">1 комн.</div>
+                </div>
+                <div class="element align-items-center">
+                  <div class="element__icon"><img class="img-fluid" src="../img/icon/icon-room.svg"/></div>
+                  <div class="element__content">1 комн.</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="h3 project-details__price">5 959 999 ₽</div>
+              <div class="project-details__price-per-meter">170 002 ₽/м²</div><a class="project-details__dev" href="apart-complex.html"><img class="img-fluid" src="../img/demo/pic-apart.jpg"/>
+                <div class="project-details__dev-name">ЖК «Vita Nova»</div></a>
+            </div>
+          </div>
+        </div>
+        <div class="pagination"><a class="pagination__link" href="#">1</a><a class="pagination__link" href="#">2</a><a class="pagination__link" href="#">3</a><span class="pagination__link pagination__link_here">4</span></div>
+      </div>
+    </section>
+    <section class="content pt-2 pb-2">
+      <div class="container">
+        <div class="content__request content__request_cta">
+          <p class="h1">Доверьте подбор недвижимости экспертам!</p>
+          <p class="mb-2">Оставьте заявку и получите максимально подходящую по вашим критериям подборку объектов</p>
+          <div class="list list_check">
+            <div class="list_check__item"> 
+              <div class="text-bold">100% соответствие </div>вашим критериям
+            </div>
+            <div class="list_check__item"> 
+              <div class="text-bold">экономия вашего времени </div>на поисках объекта
+            </div>
+            <div class="list_check__item"> 
+              <div class="text-bold">плюсы и минусы </div>каждого объекта
+            </div>
+            <div class="list_check__item"> 
+              <div class="text-bold">европейское качество </div>предоставляемых услуг 
+            </div>
+          </div>
+          <form class="form mt-2" action="">
+            <div class="form__row form__row_send">
+              <input class="input" type="text" placeholder="Ваше имя"/>
+              <input class="input input_phone" type="text" placeholder="+7"/>
+              <button class="btn btn_action">Подбор объектов</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
-      <p>footer</p>
+      <div class="container">
+        <div class="footer__contact-info">
+          <div class="row">
+            <div class="col-8">
+              <div class="footer__menu"><a class="footer__logo logo" href="index.html"><img class="img-fluid" src="../img/global/logo.svg" alt="logo"/></a>
+                <nav class="nav nav_additional"><a class="nav__link_additional nav__link nav__link_active" href="category-all.html">Аренда</a><a class="nav__link_additional nav__link" href="category-all.html">Продажа</a><a class="nav__link_additional nav__link" href="category-all.html">Новостройки</a><a class="nav__link_additional nav__link" href="category-all.html">Коммерческая недвижимость</a><a class="nav__link_additional nav__link" href="category-filters.html">Инвестиционные проекты</a>
+                </nav>
+              </div>
+              <div class="row mt-2 mb-1">
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">ТЕЛЕФОН</div><a class="text-bolder footer__contact-link" href="tel:78005334418">8 800 533 44 18</a>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">E-MAIL</div><a class="text-bolder footer__contact-link" href="mailto:info@dlk-investgroup.ru">info@dlk-investgroup.ru</a>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">АДРЕС </div><span class="text-bolder">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</span>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="footer__contact-heading">ЧАСЫ РАБОТЫ</div>
+                  <ul class="text-bolder footer__contact-list">
+                    <li>пн-пт 08.00 - 17.00 </li>
+                    <li>сб 10.00 - 16.00</li>
+                    <li>воскресенье — выходной</li>
+                  </ul>
+                </div>
+              </div>
+              <nav class="nav"><a class="nav__link_additional nav__link nav__link_active" href="sales.html">Продавать</a><a class="nav__link_additional nav__link" href="partners.html">Передать клиента</a><a class="nav__link_additional nav__link" href="managment.html">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="contact.html">Контакты</a>
+              </nav>
+            </div>
+            <div class="col-4">
+              <div class="footer__form">
+                <p class="h3">Есть вопросы?</p>
+                <form class="form">
+                  <input class="input input_line" type="text" placeholder="Ваше имя" name=""/>
+                  <input class="input input_line" type="tel" placeholder="+7" name=""/>
+                  <textarea class="input input_line" placeholder="Say «hello»" name=""></textarea>
+                  <button class="btn btn_action footer__form-submit">Отправить запрос </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__technical-info">
+          <div class="row"> 
+            <div class="col-6"><span>© 2021 ДЛК ГРУПП</span></div>
+            <div class="col-6 text-right"><a class="footer__link" href="#">Сайт разработан websoho.ru</a></div>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="./js/app.min.js"></script>
   </body>

@@ -1,0 +1,43 @@
+.toggle{
+    padding: $spacer/2 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    &__title{
+        position: relative;
+        padding-right: map-get($map: $spacers, $key: 4);
+
+        transition: .4s;
+        cursor: pointer;
+
+        &:after{
+            content: '';
+            display: inline-flex;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            width: map-get($map: $spacers, $key: 2);
+            height: map-get($map: $spacers, $key: 2);
+            background: url('../img/icon/chevron.svg');
+            transition: .4s;
+        }
+
+        &--active{
+            filter: opacity(0.4);
+
+            &:after{
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+    &__content{
+        display: none;
+        padding: $spacer/2 0 0;
+    }
+}
+
+.toggle + .toggle{
+    border-top: none;
+}

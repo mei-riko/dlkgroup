@@ -15,6 +15,8 @@
 @import "../items/checkbox/checkbox_filter";
 // Radio
 @import "../items/radio/radio";
+// Breadcrumbs
+@import "../items/breadcrumbs/breadcrumbs";
 // Table
 @import "../items/table/table";
 // Different Style Item (repeating element)
@@ -22,15 +24,30 @@
 @import "../items/element/element_numbered";
 @import "../items/element/element_advantage";
 @import "../items/element/element_disabled";
-// Project
+// Project Vertical Preview
 @import "../items/project/project-preview";
 @import "../items/project/project-preview_link";
 @import "../items/project/project-preview_full";
+// Project Category Preview
 @import "../items/project/project-category";
+// Project Horisontal Preview
+@import "../items/project/project-details";
+@import "../items/project/project-details_inside";
 // News
 @import "../items/news-preview/news-preview";
 @import "../items/news-preview/news-preview_list";
 @import "../items/news-preview/news-preview_highlight";
+// Slider
+@import "../items/slider/slider";
+@import "../items/slider/swiper";
+// List
+@import "../items/list/list";
+@import "../items/list/list_recommend";
+@import "../items/list/list_check";
+// Toggle
+@import "../items/toggle/toggle";
+// Pagination
+@import "../items/pagination/pagination";
 // Grid
 @import "../blocks/grid/grid";
 @import "../blocks/grid/grid_service-elem";
@@ -50,9 +67,7 @@
 // Footer
 @import "../blocks/footer/footer";
 
-// Slider & Tabs
-@import "../blocks/slider/slider";
-@import "../blocks/slider/swiper";
+// Tabs
 @import "../blocks/tabs/tabs";
 @import "../blocks/tabs/tabs-content";
 // Tags
@@ -63,3 +78,5 @@
 @import "../blocks/filters/filters";
 @import "../blocks/filters/filters_index";
 @import "../blocks/filters/filters_inside";
+// Modal
+@import "../items/modal/modal";

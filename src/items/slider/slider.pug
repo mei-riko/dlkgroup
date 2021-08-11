@@ -1,0 +1,11 @@
+mixin sliderRow(object)
+    if object.active 
+        .js-slide-item.slider__item.slider__item--active
+            .slider__photo
+                img.slider__img(data-src=object.img, alt="", )
+            .slider__text=object.text
+    else
+        .js-slide-item.slider__item
+            .slider__photo
+                img.slider__img(data-src=object.img, alt="", )
+            .slider__text=object.text

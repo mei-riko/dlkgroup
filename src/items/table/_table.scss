@@ -1,15 +1,19 @@
+table,
 .table{
     width: 100%;
     border-collapse: collapse;
     text-align: center;
 
+    thead,
     &__head{
         background: $black-darker;
         font-weight: $font-weight-bold;
     }
+    tr,
     &__row{
         border-bottom: 1px solid $border-color;
     }
+    td,
     &__td{
         padding: map-get($map: $spacers, $key: 1);
         width: fit-content;

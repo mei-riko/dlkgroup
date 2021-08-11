@@ -36,10 +36,22 @@ footer.footer
                                 input.input.input_line(type="tel",placeholder="+7", name="")
                                 textarea.input.input_line(placeholder="Say «hello»", name="")
                                 button.btn.btn_action.footer__form-submit Отправить запрос 
-                    
             .footer__technical-info
                 .row 
                     .col-6
                         span © 2021 ДЛК ГРУПП
                     .col-6.text-right
                         a(href="#",class="footer__link") Сайт разработан websoho.ru
+.modal.modal_callback#callback 
+    p.h4 Хотите узнать больше?
+    p.mb-2.text-secondary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas
+    form.form
+        input.form__line.input.input_line(type="tel",placeholder="+7", name="")
+        button.form__line.btn.btn_action Заказать звонок 
+.modal.modal_callback#order 
+    p.h4 Хотите узнать больше?
+    p.mb-2.text-secondary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas
+    form.form
+        input.form__line.input.input_line(type="text",placeholder="Ваше имя", name="")
+        input.form__line.input.input_line(type="tel",placeholder="+7", name="")
+        button.form__line.btn.btn_action Оставить заявку 

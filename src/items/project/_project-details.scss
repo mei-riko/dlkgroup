@@ -1,0 +1,136 @@
+.project-details{
+    margin-bottom: $spacer;
+    padding-bottom: $spacer;
+    border-bottom: 1px solid $border-color;
+
+    // Last Project In List
+    &_last{
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    // Preview Gallery
+    &__gallery{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 1);
+        grid-template-columns: repeat(3, 1fr);
+
+        &-img{
+            &_first{
+                // grid-row-start: 1;
+                grid-column-start: 1;
+                // grid-row-end: 2;
+                grid-column-end: 4;
+            }
+            &_last{
+                position: relative;
+
+                &:before{
+                    content:'Ещё фото';
+                    text-align: center;
+                    font-weight: $font-weight-bolder;
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+
+                    background-color: rgba($color: $black, $alpha: 0.5);
+                    transition: .4s;
+                }
+
+                &:hover:before{
+                    background-color: rgba($color: $black, $alpha: 0.7);
+                }
+            }
+        }
+    }
+    // Slider
+    &__thumbs{
+        margin-top: map-get($map: $spacers, $key: 1);
+
+        .swiper-slide{
+            filter: opacity(.7);
+        }
+        .swiper-slide-thumb-active{
+            filter: opacity(1);
+            border: 4px solid $gold;
+        }
+    }
+    // Preview Info
+    &__heading{
+        color: $gold;
+
+        &_inside{
+            color: $white;
+            margin-bottom: map-get($map: $spacers, $key: 2);
+        }
+    }
+    &__time{
+        color: $secondary;
+    }
+    &__sep{
+        color: $secondary;
+        margin: 0 8px;
+    }
+    &__address{
+        color: $secondary;
+    }
+    &__intro{
+        padding: map-get($map: $spacers, $key: 2) 0;
+        border-bottom: 1px solid $border-color;
+    }
+    // Chars Apart And Territories Around
+    &__chars{
+        margin-top: map-get($map: $spacers, $key: 2);
+
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 1);
+        color: $secondary;
+
+        grid-template-columns: repeat(4, minmax(auto, 120px));
+
+        // For Inside Page
+        &_inside{
+            grid-template-columns: repeat(2, minmax(auto, 180px));
+        }
+        &_around{
+            grid-template-columns: repeat(auto-fit, minmax(auto, 180px));
+        }
+    }
+    // Price
+    &__price{
+        margin-bottom: $spacer-gutter/2;
+
+        &-per-meter{
+            color: $secondary;
+            line-height: $line-height-heading;
+        }
+    }
+    // About Complex|Developer
+    &__dev{
+        margin-top: $spacer;
+
+        display: flex;
+        align-items: center;
+
+        &-name{
+            font-weight: $font-weight-bold;
+            padding-left: $spacer/2;
+        }
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    // List Chars For Inside Page
+    &__list{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 1);
+        grid-template-columns: 200px 1fr;
+    }
+}

@@ -4,17 +4,8 @@ block variables
     - var pageTitle = "Доверительное управление"
     - var sliderItems = [{text:"Краткосрочная аренда выгоднее, чем долгосрочная, а наш многолетний опыт работы в сфере управления недвижимостью, знание рынка, маркетинг и ежедневная оптимизация цен позволяют максимизировать Ваш доход!",img:"../img/slide/img.png", active: true},{text:"Ваша квартира начнёт приносить вам деньги уже в день обращения! Да, нам требуется всего несколько часов на запуск нового объекта. Вы можете смело строить планы на будущее и не переживать об упущенной выгоде из-за внезапно съехавших арендаторов.",img:"https://images.wallpaperscraft.ru/image/oblaka_tyazhelye_grozovye_molniya_nepogoda_doroga_asfalt_fonari_55492_1920x1200.jpg"},{text:"Проживание гостей возможно лишь при полной предварительной оплаты брони, которую взимают и гарантируют ведущие туристические площадки. В случае поздней или частичной отмены вы также получаете компенсацию в виде полной стоимости проживания.",img:"https://artsten.ru/kartinki/anglijskij-stil-v-interere-foto-primery-osobennosti15.jpg"},{text:"Туристы и бизнес-путешественники арендуют апартаменты в основном как место для ночлега и реже пользуются бытовой техникой, что влечет меньший износ квартиры, чем при долгосрочной аренде, и позволяет надолго сохранить её привлекательный вид.",img:"https://vashestroitelstvo.ru/wp-content/uploads/2020/09/19.jpg"},{text:"Мы берем на себя все Ваши хлопоты: от поиска арендаторов, круглосуточной поддержки, уборки и гостиничного сервиса до мелкого ремонта и постоянного поддержания квартиры в надлежащем состоянии.",img:"https://obzorstroy.ru/wp-content/uploads/2020/05/interer-v-stile-kantri-1-scaled.jpg"},{text:"Мы постоянно развиваемся и улучшаем наш сервис, поэтому вы всегда будете получать максимальный доход от своей недвижимости и весь спектр качественно предоставляемых услуг, доступный на рынке аренды жилья.",img:"https://mebel.ru/upload/iblock/e12/e12bdc057900c9be9325b475d8dea3b6.jpeg"}]
 
-mixin sliderRow(object)
-    if object.active 
-        .js-slide-item.slider__item.slider__item--active
-            .slider__photo
-                img.slider__img(data-src=object.img, alt="", )
-            .slider__text=object.text
-    else
-        .js-slide-item.slider__item
-            .slider__photo
-                img.slider__img(data-src=object.img, alt="", )
-            .slider__text=object.text
+include ../items/slider/slider.pug
+
 block content
     section.pt-4.pb-4.bg-image(style="background-image:url('../img/bg/managment.jpg');")
         .container

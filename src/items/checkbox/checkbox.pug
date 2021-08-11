@@ -1,0 +1,8 @@
+mixin checkbox(id, title, checked)
+    .checkbox(class!=attributes.class)
+        input.checkbox__input(type="checkbox" id=id checked=checked class!=attributes.field)
+        label.checkbox__label(for=id)!= title
+mixin checkboxFilter(id, title, checked)
+    .checkbox.checkbox_filter(class!=attributes.class)
+        input.checkbox__input.checkbox_filter__input(type="checkbox" id=id checked=checked class!=attributes.field)
+        label.checkbox_filter__label(for=id)!= title

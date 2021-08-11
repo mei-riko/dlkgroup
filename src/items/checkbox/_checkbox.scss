@@ -60,6 +60,10 @@
         border-color: $secondary;
         color: $secondary;
 
+        label{
+            border-color: $secondary;
+        }
+        
         &:hover{
             color: $secondary;
         }
