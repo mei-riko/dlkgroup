@@ -36,3 +36,33 @@
         font-weight: $font-weight-bold;
     }
 }
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .news-preview_highlight{
+        &:after{
+            padding-bottom: 40%;
+        }
+    }
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .news-preview_highlight{
+        &__heading{
+            top: $spacer;
+            left: $spacer;
+        }
+        &:after{
+            padding-bottom: 75%;
+        }
+    }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+}

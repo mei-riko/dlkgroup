@@ -20,6 +20,8 @@ $link-hover-color     : $action !default;
 $link-decoration      : none !default;
 $link-hover-decoration: underline !default;
 
+$transition-base      : 0.3s;
+
 $grid-breakpoints: (
   xs: 420px,
   sm: 576px,
@@ -28,13 +30,13 @@ $grid-breakpoints: (
   xl: 1440px
 ) !default;
 
-$container-width: 1360px;
+$container-width: 1360px !default;
 $container-max-widths: (
   xs: 100%,
-  sm: 0px,
-  md: 0px,
-  lg: 0px,
-  xl: 0px,
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
+  xl: 100%,
 ) !default;
 
 
@@ -117,3 +119,21 @@ $positions: static, relative, absolute,     fixed, sticky !default;
 
 $print-page-size     : a3 !default;
 $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
+
+
+
+// // < 1440px
+// @media all and (max-width: map-get($grid-breakpoints, 'xl')){
+// }
+// // < 1024px
+// @media all and (max-width: map-get($grid-breakpoints, 'lg')){
+// }
+// // < 768px
+// @media all and (max-width: map-get($grid-breakpoints, 'md')){
+// }
+// // < 576px
+// @media all and (max-width: map-get($grid-breakpoints, 'sm')){
+// }
+// // < 420px
+// @media all and (max-width: map-get($grid-breakpoints, 'xs')){
+// }

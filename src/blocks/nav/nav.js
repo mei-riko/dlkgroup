@@ -42,36 +42,30 @@ function navbarDesktopInitialize( itemNav ){
 }
 
 // Mobile Navbar
-// function openNavbarOnClick( elem ){
-//     const idNavbar = elem.data('navbar');
-//     const target = $('.navbar-sidebar#' + idNavbar);
+function openNavbarOnClick( itemNav ){
+    let $parentHeader = itemNav.closest('.header');
+    let $item = itemNav.find(".nav__link");
+    
 
-//     // Если есть открытое меню - скрыть его
-//     $(".navbar-sidebar").removeClass("navbar-sidebar--active");
-
-//     if ( target.length > 0 ){
-//         target.addClass('navbar-sidebar--active');
-//         $('.overlay').removeClass('overlay--disable');
-//         $('body').addClass('hidden');
-//         $('body').addClass('open-navbar');
-//     } else{
-//         return null;
-//     }
-
-//     // Change z-index
-//     $('.header.header_sticky').addClass('header_sticky--open-sidebar');
-// }
+    $item.on('click', function(e){
+        e.preventDefault();
+        let nav = $(this).data("nav");
+        console.log( $parentHeader.find(".nav .nav__children" + nav) );
+        $parentHeader.find(".nav .nav__children" + nav).slideToggle();
+    });
+}
 
 $(function(){
     // Check Windows Size
     if ( $(window).width() > 1023 || !window.matchMedia('screen and (max-width: 1024px)').matches ){
         $('.nav').removeClass("nav--mobile").addClass("nav--desktop");
+        // Desktop Navbar
+        navbarDesktopInitialize( $('.nav.nav--desktop .nav__item.nav__item_has-child') );
     }else{
         $('.nav').removeClass("nav--desktop").addClass("nav--mobile");
+        // Mobile Navbar
+        openNavbarOnClick ( $('.nav.nav--mobile .nav__item.nav__item_has-child') );
     }
-
-    // Desktop Navbar
-    navbarDesktopInitialize( $('.nav.nav--desktop .nav__item.nav__item_has-child') );
 });
 
 // Resize

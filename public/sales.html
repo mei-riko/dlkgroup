@@ -7,11 +7,11 @@
     <title>Партнерская программа</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-    <link href="./css/framework.css" rel="stylesheet"/>
-    <link href="./css/main.css" rel="stylesheet"/>
+    <link href="../css/framework.css" rel="stylesheet"/>
+    <link href="../css/main.css" rel="stylesheet"/>
   </head>
   <body>
-    <script src="./js/jquery.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
     <header class="header">
       <div class="header__additional">
         <div class="container">
@@ -21,23 +21,39 @@
               <path d="M19.1921 9.19208H0.807891C0.361719 9.19208 0 9.55376 0 9.99997C0 10.4462 0.361719 10.8079 0.807891 10.8079H19.1921C19.6383 10.8079 20 10.4462 20 9.99997C20 9.5538 19.6383 9.19208 19.1921 9.19208Z"></path>
               <path d="M19.1921 3.06403H0.807891C0.361719 3.06403 0 3.42574 0 3.87192C0 4.31809 0.361719 4.67981 0.807891 4.67981H19.1921C19.6383 4.67981 20 4.31809 20 3.87192C20 3.42574 19.6383 3.06403 19.1921 3.06403Z"></path>
             </svg><a class="header__logo logo" href="index.html"><img class="img-fluid" src="../img/global/logo.svg" alt="logo"/></a>
-            <nav class="nav nav_additional"><a class="nav__link_additional nav__link nav__link_active" href="sales.html">Продавать</a><a class="nav__link_additional nav__link" href="partners.html">Передать клиента</a><a class="nav__link_additional nav__link" href="managment.html">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="contact.html">Контакты</a>
+            <nav class="nav nav_additional nav_desktop-only"><a class="nav__link_additional nav__link nav__link_active" href="sales.html">Продавать</a><a class="nav__link_additional nav__link" href="partners.html">Передать клиента</a><a class="nav__link_additional nav__link" href="managment.html">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="contact.html">Контакты</a>
             </nav>
-            <div class="header__callbacks"><a class="header__callbacks-item d-none" href="tel:78005334418">8 800 533 44 18</a><a class="header__callbacks-item btn btn_additional btn_secondary" href="javascript;" data-fancybox="data-fancybox" data-src="#callback">Заказать звонок</a><a class="header__callbacks-item btn btn_networks" href="#"><svg width="16" height="16" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="header__callbacks">
+              <div class="header__callbacks-item header__phone d-none d-lg-block d-md-none"><a class="text-bold" href="tel:78005334418">8 800 533 44 18</a></div><a class="header__callbacks-item btn btn_additional btn_secondary d-sm-none" href="javascript;" data-fancybox="data-fancybox" data-src="#callback">Заказать звонок</a><a class="header__callbacks-item btn btn_networks" href="#"><svg width="16" height="16" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.83274 8.11186L5.81389 13.0644L8.39307 10.4852L12.8152 14L15.9289 0L0 6.63493L3.83274 8.11186ZM11.3772 4.01674L6.50161 8.4638L5.89434 10.7525L4.77252 7.94743L11.3772 4.01674Z" fill="white"/>
 </svg></a><a class="header__callbacks-item btn btn_networks" href="#"><svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.50187 0H7.49813C3.36281 0 0 3.36375 0 7.5C0 9.14062 0.52875 10.6613 1.42781 11.8959L0.493125 14.6822L3.37594 13.7606C4.56187 14.5463 5.97656 15 7.50187 15C11.6372 15 15 11.6353 15 7.5C15 3.36469 11.6372 0 7.50187 0Z" fill="#FCFCFC"/>
 <path d="M11.8663 10.5909C11.6853 11.1018 10.9672 11.5256 10.3944 11.6493C10.0025 11.7327 9.49063 11.7993 7.76751 11.0849C5.56345 10.1718 4.14407 7.93211 4.03345 7.7868C3.92751 7.64149 3.14282 6.60086 3.14282 5.52461C3.14282 4.44836 3.68938 3.9243 3.9097 3.6993C4.09063 3.51461 4.3897 3.43024 4.67657 3.43024C4.76938 3.43024 4.85282 3.43492 4.92782 3.43867C5.14813 3.44805 5.25876 3.46117 5.40407 3.80899C5.58501 4.24492 6.02563 5.32117 6.07813 5.4318C6.13157 5.54243 6.18501 5.69243 6.11001 5.83774C6.0397 5.98774 5.97782 6.0543 5.8672 6.1818C5.75657 6.3093 5.65157 6.4068 5.54095 6.54368C5.4397 6.66274 5.32532 6.79024 5.45282 7.01055C5.58032 7.22618 6.02095 7.94524 6.6697 8.52274C7.50688 9.26805 8.18563 9.50618 8.42845 9.60743C8.60938 9.68243 8.82501 9.66461 8.9572 9.52399C9.12501 9.34305 9.3322 9.04305 9.54313 8.74774C9.69313 8.53586 9.88251 8.50961 10.0813 8.58461C10.2838 8.65493 11.3553 9.18461 11.5756 9.2943C11.7959 9.40493 11.9413 9.45743 11.9947 9.55024C12.0472 9.64305 12.0472 10.079 11.8663 10.5909Z" fill="#146565"/>
-</svg></a></div>
+</svg></a>
+            </div>
           </menu>
         </div>
       </div>
-      <div class="header__main">
+      <div class="header__main">             
         <div class="container">
-          <menu class="header__menu">
-            <nav class="nav"><a class="nav__link nav__link_active" href="category-all.html">Аренда</a><a class="nav__link" href="category-all.html">Продажа</a><a class="nav__link" href="category-all.html">Новостройки</a><a class="nav__link" href="category-all.html">Коммерческая недвижимость</a><a class="nav__link" href="category-filters.html">Инвестиционные проекты</a>
+          <menu class="header__menu header__menu_on-mobile">
+            <nav class="nav nav_main">
+              <div class="nav__item nav__item_has-child"><a class="nav__link nav__link_parent" href="category-all.html" data-nav="#nav1">Category</a>
+                <div class="nav__children" id="nav1">
+                  <div class="container">
+                    <div class="nav__children-grid">
+                      <div class="nav__children-col"><a class="nav__children-title nav__children-title_link" href="catalog.html">Subcategory Link</a><a class="nav__children-item" href="category-filters.html">Subcategory Inside</a><a class="nav__children-item" href="category-filters.html">Subcategory Inside</a><a class="nav__children-item" href="category-filters.html">Subcategory Inside</a><a class="nav__children-item" href="category-filters.html">Subcategory Inside</a><a class="nav__children-item" href="category-filters.html">Subcategory Inside</a><a class="nav__children-item" href="category-filters.html">Subcategory Inside</a></div>
+                      <div class="nav__children-col">
+                        <div class="nav__children-title">Subcategory</div><a class="nav__children-item" href="category-filters.html">Subcategory Inside</a><a class="nav__children-item" href="category-filters.html">Subcategory Inside</a><a class="nav__children-item" href="category-filters.html">Subcategory Inside</a><a class="nav__children-item" href="category-filters.html">Subcategory Inside</a><a class="nav__children-item" href="category-filters.html">Subcategory Inside</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><a class="nav__link nav__link_active" href="category-all.html">Аренда</a><a class="nav__link" href="category-all.html">Продажа</a><a class="nav__link" href="category-all.html">Новостройки</a><a class="nav__link" href="category-all.html">Коммерческая недвижимость</a><a class="nav__link" href="category-filters.html">Инвестиционные проекты</a>
             </nav>
-            <div class="header__phone"><a class="header__link text-bold" href="tel:78005334418">8 800 533 44 18</a></div>
+            <nav class="nav nav_additional d-none d-lg-block"><a class="nav__link_additional nav__link nav__link_active" href="sales.html">Продавать</a><a class="nav__link_additional nav__link" href="partners.html">Передать клиента</a><a class="nav__link_additional nav__link" href="managment.html">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="contact.html">Контакты</a>
+            </nav>
+            <div class="header__phone d-lg-none d-md-block mt-md-2"><a class="header__link text-bold" href="tel:78005334418">8 800 533 44 18</a></div>
           </menu>
         </div>
       </div>
@@ -45,19 +61,19 @@
     <section class="pt-2 pb-2 content">
       <div class="container">
         <div class="row justify-content-between align-items-center">
-          <div class="col-5"> 
+          <div class="col-5 col-xl-5 col-lg-6 col-md-12">
             <h1>Удобная продажа недвижимости с&nbsp;DLK&nbsp;Group</h1>
             <p class="lead text-secondary text-bolder mb-2">DLK&nbsp;Group поможет вам продать вашу недвижимость.</p>
             <p>DLK Group поможет вам продать вашу недвижимость. Мы активно сотрудничаем не только с частными лицами, которые хотят продать свой объект, но и с инвесторами, которые регулярно реализуют свои объекты.</p>
             <p>Для того, чтобы продать через нас свой объект просим Вас заполнить анкету ниже или связаться по контактным номерам, расположенным после анкеты.  </p>
           </div>
-          <div class="col-6"> 
+          <div class="col-6 col-xl-6 col-lg-6 col-md-12 mt-md-2">
             <div class="row"> 
-              <div class="col-6">
+              <div class="col-6 col-xs-12">
                 <div class="content__image content__image_circle" style="background-image:url('../img/demo/img1.png');"></div>
                 <div class="content__image content__image_ellipse" style="background-image:url('../img/demo/img2.png');"></div>
               </div>
-              <div class="col-6">
+              <div class="col-6 d-xs-none">
                 <div class="content__image content__image_arch" style="background-image:url('../img/demo/img3.png');"></div>
               </div>
             </div>
@@ -68,66 +84,96 @@
     <section class="pt-2 pb-2 content">
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col-4">
+          <div class="col-4 col-lg-6 col-md-12">
             <p class="h2">Анкета продажи</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas. Nec feugiat elementum at augue sit. Placerat odio amet cursus morbi.</p>
-            <p class="mt-4 mb-2 lead text-secondary text-bolder">Контактная информация для партнёров</p>
-            <div class="row"> 
-              <div class="col-5">
-                <p class="content__contact-heading">Телефон</p><a class="text-bolder footer__contact-link" href="tel:78005334418">8 800 533 44 18</a>
-              </div>
-              <div class="col-7">
-                <p class="content__contact-heading">E-mail</p><a class="text-bolder footer__contact-link" href="mailto:info@dlk-investgroup.ru">info@dlk-investgroup.ru</a>
+            <div class="d-md-none">
+              <p class="mt-4 mb-2 lead text-secondary text-bolder">Контактная информация для&nbsp;партнёров</p>
+              <div class="row"> 
+                <div class="col-5 col-lg-12 mb-lg-2">
+                  <p class="content__contact-heading">Телефон</p><a class="text-bolder content__contact-item" href="tel:78005334418">8 800 533 44 18</a>
+                </div>
+                <div class="col-7 col-lg-12">
+                  <p class="content__contact-heading">E-mail</p><a class="text-bolder content__contact-item" href="mailto:info@dlk-investgroup.ru">info@dlk-investgroup.ru</a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-8">
-            <div class="content__request"> 
+          <div class="col-8 col-lg-6 col-md-12 mt-md-2">
+            <div class="content__request content__request_questionary">
               <form class="form" action="">
-                <div class="row align-items-center justify-content-end">
-                  <div class="col-4 text-right">
-                    <label class="text-secondary">Ваши Ф.И.О.</label>
+                <div class="row">
+                  <div class="col-12 mb-lg-1 col-md-6 col-sm-12 mb-xs-0">
+                    <div class="row align-items-center justify-content-end">
+                      <div class="col-4 text-right col-lg-12 text-lg-left">
+                        <label class="text-secondary">Ваши Ф.И.О.</label>
+                      </div>
+                      <div class="col-8 col-lg-12">
+                        <input class="input input_line" type="text"/>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-8">
-                    <input class="input input_line" type="text"/>
+                  <div class="col-12 mb-lg-1 col-md-6 col-sm-12 mb-xs-0">
+                    <div class="row align-items-center justify-content-end">
+                      <div class="col-4 text-right col-lg-12 text-lg-left">
+                        <label class="text-secondary">Тип объекта</label>
+                      </div>
+                      <div class="col-8 col-lg-12">
+                        <input class="input input_line" type="text"/>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-4 text-right">
-                    <label class="text-secondary">Тип объекта</label>
+                  <div class="col-12 mb-lg-1 col-md-6 col-sm-12 mb-xs-0">
+                    <div class="row align-items-center justify-content-end">
+                      <div class="col-4 text-right col-lg-12 text-lg-left">
+                        <label class="text-secondary">Регион, в котором находится объект</label>
+                      </div>
+                      <div class="col-8 col-lg-12">
+                        <input class="input input_line" type="text"/>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-8">
-                    <input class="input input_line" type="text"/>
+                  <div class="col-12 mb-lg-1 col-md-6 col-sm-12 mb-xs-0">
+                    <div class="row align-items-center justify-content-end">
+                      <div class="col-4 text-right col-lg-12 text-lg-left">
+                        <label class="text-secondary">Общий метраж</label>
+                      </div>
+                      <div class="col-8 col-lg-12">
+                        <input class="input input_line" type="number"/>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-4 text-right">
-                    <label class="text-secondary">Регион, в котором находится объект</label>
+                  <div class="col-12 mb-lg-1 col-md-6 col-sm-12 mb-xs-0">
+                    <div class="row align-items-center justify-content-end">
+                      <div class="col-4 text-right col-lg-12 text-lg-left">
+                        <label class="text-secondary">Состояние объекта</label>
+                      </div>
+                      <div class="col-8 col-lg-12">
+                        <input class="input input_line" type="text"/>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-8">
-                    <input class="input input_line" type="text"/>
+                  <div class="col-12 mb-lg-1 col-md-6 col-sm-12 mb-xs-0">
+                    <div class="row align-items-center justify-content-end">
+                      <div class="col-4 text-right col-lg-12 text-lg-left">
+                        <label class="text-secondary">Пожелания по стоиомсти</label>
+                      </div>
+                      <div class="col-8 col-lg-12">
+                        <input class="input input_line" type=""/>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-4 text-right">
-                    <label class="text-secondary">Общий метраж</label>
+                  <div class="col-12 mb-lg-1 col-md-6 col-sm-12 mb-xs-0">
+                    <div class="row align-items-center justify-content-end">
+                      <div class="col-4 text-right col-lg-12 text-lg-left">
+                        <label class="text-secondary">Контактный телефон</label>
+                      </div>
+                      <div class="col-8 col-lg-12">
+                        <input class="input input_line" type="tel" placeholder="+7"/>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-8">
-                    <input class="input input_line" type="number"/>
-                  </div>
-                  <div class="col-4 text-right">
-                    <label class="text-secondary">Состояние объекта</label>
-                  </div>
-                  <div class="col-8">
-                    <input class="input input_line" type="text"/>
-                  </div>
-                  <div class="col-4 text-right">
-                    <label class="text-secondary">Пожелания по стоиомсти</label>
-                  </div>
-                  <div class="col-8">
-                    <input class="input input_line" type=""/>
-                  </div>
-                  <div class="col-4 text-right">
-                    <label class="text-secondary">Контактный телефон</label>
-                  </div>
-                  <div class="col-8">
-                    <input class="input input_line" type="tel" placeholder="+7"/>
-                  </div>
-                  <div class="col-8">
+                  <div class="col-8 col-lg-12 col-md-6 col-sm-12 content__request-form-btn">
                     <button class="btn btn_action" type="submit" style="width:100%;">Отправить запрос</button>
                   </div>
                 </div>
@@ -135,49 +181,60 @@
             </div>
           </div>
         </div>
+        <div class="d-none d-md-block content__contact-mobile">
+          <p class="mb-2 lead text-secondary text-bolder">Контактная информация для&nbsp;партнёров</p>
+          <div class="row"> 
+            <div class="col-6">
+              <p class="content__contact-heading">Телефон</p><a class="text-bolder content__contact-item" href="tel:78005334418">8 800 533 44 18</a>
+            </div>
+            <div class="col-6">
+              <p class="content__contact-heading">E-mail</p><a class="text-bolder content__contact-item" href="mailto:info@dlk-investgroup.ru">info@dlk-investgroup.ru</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="footer">
       <div class="container">
-        <div class="footer__contact-info">
-          <div class="row">
-            <div class="col-8">
-              <div class="footer__menu"><a class="footer__logo logo" href="index.html"><img class="img-fluid" src="../img/global/logo.svg" alt="logo"/></a>
-                <nav class="nav nav_additional"><a class="nav__link_additional nav__link nav__link_active" href="category-all.html">Аренда</a><a class="nav__link_additional nav__link" href="category-all.html">Продажа</a><a class="nav__link_additional nav__link" href="category-all.html">Новостройки</a><a class="nav__link_additional nav__link" href="category-all.html">Коммерческая недвижимость</a><a class="nav__link_additional nav__link" href="category-filters.html">Инвестиционные проекты</a>
-                </nav>
+        <div class="footer__main-info">
+          <div class="footer__menu"><a class="footer__logo logo" href="index.html"><img class="img-fluid" src="../img/global/logo.svg" alt="logo"/></a>
+            <nav class="nav nav_additional-footer"><a class="nav__link_additional nav__link nav__link_active" href="category-all.html">Аренда</a><a class="nav__link_additional nav__link" href="category-all.html">Продажа</a><a class="nav__link_additional nav__link" href="category-all.html">Новостройки</a><a class="nav__link_additional nav__link" href="category-all.html">Коммерческая недвижимость</a><a class="nav__link_additional nav__link" href="category-filters.html">Инвестиционные проекты</a>
+            </nav>
+          </div>
+          <div class="footer__contact">
+            <div class="row">
+              <div class="col-6 col-lg-12 mb-2 mb-lg-1">
+                <div class="footer__contact-heading">ТЕЛЕФОН</div><a class="text-bolder footer__contact-link" href="tel:78005334418">8 800 533 44 18</a>
               </div>
-              <div class="row mt-2 mb-1">
-                <div class="col-6 mb-2">
-                  <div class="footer__contact-heading">ТЕЛЕФОН</div><a class="text-bolder footer__contact-link" href="tel:78005334418">8 800 533 44 18</a>
-                </div>
-                <div class="col-6 mb-2">
-                  <div class="footer__contact-heading">E-MAIL</div><a class="text-bolder footer__contact-link" href="mailto:info@dlk-investgroup.ru">info@dlk-investgroup.ru</a>
-                </div>
-                <div class="col-6 mb-2">
-                  <div class="footer__contact-heading">АДРЕС </div><span class="text-bolder">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</span>
-                </div>
-                <div class="col-6 mb-2">
-                  <div class="footer__contact-heading">ЧАСЫ РАБОТЫ</div>
-                  <ul class="text-bolder footer__contact-list">
-                    <li>пн-пт 08.00 - 17.00 </li>
-                    <li>сб 10.00 - 16.00</li>
-                    <li>воскресенье — выходной</li>
-                  </ul>
-                </div>
+              <div class="col-6 col-lg-12 mb-2 mb-lg-1">
+                <div class="footer__contact-heading">E-MAIL</div><a class="text-bolder footer__contact-link" href="mailto:info@dlk-investgroup.ru">info@dlk-investgroup.ru</a>
               </div>
-              <nav class="nav"><a class="nav__link_additional nav__link nav__link_active" href="sales.html">Продавать</a><a class="nav__link_additional nav__link" href="partners.html">Передать клиента</a><a class="nav__link_additional nav__link" href="managment.html">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="contact.html">Контакты</a>
-              </nav>
+              <div class="col-6 col-lg-12 mb-2 mb-lg-1">
+                <div class="footer__contact-heading">АДРЕС </div><span class="text-bolder">Санкт-Петербург, р-н Центральный, Литейный проспект, Шпалерная ул., 3</span>
+              </div>
+              <div class="col-6 col-lg-12 mb-2 mb-lg-0">
+                <div class="footer__contact-heading">ЧАСЫ РАБОТЫ</div>
+                <ul class="text-bolder footer__contact-list">
+                  <li>пн-пт 08.00 - 17.00 </li>
+                  <li>сб 10.00 - 16.00</li>
+                  <li>воскресенье — выходной</li>
+                </ul>
+              </div>
             </div>
-            <div class="col-4">
-              <div class="footer__form">
-                <p class="h3">Есть вопросы?</p>
-                <form class="form">
-                  <input class="input input_line" type="text" placeholder="Ваше имя" name=""/>
-                  <input class="input input_line" type="tel" placeholder="+7" name=""/>
-                  <textarea class="input input_line" placeholder="Say «hello»" name=""></textarea>
-                  <button class="btn btn_action footer__form-submit">Отправить запрос </button>
-                </form>
-              </div>
+          </div>
+          <div class="footer__menu-additional">
+            <nav class="nav nav_footer"><a class="nav__link_additional nav__link nav__link_active" href="sales.html">Продавать</a><a class="nav__link_additional nav__link" href="partners.html">Передать клиента</a><a class="nav__link_additional nav__link" href="managment.html">Доверительное управление</a><a class="nav__link_additional nav__link" href="#">Услуги</a><a class="nav__link_additional nav__link" href="contact.html">Контакты</a>
+            </nav>
+          </div>
+          <div class="footer__form-col">
+            <div class="footer__form">
+              <p class="h3">Есть вопросы?</p>
+              <form class="form">
+                <input class="input input_line" type="text" placeholder="Ваше имя" name=""/>
+                <input class="input input_line" type="tel" placeholder="+7" name=""/>
+                <textarea class="input input_line" placeholder="Say «hello»" name=""></textarea>
+                <button class="btn btn_action footer__form-submit">Отправить запрос </button>
+              </form>
             </div>
           </div>
         </div>
@@ -189,6 +246,26 @@
         </div>
       </div>
     </footer>
-    <script src="./js/app.min.js"></script>
+    <div class="modal modal_callback" id="callback"> 
+      <p class="h4">Хотите узнать больше?</p>
+      <p class="mb-2 text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas</p>
+      <form class="form">
+        <input class="form__line input input_line" type="tel" placeholder="+7" name=""/>
+        <button class="form__line btn btn_action">Заказать звонок </button>
+      </form>
+    </div>
+    <div class="modal modal_callback" id="order"> 
+      <p class="h4">Хотите узнать больше?</p>
+      <p class="mb-2 text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas</p>
+      <form class="form">
+        <input class="form__line input input_line" type="text" placeholder="Ваше имя" name=""/>
+        <input class="form__line input input_line" type="tel" placeholder="+7" name=""/>
+        <button class="form__line btn btn_action">Оставить заявку </button>
+      </form>
+    </div>
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="../js/jquery.inputmask.min.js"></script>
+    <script src="../js/app.min.js"></script>
   </body>
 </html>

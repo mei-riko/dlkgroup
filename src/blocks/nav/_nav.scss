@@ -76,3 +76,56 @@
         }
     }
 }
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .nav{
+        // display: grid;
+        // grid-template-columns: 1fr;
+        // grid-gap: $spacer-gutter;
+
+        // margin: 0;
+
+        &__item{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__link{
+            &_parent{
+                flex: 0 0 100%;
+
+                display: flex;
+                align-items: center;
+
+                &:after{
+                    content: '';
+                    display: inline-block;
+
+                    width: 30px;
+                    height: 20px;
+
+                    background: url("../img/icon/chevron.svg") no-repeat center right/ contain;
+                }
+            }
+        }
+        &__children{
+            position: unset;
+            transform: unset;
+            z-index: 11;
+
+            width: auto;
+        }
+    }
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+}

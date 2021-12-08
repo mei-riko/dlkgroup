@@ -18,3 +18,30 @@
         grid-template-columns: repeat(3, minmax(auto, 120px));
     }
 }
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .project-preview_full{
+        &__heading{
+            font-size: 18px;
+        }
+        &__content{
+            padding-left: 0px;
+        }
+        &__chars{
+            grid-template-columns: repeat(2, minmax(auto, 120px));
+        }
+    }
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+}

@@ -2,3 +2,38 @@
     padding: 0 2*$spacer-gutter;
     margin: 0;
 }
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .nav_additional{}
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .nav_additional{
+        flex: 0 0 100%;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: $spacer-gutter;
+
+        margin-left: -($spacer-gutter);
+        margin-right: -($spacer-gutter);
+
+        padding: $grid-gutter-width 0 0;
+        margin-top: $grid-gutter-width;
+        border-top: 1px solid $border-color;
+    }
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .nav_additional{}
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .nav_additional{}
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .nav_additional{}
+}

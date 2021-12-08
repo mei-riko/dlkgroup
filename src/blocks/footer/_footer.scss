@@ -1,10 +1,19 @@
 .footer{
     border-top: 1px solid $border-color;
 
+    &__main-info{
+        padding: map-get($map: $spacers, $key: 4) 0;
+
+        display: grid;
+        grid-gap: $grid-gutter-width;
+
+        // grid-template-columns: 66.66667% 33.33333%;
+        grid-template-columns: 8fr 4fr;
+    }
     &__contact{
-        &-info{
-            padding: map-get($map: $spacers, $key: 4) 0;
-        }
+        grid-column-start: 1;
+        grid-column-end: 2;
+        
         &-heading{
             font-size: 10px;
             line-height: $line-height-heading;
@@ -23,21 +32,27 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    &__menu-additional{
+        grid-column-start: 1;
+        grid-column-end: 2;
     }
     &__logo{
         padding-bottom: 4px;
     }
-    // Additional Information
-    &__technical-info{
-        border-top: 1px solid $border-color;
-        padding: map-get($map: $spacers, $key: 1) 0;
-
-        font-size: 10px;
-        line-height: $line-height-heading;
-        color: $secondary;
-    }
+    
 
     // Form
+    &__form-col{
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
     &__form{
         background: $black-lighter;
         padding: $spacer;
@@ -50,4 +65,64 @@
     &__link{
         color: $secondary;
     }
+    
+    // Additional Information
+    &__technical-info{
+        border-top: 1px solid $border-color;
+        padding: map-get($map: $spacers, $key: 1) 0;
+
+        font-size: 10px;
+        line-height: $line-height-heading;
+        color: $secondary;
+    }
+}
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .footer{
+        &__main-info{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__menu{
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            flex-wrap: wrap;
+        }
+        &__menu-additional{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        // Form
+        &__form-col{
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+    }
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .footer{
+        &__contact{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        &__form-col{
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            grid-row-start: 4;
+            grid-row-end: auto;
+        }
+    }
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
 }

@@ -29,6 +29,7 @@
     }
     &__image{
         background: $black-lighter no-repeat center / cover;
+        max-width: 100%;
 
         &_circle{
             width: 190px;
@@ -48,6 +49,136 @@
             height: 430px;
             border-radius: 150px 150px 0px 0px;
             margin-top: map-get($map: $spacers, $key: 2);
+        }
+    }
+}
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .content{
+        &__request{
+            &_cta{
+                padding-right: 320px;
+                background-size: 260px;
+                background-position-x: calc(100% - 30px);
+            }
+        }
+        &__image{
+            &_circle{
+                width: 160px;
+                height: 160px;
+            }
+        }
+    }
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .content{
+        &__request{
+            &_cta{
+                padding-right: map-get($map: $spacers, $key: 3);
+                background-image: unset;
+            }
+        }
+        &__image{
+            &_circle{
+                width: 120px;
+                height: 120px;
+            }
+            &_arch{
+                height: 340px;
+            }
+            &_ellipse{
+                height: 280px;
+            }
+        }
+    }
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content{
+        &__image{
+            &_arch{
+                height: 400px;
+            }
+            &_ellipse{
+                height: 400px;
+            }
+        }
+        &__request{
+            &_questionary{
+                padding: 0;
+                background: inherit;
+            }
+        }
+        &__request-form-btn{
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 25px;
+        }
+        &__contact-mobile{
+            margin-top: map-get($map: $spacers, $key: 1);
+            padding-top: map-get($map: $spacers, $key: 2);
+            border-top: 1px solid $border-color;
+        }
+    }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content{
+        &__image{
+            &_arch{
+                height: 320px;
+            }
+            &_ellipse{
+                height: 320px;
+            }
+        }
+        &__request{
+            padding:map-get($map: $spacers, $key: 2);
+
+            &_questionary{
+                padding: 0;
+            }
+        }
+
+        &__scroll{
+            max-width: 100%;
+            overflow: auto;
+    
+            &-inside{
+                margin-bottom: $spacer-gutter;
+            }
+        }
+    }
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .content{
+        &__image{
+            &_circle{
+                position: relative;
+                z-index: 11;
+
+                margin-left: 140px;
+                margin-bottom: 0;
+            }
+            &_ellipse{
+                width: 240px;
+                height: 320px;
+
+                transform: translateY(-30px);
+            }
+        }
+        &__request{
+            padding:map-get($map: $spacers, $key: 1);
+
+            &_questionary{
+                padding: 0;
+            }
+        }
+        &__request-form-btn{
+            padding-top: $spacer-gutter;
         }
     }
 }

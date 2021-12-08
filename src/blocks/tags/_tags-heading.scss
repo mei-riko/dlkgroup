@@ -4,7 +4,11 @@
     flex-wrap: wrap;
 
 
+    &__name{
+        margin-right: $spacer;
+        margin-bottom: $spacer-gutter;
+    }
     &__link{
-        margin-left: $spacer;
+        margin-bottom: $spacer-gutter;
     }
 }

@@ -18,51 +18,51 @@ block content
         .content_filters-tab__content
             .container 
                 .row.justify-content-center
-                    .col-10
+                    .col-10.col-md-12
                         p.h1.content_filters-tab__heading Подберите для себя идеальную недвижимость
-                        .tabs-container
-                            .tabs
-                                .tabs__item.tabs__item--active(data-content="#tabBuy") Покупка
-                                .tabs__item(data-content="#tabRent") Аренда
-                            .tabs-content.tabs-content--active#tabBuy
-                                .filters.filters_index 
-                                    .filters__item.filters__item_type 
-                                        .filters__heading.filters__heading--has-value Квартира в новостройке
-                                        .filters__options
-                                            +checkbox('type1','Квартира в новостройке')
-                                            +checkbox('type2','Квартира во вторичке')
-                                            +checkbox('type3','Дом')(class="checkbox--disabled")
-                                            +checkbox('type4','Таунхаус')
-                                    .filters__item.filters__item_room
-                                        .filters__heading.filters__heading--has-value Студия, 1 комн.
-                                        .filters__options 
-                                            +checkbox('room1','Студия')
-                                            +checkbox('room2','1 комната')
-                                            +checkbox('room3','2 комнаты')
-                                            +checkbox('room4','3 комнаты')
-                                            +checkbox('room5','4 комнаты')
-                                            +checkbox('room6','5 комнат')
-                                            +checkbox('room7','6 комнат')
-                                            +checkbox('room8','Свободная планировка')
-                                    .filters__item.filters__item_price
-                                        .filters__heading Цена
-                                        .filters__options 
-                                            span от 
-                                            span до 
-                                    .filters__item.filters__item_location
-                                        .filters__heading Город и регион
-                                        .filters__options 
-                                            +checkboxFilter('city1','Адлер')
-                                            +checkboxFilter('city2','Бытха',true)
-                                            +checkboxFilter('city3','Вардане')(class="checkbox--disabled")
-                                            +checkboxFilter('city4','Сочи')
-                                            +checkboxFilter('city5','Лазаревское')
-                                            +checkboxFilter('city6','Новый Сочи')
-                                            +checkboxFilter('city7','Туапсе')
-                                .text-right.mt-1
-                                    a.btn.btn_action(href="#" data-filter="index") Найти
-                            .tabs-content#tabRent
-                                span Test
+                        //- .tabs-container
+                        //-     .tabs
+                        //-         .tabs__item.tabs__item--active(data-content="#tabBuy") Покупка
+                        //-         .tabs__item(data-content="#tabRent") Аренда
+                        //-     .tabs-content.tabs-content--active#tabBuy
+                        //-         .filters.filters_index 
+                        //-             .filters__item.filters__item_type 
+                        //-                 .filters__heading.filters__heading--has-value Квартира в новостройке
+                        //-                 .filters__options
+                        //-                     +checkbox('type1','Квартира в новостройке')
+                        //-                     +checkbox('type2','Квартира во вторичке')
+                        //-                     +checkbox('type3','Дом')(class="checkbox--disabled")
+                        //-                     +checkbox('type4','Таунхаус')
+                        //-             .filters__item.filters__item_room
+                        //-                 .filters__heading.filters__heading--has-value Студия, 1 комн.
+                        //-                 .filters__options 
+                        //-                     +checkbox('room1','Студия')
+                        //-                     +checkbox('room2','1 комната')
+                        //-                     +checkbox('room3','2 комнаты')
+                        //-                     +checkbox('room4','3 комнаты')
+                        //-                     +checkbox('room5','4 комнаты')
+                        //-                     +checkbox('room6','5 комнат')
+                        //-                     +checkbox('room7','6 комнат')
+                        //-                     +checkbox('room8','Свободная планировка')
+                        //-             .filters__item.filters__item_price
+                        //-                 .filters__heading Цена
+                        //-                 .filters__options 
+                        //-                     span от 
+                        //-                     span до 
+                        //-             .filters__item.filters__item_location
+                        //-                 .filters__heading Город и регион
+                        //-                 .filters__options 
+                        //-                     +checkboxFilter('city1','Адлер')
+                        //-                     +checkboxFilter('city2','Бытха',true)
+                        //-                     +checkboxFilter('city3','Вардане')(class="checkbox--disabled")
+                        //-                     +checkboxFilter('city4','Сочи')
+                        //-                     +checkboxFilter('city5','Лазаревское')
+                        //-                     +checkboxFilter('city6','Новый Сочи')
+                        //-                     +checkboxFilter('city7','Туапсе')
+                        //-         .text-right.mt-1
+                        //-             a.btn.btn_action(href="#" data-filter="index") Найти
+                        //-     .tabs-content#tabRent
+                        //-         span Test
         .content_filters-tab__slider
             //- Swiper Slider
             .swiper-container
@@ -70,14 +70,14 @@ block content
                     .swiper-slide.content_filters-tab__slide(style="background-image:url('https://images.unsplash.com/photo-1484154218962-a197022b5858?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80');")
                     .swiper-slide.content_filters-tab__slide(style="background-image:url('https://images.unsplash.com/photo-1507149833265-60c372daea22?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80');")
                     .swiper-slide.content_filters-tab__slide(style="background-image:url('https://images.unsplash.com/photo-1499955085172-a104c9463ece?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');")
-    section.pt-5.pb-5
+    section.pt-5.pb-5.pt-sm-3.pb-sm-3
         .container 
-            .row.justify-content-between
-                .col-7
+            .row.justify-content-between.justify-content-lg-end
+                .col-7.col-xl-8.col-lg-12.mb-md-2.mb-lg-3
                     .row
-                        .col-5
+                        .col-5.col-md-12.mb-md-1
                             p.h1 О «DLK Group»
-                        .col-7
+                        .col-7.col-md-12
                             p.mb-2.text-bolder Агенство DLK Group — это&nbsp;эксперты в&nbsp;сфере недвижимости и&nbsp;земельных участков. 
                                 | DLK помогает клиентам подбирать недвижимость под&nbsp;любые цели.
                             p.text-secondary Доступно множество разнообразных объектов: от&nbsp;квартиру или&nbsp;дом для&nbsp;постоянного 
@@ -90,21 +90,22 @@ block content
                                     <path d="M0.61405 7.96572e-06L5.52642 4.49998L0.61405 9L0 8.43743L4.29834 4.49998L0 0.5625L0.61405 7.96572e-06ZM4.08758 0L9 4.49998L4.08758 9L3.47358 8.43743L7.77192 4.49998L3.47358 0.5625L4.08758 0Z" />
                                 </svg>
                                 span.link-arrow__body Больше информации
-                .col-4
+                .col-4.col-lg-7.col-md-12
                     img.img-fluid(src="../img/demo/index-img-1.jpg" alt="" title="")
-            .row.justify-content-end.mt-5
-                .col-9
-                    .grid.grid_service-elem.content__scroll
-                        for advantage in advantages
-                            .element.element_advantage
-                                p.h6=advantage.title
-                                p.text-secondary=advantage.content
+            .content__scroll
+                .row.justify-content-end.mt-5.mt-sm-3
+                    .col-9.col-xl-12
+                        .grid.grid_service-elem.content__scroll-inside
+                            for advantage in advantages
+                                .element.element_advantage
+                                    p.h6=advantage.title
+                                    p.text-secondary=advantage.content
     section.pt-4.pb-4.bg-darker
         .container 
             .row.mb-2
-                .col-9 
+                .col-9.col-md-8.col-sm-12
                     p.h3 Популярные объявления
-                .col-3.text-right
+                .col-3.col-md-4.text-right.d-sm-none
                     a.link-inverse.text-underline(href="#") Как сюда попасть?
             .tabs-container
                 .tabs
@@ -154,12 +155,14 @@ block content
                         .swiper-wrapper
                             for object in popularProjects3
                                 +projectSlide(object)
+            .d-none.d-sm-block.mt-sm-2
+                a.link-inverse.text-underline(href="#") Как сюда попасть?
     section.pt-4.pb-4
         .container 
             .row.mb-2
-                .col-9 
+                .col-9.col-md-8.col-sm-12
                     p.h3 Элитные объекты
-                .col-3.text-right
+                .col-3.col-md-4.text-right.d-sm-none
                     a.link-inverse.text-underline(href="#") Как сюда попасть?
             .tabs-container
                 .tabs
@@ -180,5 +183,7 @@ block content
                         .swiper-wrapper
                             for object in eliteProjects1
                                 +projectFullSlide(object)
+            .d-none.d-sm-block.mt-sm-2
+                    a.link-inverse.text-underline(href="#") Как сюда попасть?
     include ../blocks/news/news.pug
     include ../blocks/tags/tags.pug

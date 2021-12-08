@@ -33,6 +33,7 @@
         &-count{
             color: $secondary;
             font-size: 10px;
+            white-space: nowrap;
         }
 
         &:hover, &:focus{
@@ -43,4 +44,43 @@
     &_reverse{
         grid-template-areas: "content image";
     }
+}
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .project-category{
+        &__object{
+            flex-wrap: wrap;
+        }
+    }
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .project-category{
+        &:nth-child(2n+1){
+            grid-template-areas: "image content";
+        }
+        &:nth-child(2n){
+            grid-template-areas: "content image";
+        }
+    }
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .project-category{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "image"
+                            "content";
+
+        &__image{
+            height: 180px;
+        }
+    }
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
 }

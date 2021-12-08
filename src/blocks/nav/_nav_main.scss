@@ -1,0 +1,17 @@
+.nav_main{
+}
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .nav_main{
+        flex: 0 0 100%;
+        width: 100%;
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: $spacer-gutter;
+    }
+}

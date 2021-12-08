@@ -19,17 +19,29 @@
         justify-content: space-between;
     }
     &__burger{
+        cursor: pointer;
         fill: $body-color;
         display: none;
+
+        transition: $transition-base;
+
+        &:hover{
+            fill: $gold;
+        }
     }
     &__logo{
         padding-bottom: 4px;
+        transition: $transition-base;
+
+        &:hover{
+            filter: opacity(.75);
+        }
     }
     // Callback
     &__callbacks{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
 
         &-item{
             margin-right: map-get($map: $spacers, $key: 1);
@@ -47,4 +59,66 @@
             text-decoration: none;
         }
     }
+}
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .header{}
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .header{
+        &__burger{
+            display: inline-block;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+
+            margin-right: $spacer;
+        }
+        &__main{
+            // display: none;
+
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            bottom: 0;
+            left: 0;
+
+            background-color: $black;
+            transform: translateX(-100%);
+            transition: $transition-base;
+
+            width: 380px;
+            padding: $grid-gutter-width 0;
+
+            overflow: auto;
+
+            &--active{
+                transform: translateX(0px);
+                filter: drop-shadow(2px 4px 14px $black-darker);
+            }
+        }
+        &__callbacks{
+            flex-grow: 1;
+        }
+        &__menu{
+            &_on-mobile{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .header{}
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header{}
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .header{}
 }

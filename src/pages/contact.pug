@@ -20,13 +20,13 @@ block content
     section.pt-4.pb-4
         .container
             .row
-                .col-6
-                    p.h5 Телефоны
-                    dl.contact-list.mt-2
+                .col-6.col-sm-12.mb-sm-3
+                    p.h5.mb-md-0 Телефоны
+                    dl.contact-list.mt-2.mt-lg-0
                         for i in phones
                             +listContact(i.name, i.item, i.link)
-                .col-6
-                    p.h5 E-mail
-                    dl.contact-list.mt-2
+                .col-6.col-sm-12
+                    p.h5.mb-md-0 E-mail
+                    dl.contact-list.mt-2.mt-lg-0
                         for i in emails
                             +listContact(i.name, i.item, i.link, 'text-underline')

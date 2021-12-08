@@ -28,10 +28,11 @@ block content
                 span.breadcrumbs__sep / 
                 span.breadcrumbs__here 1-комн. квартира ЖК «Vita Nova»
             .row.project-details.project-details_inside
-                .col-9
+                .col-9.col-lg-12
+                    p.d-none.d-lg-block.h2.project-details__heading.project-details__heading_inside 1-комн. квартира, 37 м²
                     .row
                         //- Slider
-                        .col-6
+                        .col-6.col-lg-12.mb-lg-4
                             .project-details__slider.swiper-container.swiper-container_project
                                 //- .swiper-button.swiper-button_prev
                                 //-     <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,8 +62,8 @@ block content
                                     .swiper-slide
                                         img.img-fluid(src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80")
                         //- Main Info
-                        .col-6
-                            p.h2.project-details__heading.project-details__heading_inside 1-комн. квартира, 37 м²
+                        .col-6.col-sm-12.mb-sm-4
+                            p.d-lg-none.h2.project-details__heading.project-details__heading_inside 1-комн. квартира, 37 м²
                             .project-details__location
                                 span ст.м. Динамо
                                 span.project-details__sep ⋅
@@ -97,14 +98,30 @@ block content
                                     .element__icon
                                         img.img-fluid(src="../img/icon/icon-balcony.svg")
                                     .element__content есть балкон
+                        //- Price On Mobile
+                        .col-6.d-none.d-lg-block.col-md-12
+                            .project-details_inside__mobile-price
+                                //- Price
+                                .h3.project-details__price 8  858 949 ₽
+                                .project-details__price-per-meter 170 002 ₽/м²
+                                //- Sidebar Intro
+                                p.mt-2 Долевое участие (214-ФЗ), возможна ипотека
+                                a.btn.btn_action(href="#" data-fancybox="order" data-src="#order" style="width: 100%;") Оставить заявку
+                                //- Complex|Developer
+                                a.project-details_inside__dev(href="apart-complex.html")
+                                    img.project-details_inside__dev-img.img-fluid(src="../img/demo/pic-apart.jpg")
+                                    .project-details_inside__dev-intro 
+                                        .project-details_inside__dev-name.text-bold ЖК «Vita Nova»
+                                        .text-secondary Застройщик: Эталон 
+                                        .text-secondary Год основания: 1987
                         //- Chars
-                        .col-6.mt-4
+                        .col-6.mt-4.col-md-12
                             p.h6.mb-2 Характеристики объекта
                             dl.project-details__list
                                 for i in chars
                                     +listChars(i.title, i.item)
                         //- Apartment Plan
-                        .col-6.mt-4
+                        .col-6.mt-4.col-md-12
                             p.h6.mb-2 Планировка объекта
                             img.img-fluid(src="../img/demo/plan.jpg")
                     //- Main Content
@@ -147,7 +164,7 @@ block content
                             .element__icon
                                 img.img-fluid(src="../img/icon/icon-balcony.svg")
                             .element__content пекарня
-                .col-3
+                .col-3.d-lg-none
                     .project-details_inside__sidebar
                         //- Price
                         .h3.project-details__price 8  858 949 ₽

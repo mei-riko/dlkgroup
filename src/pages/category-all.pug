@@ -142,9 +142,9 @@ block content
     section.pt-2.pb-4
         .container 
             .row.mb-2
-                .col-9 
+                .col-9.col-md-8.col-sm-12
                     p.h3 Популярные объявления
-                .col-3.text-right
+                .col-3.col-md-4.text-right.d-sm-none
                     a.link-inverse.text-underline(href="#") Как сюда попасть?
             .tabs-container.mb-4
                 .tabs
@@ -242,5 +242,7 @@ block content
                         .swiper-wrapper
                             for object in popularProjects3
                                 +projectSlide(object)
+            .d-none.d-sm-block.mt-sm-3
+                a.link-inverse.text-underline(href="#") Как сюда попасть?
     include ../blocks/news/news.pug
     include ../blocks/tags/tags.pug

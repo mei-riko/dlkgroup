@@ -20,7 +20,7 @@ block content
     section.pt-4.pb-4.bg-image(style="background-image:url('../img/bg/managment.jpg');")
         .container
             .row.justify-content-center
-                .col-5.text-center
+                .col-5.text-center.col-lg-7.col-sm-10.col-xs-12
                     p.text-uppercase.text-gold.text-bold Комплекс бизнес класса
                     h1.mt-1.mb-2 Жилой комплекс «Vita Nova»
                     p  Ближайшая станция метро&nbsp;Динамо (ул.&nbsp;Кораблестроителей, дом&nbsp;35)
@@ -36,10 +36,11 @@ block content
                 span.breadcrumbs__sep / 
                 span.breadcrumbs__here ЖК «Vita Nova»
             .row.project-details.project-details_inside
-                .col-9
+                .col-9.col-lg-12
+                    p.d-none.d-lg-block.h2.project-details__heading.project-details__heading_inside ЖК&nbsp;«Апарт-отель ARTSTUDIO Moskovsky»
                     .row
                         //- Slider
-                        .col-6
+                        .col-6.col-lg-12.mb-lg-4
                             .project-details__slider.swiper-container.swiper-container_project
                                 .swiper-wrapper
                                     .swiper-slide
@@ -61,8 +62,8 @@ block content
                                     .swiper-slide
                                         img.img-fluid(src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80")
                         //- Main Info
-                        .col-6
-                            p.h2.project-details__heading.project-details__heading_inside ЖК&nbsp;«Апарт-отель ARTSTUDIO Moskovsky»
+                        .col-6.col-sm-12.mb-sm-4
+                            p.d-lg-none.h2.project-details__heading.project-details__heading_inside ЖК&nbsp;«Апарт-отель ARTSTUDIO Moskovsky»
                             .project-details__location
                                 span ст.м. Динамо
                                 span.project-details__sep ⋅
@@ -97,6 +98,22 @@ block content
                                     .element__icon
                                         img.img-fluid(src="../img/icon/icon-balcony.svg")
                                     .element__content есть балкон
+                        //- Price On Mobile
+                        .col-6.d-none.d-lg-block.col-md-12
+                            .project-details_inside__mobile-price
+                                //- Price
+                                .h3.project-details__price от 18 820 119 ₽
+                                .project-details__price-per-meter от 170 002 до 225 000 ₽/м²
+                                //- Sidebar Intro
+                                p.mt-2 Долевое участие (214-ФЗ), возможна ипотека
+                                a.btn.btn_action(href="#" data-fancybox="order" data-src="#order" style="width: 100%;") Оставить заявку
+                                //- Complex|Developer
+                                .project-details_inside__dev
+                                    img.project-details_inside__dev-img.img-fluid(src="../img/demo/pic-apart.jpg")
+                                    .project-details_inside__dev-intro 
+                                        .project-details_inside__dev-name.text-bold Эталон
+                                        .text-secondary Застройщик 
+                                        .text-secondary Год основания: 1987
                     //- Apartments
                     p.h4.mt-4 102 апартаментов от застройщика
                     p.text-secondary.mb-2 в ЖК «Апарт-отель ARTSTUDIO Moskovsky (Артстудио Московский)»
@@ -104,13 +121,13 @@ block content
                         .toggle__title
                             .project-details_inside__apart 
                                 span Студии
-                                span.text-secondary от 18 м²
+                                span.text-secondary.text-xs-right от 18 м²
                                 span 5,7–8,6 млн ₽
-                                span.text-gold.text-right 11 предложений
+                                span.text-gold.text-right.text-sm-left.text-xs-right 11 предложений
                         .toggle__content 
                             .project-details_inside__apart.project-details_inside__apart_toggle 
                                 a.text-underline(href="apart.html") Студия
-                                span.text-secondary 21.4 м²
+                                span.text-secondary.text-xs-right 21.4 м²
                                 span 6,6 млн ₽
                                 span.text-secondary.text-right 3 кв. 2021
                                 img.img-fluid(src="../img/demo/plan.jpg")
@@ -130,9 +147,9 @@ block content
                         .toggle__title
                             .project-details_inside__apart 
                                 span 1-комнатные
-                                span.text-secondary от 28 м²
+                                span.text-secondary.text-xs-right от 28 м²
                                 span 11,2–32,8 млн ₽
-                                span.text-gold.text-right 67 предложений
+                                span.text-gold.text-right.text-sm-left.text-xs-right 67 предложений
                         .toggle__content 
                             p 2
                     //- Main Content
@@ -177,7 +194,7 @@ block content
                                 img.img-fluid(src="../img/icon/icon-balcony.svg")
                             .element__content пекарня
                 //- Sidebar
-                .col-3
+                .col-3.d-lg-none
                     .project-details_inside__sidebar
                         //- Price
                         .h3.project-details__price от 18 820 119 ₽

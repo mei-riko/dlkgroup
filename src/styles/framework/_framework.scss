@@ -209,7 +209,6 @@ blockquote, .blockquote{
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     html, body {
-        background-color: $white;
         font-size: map-get($font-size, 'sm');
     }
     .text-xs{

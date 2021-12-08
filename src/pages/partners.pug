@@ -8,7 +8,7 @@ block content
     section.pt-2.pb-2.content
         .container
             .row.justify-content-between.align-items-center
-                .col-5 
+                .col-5.col-xl-5.col-lg-6.col-md-12
                     h1 Партнерская программа для&nbsp;агентств и&nbsp;частных риелторов
                     p.lead.text-secondary.text-bolder.mb-2 В&nbsp;DLK Group действует партнерская программа для&nbsp;обмена клиентами
                     p Если у&nbsp;Вас есть запрос от&nbsp;клиента на&nbsp;наш объект или в&nbsp;нашем регионе, 
@@ -17,35 +17,47 @@ block content
                     p Ваше вознаграждение составит 60% от&nbsp;комиссионных со&nbsp;сделки. Узнать точную сумму 
                         | объекта и&nbsp;процессы взаимодействия с&nbsp;нашей организацией, Вы&nbsp;можете, оставив 
                         | заявку или связавшись с&nbsp;нами по&nbsp;контактам, указанным ниже.
-                .col-6
-                    .row
-                        .col-6
+                .col-6.col-xl-6.col-lg-6.col-md-12.mt-md-2
+                    .row 
+                        .col-6.col-xs-12
                             .content__image.content__image_circle(style="background-image:url('../img/demo/img1.png');")
                             .content__image.content__image_ellipse(style="background-image:url('../img/demo/img2.png');")
-                        .col-6
+                        .col-6.d-xs-none
                             .content__image.content__image_arch(style="background-image:url('../img/demo/img3.png');")
     section.pt-2.pb-2.content
         .container
             .row.justify-content-between
-                .col-4
+                .col-4.col-lg-6.col-md-12
                     p.h2 Анкета передачи клиента
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida aliquam morbi lacinia maecenas. Nec feugiat elementum at augue sit. Placerat odio amet cursus morbi.
-                    p.mt-4.mb-2.lead.text-secondary.text-bolder Контактная информация для партнёров
-                    .row 
-                        .col-5
-                            p.content__contact-heading Телефон
-                            a(href=tel.link).text-bolder.footer__contact-link=tel.item
-                        .col-7
-                            p.content__contact-heading E-mail
-                            a(href=email.link).text-bolder.footer__contact-link=email.item
-                .col-8
-                    .content__request 
+                    .d-md-none
+                        p.mt-4.mb-2.lead.text-secondary.text-bolder Контактная информация для&nbsp;партнёров
+                        .row 
+                            .col-5.col-lg-12.mb-lg-2
+                                p.content__contact-heading Телефон
+                                a(href=tel.link).text-bolder.content__contact-item=tel.item
+                            .col-7.col-lg-12
+                                p.content__contact-heading E-mail
+                                a(href=email.link).text-bolder.content__contact-item=email.item
+                .col-8.col-lg-6.col-md-12.mt-md-2
+                    .content__request.content__request_questionary
                         form.form(action="")
-                            .row.align-items-center.justify-content-end
+                            .row
                                 for input in inputs
-                                    .col-4.text-right
-                                        label.text-secondary=input.label
-                                    .col-8
-                                        input(type=input.type, placeholder=input.placeholder).input.input_line
-                                .col-8
+                                    .col-12.mb-lg-1.col-md-6.col-sm-12.mb-xs-0
+                                        .row.align-items-center.justify-content-end
+                                            .col-4.text-right.col-lg-12.text-lg-left
+                                                label.text-secondary=input.label
+                                            .col-8.col-lg-12
+                                                input(type=input.type, placeholder=input.placeholder).input.input_line
+                                .col-8.col-lg-12.col-md-6.col-sm-12.content__request-form-btn
                                     button.btn.btn_action(type="submit" style="width:100%;") Отправить запрос
+            .d-none.d-md-block.content__contact-mobile
+                p.mb-2.lead.text-secondary.text-bolder Контактная информация для&nbsp;партнёров
+                .row 
+                    .col-6
+                        p.content__contact-heading Телефон
+                        a(href=tel.link).text-bolder.content__contact-item=tel.item
+                    .col-6
+                        p.content__contact-heading E-mail
+                        a(href=email.link).text-bolder.content__contact-item=email.item

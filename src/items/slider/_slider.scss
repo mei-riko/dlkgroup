@@ -42,7 +42,7 @@
             // js status
             &--active{
                 color: $gold;
-                font-weight: $font-weight-bold;
+                // font-weight: $font-weight-bold;
                 pointer-events: none;
             }
         }
@@ -71,12 +71,10 @@
             }
         }
     }
-
     &__content{
         width: 410px;
         max-width: 100%;
     }
-
     &__item{
         display: none;
         height: 100%;
@@ -123,6 +121,7 @@
         left: 0;
         // right: 0;
         bottom: map-get($map: $spacers, $key: 5);
+        z-index: 11;
     }
 }
 
@@ -132,5 +131,83 @@
     }
     100% {
       opacity: 1;
+    }
+}
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .slider{
+        &__controls{
+            padding-bottom: map-get($map: $spacers, $key: 1);
+        }
+        // Block With Text
+        &__text{
+            bottom: map-get($map: $spacers, $key: 3);
+        }
+    }
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .slider{
+        flex-direction: column;
+
+        &__controls{
+            width: 100%;
+            margin-right: 0;
+            margin-top: $grid-gutter-width;
+            margin-bottom: $grid-gutter-width;
+
+            &-text{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: $spacer-gutter;
+            }
+            &-icon{
+                display: none;
+            }
+        }
+        &__content{
+            position: relative;
+            margin-left: auto;
+            width: 100%;
+        }
+        &__text{
+            top: map-get($map: $spacers, $key: 3);
+            bottom: auto;
+        }
+        &__photo{
+            width: 400px;
+            margin-left: auto;
+        }
+    }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .slider{
+        &__controls{
+            &-text{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        &__photo{
+            width: 100%;
+        }
+        &__text{
+            position: unset;
+            padding: map-get($map: $spacers, $key: 2);
+        }
+    }
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .slider{
+        &__controls{
+            &-text{
+                grid-template-columns: 1fr;
+            }
+        }
     }
 }

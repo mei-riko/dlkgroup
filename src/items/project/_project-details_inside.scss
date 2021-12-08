@@ -12,6 +12,10 @@
         padding: $spacer;
         background-color: $black-lighter;
     }
+    &__mobile-price{
+        padding: $spacer;
+        background-color: $black-lighter;
+    }
     &__content{
         padding: $spacer;
         background-color: $black-lighter;
@@ -64,6 +68,61 @@
         }
         &-intro{
             line-height: $line-height-base;
+        }
+    }
+}
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .project-details_inside{
+        &__sidebar{
+            padding: map-get($map: $spacers, $key: 1);
+        }
+        &__dev{
+            grid-template-columns: 40px 1fr;
+        }
+    }
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .project-details_inside{
+        &__apart{
+            grid-template-columns: 1fr 80px repeat(2, 120px);
+    
+            &_toggle{
+                grid-template-columns: 1fr 80px repeat(2, 120px) 45px;
+            }
+        }
+    }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .project-details_inside{
+        &__dev{
+            grid-template-columns: 60px 1fr;
+        }
+
+        &__apart{
+            grid-template-columns: repeat(3, 1fr);
+    
+            &_toggle{
+                grid-template-columns: 1fr repeat(3, 80px) 45px;
+            }
+        }
+    }
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .project-details_inside{
+        &__apart{
+            grid-template-columns: repeat(2, 1fr);
+    
+            &_toggle{
+                grid-template-columns: 1fr repeat(2, 180px);
+            }
         }
     }
 }

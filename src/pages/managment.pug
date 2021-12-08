@@ -2,7 +2,7 @@ extends ../blocks/main.pug
 
 block variables
     - var pageTitle = "Доверительное управление"
-    - var sliderItems = [{text:"Краткосрочная аренда выгоднее, чем долгосрочная, а наш многолетний опыт работы в сфере управления недвижимостью, знание рынка, маркетинг и ежедневная оптимизация цен позволяют максимизировать Ваш доход!",img:"../img/slide/img.png", active: true},{text:"Ваша квартира начнёт приносить вам деньги уже в день обращения! Да, нам требуется всего несколько часов на запуск нового объекта. Вы можете смело строить планы на будущее и не переживать об упущенной выгоде из-за внезапно съехавших арендаторов.",img:"https://images.wallpaperscraft.ru/image/oblaka_tyazhelye_grozovye_molniya_nepogoda_doroga_asfalt_fonari_55492_1920x1200.jpg"},{text:"Проживание гостей возможно лишь при полной предварительной оплаты брони, которую взимают и гарантируют ведущие туристические площадки. В случае поздней или частичной отмены вы также получаете компенсацию в виде полной стоимости проживания.",img:"https://artsten.ru/kartinki/anglijskij-stil-v-interere-foto-primery-osobennosti15.jpg"},{text:"Туристы и бизнес-путешественники арендуют апартаменты в основном как место для ночлега и реже пользуются бытовой техникой, что влечет меньший износ квартиры, чем при долгосрочной аренде, и позволяет надолго сохранить её привлекательный вид.",img:"https://vashestroitelstvo.ru/wp-content/uploads/2020/09/19.jpg"},{text:"Мы берем на себя все Ваши хлопоты: от поиска арендаторов, круглосуточной поддержки, уборки и гостиничного сервиса до мелкого ремонта и постоянного поддержания квартиры в надлежащем состоянии.",img:"https://obzorstroy.ru/wp-content/uploads/2020/05/interer-v-stile-kantri-1-scaled.jpg"},{text:"Мы постоянно развиваемся и улучшаем наш сервис, поэтому вы всегда будете получать максимальный доход от своей недвижимости и весь спектр качественно предоставляемых услуг, доступный на рынке аренды жилья.",img:"https://mebel.ru/upload/iblock/e12/e12bdc057900c9be9325b475d8dea3b6.jpeg"}]
+    - var sliderItems = [{text:"Краткосрочная аренда выгоднее, чем долгосрочная, а наш многолетний опыт работы в сфере управления недвижимостью, знание рынка, маркетинг и ежедневная оптимизация цен позволяют максимизировать Ваш доход!",img:"../img/slide/img.png", active: true},{text:"Ваша квартира начнёт приносить вам деньги уже в день обращения! Да, нам требуется всего несколько часов на запуск нового объекта. Вы можете смело строить планы на будущее и не переживать об упущенной выгоде из-за внезапно съехавших арендаторов.",img:"../img/slide/img.png"},{text:"Проживание гостей возможно лишь при полной предварительной оплаты брони, которую взимают и гарантируют ведущие туристические площадки. В случае поздней или частичной отмены вы также получаете компенсацию в виде полной стоимости проживания.",img:"https://artsten.ru/kartinki/anglijskij-stil-v-interere-foto-primery-osobennosti15.jpg"},{text:"Туристы и бизнес-путешественники арендуют апартаменты в основном как место для ночлега и реже пользуются бытовой техникой, что влечет меньший износ квартиры, чем при долгосрочной аренде, и позволяет надолго сохранить её привлекательный вид.",img:"https://vashestroitelstvo.ru/wp-content/uploads/2020/09/19.jpg"},{text:"Мы берем на себя все Ваши хлопоты: от поиска арендаторов, круглосуточной поддержки, уборки и гостиничного сервиса до мелкого ремонта и постоянного поддержания квартиры в надлежащем состоянии.",img:"https://obzorstroy.ru/wp-content/uploads/2020/05/interer-v-stile-kantri-1-scaled.jpg"},{text:"Мы постоянно развиваемся и улучшаем наш сервис, поэтому вы всегда будете получать максимальный доход от своей недвижимости и весь спектр качественно предоставляемых услуг, доступный на рынке аренды жилья.",img:"https://mebel.ru/upload/iblock/e12/e12bdc057900c9be9325b475d8dea3b6.jpeg"}]
 
 include ../items/slider/slider.pug
 
@@ -10,7 +10,7 @@ block content
     section.pt-4.pb-4.bg-image(style="background-image:url('../img/bg/managment.jpg');")
         .container
             .row.justify-content-center
-                .col-5.text-center
+                .col-5.text-center.col-lg-7.col-sm-10.col-xs-12
                     p.text-uppercase.text-gold.text-bold Доверительное управление
                     h1.mt-1.mb-2 Максимальный доход
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum quam elit purus tincidunt massa. Nulla turpis sed metus rhoncus, volutpat, vulputate lectus. Morbi neque ultricies sit pellentesque metus.
@@ -18,12 +18,12 @@ block content
         .container
             .content__block
                 .row.justify-content-between 
-                    .col-4 
+                    .col-4.col-xl-5.col-lg-12.mb-lg-3
                         h2.h3 Сотрудничество с агенством
                         p.lead.text-bolder.text-secondary.mb-2 Неоспоримые преимущества работы с агенством недвижимости DLK Group
                         p Сдавать квартиру вместе с DLK Group — лучшее решение, если вы цените свое время и хотите зарабатывать на своей недвижимости.
                         p Сотрудничая с нами, вы получаете ряд неоспоримых преимуществ, которыми уже успели воспользоваться сотни наших клиентов. Оцените и вы наши возможности и раскройте потенциал своего жилья.
-                    .col-7 
+                    .col-7.col-lg-12
                         .slider.js-slide
                             //- .slider-management
                             .slider__controls
@@ -57,7 +57,7 @@ block content
                     .form__row.form__row_send
                         input.input(type="text",placeholder="Ваше имя")
                         input.input.input_phone(type="text",placeholder="+7")
-                        button.btn.btn_action Отправить
+                        button.btn.btn_action.form__row-btn Отправить
             .content__block
                 p.h1 Какие услуги мы предоставляем?
                 .mt-2.grid.grid_service-elem.content__scroll

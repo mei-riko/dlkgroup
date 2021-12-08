@@ -41,3 +41,27 @@
         background: no-repeat center / cover;
     }
 }
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content_filters-tab{
+        &__content{
+            padding: map-get($map: $spacers, $key: 3) 0;
+        }
+        &__heading{
+            font-size: 24px;
+        }
+    }
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+}

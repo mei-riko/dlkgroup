@@ -1,5 +1,30 @@
 .grid_service-elem{
     // display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(30%, 1fr) );
     // grid-gap: $grid-gutter-width;
+}
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .grid_service-elem{
+        grid-template-columns: repeat(2, minmax(45%, 1fr) );
+    }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .grid_service-elem{
+        grid-template-columns: repeat(2, minmax(280px, 1fr) );
+        // grid-template-columns: 1fr;
+        grid-gap: $spacer-gutter;
+    }
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
 }

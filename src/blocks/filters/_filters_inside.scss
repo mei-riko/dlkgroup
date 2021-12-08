@@ -6,3 +6,31 @@
         width: 100%;
     }
 }
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .filters_inside{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .filters_inside{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .filters_inside{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .filters_inside{
+        grid-template-columns: 1fr;
+    }
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+}

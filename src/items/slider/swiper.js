@@ -12,11 +12,21 @@ $(function() {
         },
       });
       var swiperProject = new Swiper(".swiper-container_projects", {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 30,
           navigation: {
             nextEl: ".swiper-button_next",
             prevEl: ".swiper-button_prev",
+          },
+          breakpoints: {
+            576: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
           },
           observer: true,
           observeParents: true

@@ -1,25 +1,30 @@
-.grid_category{
-    grid-template-columns: repeat(2, 1fr);
+.nav_additional-footer{
+    padding: 0 2*$spacer-gutter;
+    margin: 0;
 }
 
 // < 1440px
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .nav_additional-footer{}
 }
 // < 1024px
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
-    .grid_category{
-        grid-template-columns: 1fr;
-    }
+    .nav_additional-footer{}
 }
 // < 768px
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .nav_additional-footer{
+        padding: 2*$spacer-gutter 0 0;
+
+        margin-left: -($spacer-gutter);
+        margin-right: -($spacer-gutter);
+    }
 }
 // < 576px
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .nav_additional-footer{}
 }
 // < 420px
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
-    .grid_category{
-        grid-gap: $spacer-gutter;
-    }
+    .nav_additional-footer{}
 }

@@ -11,8 +11,37 @@
         padding-right: $spacer/2;
         background: url('../img/icon/checkbox-gold.svg') no-repeat 15px center / 20px;
 
+        min-width: 200px;
         max-width: 25%;
 
         line-height: $line-height-base;
+
+        margin-bottom: $spacer-gutter;
     }
+}
+
+
+// < 1440px
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+}
+// < 1024px
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+}
+// < 768px
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .list_check{
+        &__item{
+            padding-left: 40px;
+            background: url('../img/icon/checkbox-gold.svg') no-repeat 15px center / 14px;
+    
+            min-width: 220px;
+            max-width: 50%;
+        }
+    }
+}
+// < 576px
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+}
+// < 420px
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
 }
