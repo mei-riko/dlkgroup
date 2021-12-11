@@ -22,6 +22,8 @@
         padding-left: 35px;
         margin: 0;
 
+        white-space: nowrap;
+
         cursor: inherit;
         transition: .3s;
 
@@ -37,7 +39,7 @@
             height: 20px;
             border-radius: 10px;
 
-            // background: $light;
+            background: $light;
             border: 1px solid $light;
         }
         &:after{

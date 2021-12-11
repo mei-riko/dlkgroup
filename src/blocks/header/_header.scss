@@ -90,6 +90,7 @@
             transition: $transition-base;
 
             width: 380px;
+            max-width: calc(100% - 45px);
             padding: $grid-gutter-width 0;
 
             overflow: auto;

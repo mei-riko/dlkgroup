@@ -145,10 +145,7 @@
         &__scroll{
             max-width: 100%;
             overflow: auto;
-    
-            &-inside{
-                margin-bottom: $spacer-gutter;
-            }
+            padding-bottom: $spacer-gutter;
         }
     }
 }

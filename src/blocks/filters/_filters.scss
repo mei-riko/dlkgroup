@@ -19,6 +19,11 @@
             right: $spacer-gutter;
             top: calc(50% - 12px);
         }
+
+        &.disabled{
+            filter: opacity(.5);
+            cursor: not-allowed;
+        }
     }
     &__heading{
         padding-right: $spacer-gutter;

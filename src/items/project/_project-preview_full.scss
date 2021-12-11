@@ -21,6 +21,11 @@
 
 // < 1440px
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .project-preview_full{
+        &__content{
+            padding-left: 0px;
+        }
+    }
 }
 // < 1024px
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
@@ -33,9 +38,6 @@
     .project-preview_full{
         &__heading{
             font-size: 18px;
-        }
-        &__content{
-            padding-left: 0px;
         }
         &__chars{
             grid-template-columns: repeat(2, minmax(auto, 120px));

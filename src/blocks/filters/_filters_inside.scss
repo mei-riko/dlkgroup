@@ -1,9 +1,16 @@
 .filters_inside{
     grid-gap: $spacer-gutter;
-    grid-template-columns: repeat(4, minmax(140px, auto)) 1fr 180px 110px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, auto));
 
     &__btn{
         width: 100%;
+
+        &.disabled{
+            border-color: $black-lighter;
+            background-color: $black-lighter;
+            color: $secondary;
+            cursor: not-allowed;
+        }
     }
 }
 

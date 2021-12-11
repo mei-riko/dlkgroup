@@ -75,7 +75,12 @@
         grid-template-areas: 
                             "image"
                             "content";
-
+        &:nth-child(2n+1),
+        &:nth-child(2n){
+            grid-template-areas: 
+                                "image"
+                                "content";
+        }
         &__image{
             height: 180px;
         }

@@ -1,0 +1,74 @@
+.ajax_form .input.error{
+    color: $red;
+    border-color: $red;
+}
+.ajax_form .form__error.error{
+    color: $red;
+}
+.ajax_form .form__error-line.error{
+    color: $red;
+    margin-bottom: $spacer-gutter;
+}
+
+.jGrowl#jGrowl {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+
+    font-family: $font-family-heading;
+
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 99;
+
+    .jGrowl-notification {
+        opacity: 1;
+        width: 320px;
+        padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 2);
+        margin: 0;
+
+        border: 4px solid $border-color;
+        border-radius: 0;
+
+        font-size: map-get($map: $font-size, $key: sm);
+        color: $white;
+
+        .jGrowl-close {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+
+            font-size: 20px;
+            line-height: 30px;
+            width: 34px;
+
+            text-align: center;
+            color: $white;
+
+            border: none;
+            border-radius: 0;
+            outline: 0
+        }
+
+        &.af-message-success {
+            background-color: $body-bg!important;
+            border-color: $green;
+            color: $green;
+
+            .jGrowl-close {
+                background: $green;
+                color: $black;
+            }
+        }
+
+        &.af-message-error {
+            background-color: $body-bg!important;
+            border-color: $red;
+            color: lighten($color: $red, $amount: 12);
+
+            .jGrowl-close {
+                background: $red;
+            }
+        }
+    }
+}

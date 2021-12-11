@@ -2,6 +2,9 @@ import $ from 'jquery';
 
 $(document).on("click", ".filters .filters__item", function(){
     let $filterItem = $(this);
+
+    if( $filterItem.hasClass("disabled") ){ return false; }
+
     let $filtersParent = $filterItem.closest(".filters");
     let $filterItemActive = $filtersParent.find(".filters__item--active");
     // let $filtersHeading = $filterItem.find(".filters__heading");
@@ -19,7 +22,11 @@ $(document).on("click", ".filters .filters__item", function(){
         $filterItem.removeClass("filters__item--active");
         $filtersOptions.removeClass("filters__options--active");
     }
+});
 
+$(document).on("click", ".filters_inside .filters_inside__btn", function(e){
+    let $filterBtn = $(this);
+    if( $filterBtn.hasClass("disabled") ){ e.preventDefault(); return false; }
 });
 
 $(document).on('mouseup', function (e){

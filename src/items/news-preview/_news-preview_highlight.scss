@@ -2,6 +2,7 @@
     display: block;
     position: relative;
     // padding: map-get($map: $spacers, $key: 3);
+    background: no-repeat center / cover;
 
     &:after{
         content: '';
@@ -56,12 +57,17 @@
             left: $spacer;
         }
         &:after{
-            padding-bottom: 75%;
+            padding-bottom: 55%;
         }
     }
 }
 // < 576px
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .news-preview_highlight{
+        &:after{
+            padding-bottom: 75%;
+        }
+    }
 }
 // < 420px
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){

@@ -1,13 +1,15 @@
 .swiper-container{
     &_projects{
         padding-top: $spacer;
-        overflow: visible;
-        overflow-x: clip;
+        // overflow: visible;
+        // overflow-x: clip;
+        overflow: hidden;
     }
     &_elites{
         padding-top: $spacer;
-        overflow: visible;
-        overflow-x: clip;
+        // overflow: visible;
+        // overflow-x: clip;
+        overflow: hidden;
     }
 }
 .swiper-wrapper{
