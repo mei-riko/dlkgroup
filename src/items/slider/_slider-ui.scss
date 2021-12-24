@@ -1,0 +1,22 @@
+.mse2_number_slider.ui-widget.ui-widget-content{
+    border-color: $border-color;
+    background-color: $black-darker;
+}
+.mse2_number_slider .ui-slider-range{
+    background-color: $black-darker;
+}
+
+.mse2_number_slider.ui-widget.ui-widget-content .ui-state-default{
+    border-color: $secondary;
+    background-color: $secondary;
+}
+.mse2_number_slider.ui-widget.ui-widget-content .ui-slider-handle{
+    top: -0.75em;
+    margin-left: -0.75em;
+    width: 2em;
+    height: 2em;
+}
+
+.mse2_number_inputs{
+    margin-top: $spacer;
+}

@@ -1,0 +1,9 @@
+.grid_input{
+    grid-gap: $spacer-gutter;
+    grid-template-columns: $spacer auto;
+
+    &__value{
+        padding: 6px 10px;
+        background: inherit;
+    }
+}

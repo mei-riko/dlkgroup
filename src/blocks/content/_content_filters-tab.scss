@@ -20,7 +20,8 @@
 
     &__slider{
         position: relative;
-
+        overflow: hidden;
+        
         &:after{
             content: '';
             display: block;
